@@ -11,19 +11,19 @@ NeoBundle 'git://github.com/Shougo/unite.vim.git'
 "NeoBundle 'git://github.com/Shougo/vim-vcs.git'
 NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimshell.git'
+NeoBundle 'git://github.com/thinca/vim-quickrun.git'
+NeoBundle 'git://github.com/thinca/vim-ref.git'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 "NeoBundle 'git://github.com/Shougo/vinarise.git'
 filetype plugin on
 filetype indent on
 
 NeoBundle 'The-NERD-Commenter'
-NeoBundle 'quickrun.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'taglist.vim'
-NeoBundle 'unite.vim'
 NeoBundle 'textmanip.vim'
 
 " Web develop
-NeoBundle 'ZenCoding.vim'
 NeoBundle 'html5.vim'
 NeoBundle 'jQuery'
 NeoBundle 'css_color.vim'
