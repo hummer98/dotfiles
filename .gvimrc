@@ -1,6 +1,5 @@
-colorscheme Metroid
-
 set background=dark
+color Metroid
 
 if has('mac')
 	set transparency=30		" opacity
