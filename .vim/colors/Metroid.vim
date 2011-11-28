@@ -12,7 +12,7 @@ let g:colors_name = "Metroid"
 hi Normal gui=NONE guifg=White guibg=Black                                              " 通常
 hi NonText guifg=LightBlue ctermfg=LightBlue                                            " EOF以降の~など
 hi Comment gui=Italic guifg=LightGreen cterm=Italic ctermfg=LightGreen                  " コメント
-hi Statement gui=Bold guifg=Magenta cterm=Bold ctermfg=Green                          " 命令、分岐
+hi Statement gui=Bold guifg=Magenta cterm=Bold ctermfg=Green                            " 命令、分岐
 hi Identifier gui=Bold guifg=Green cterm=Bold ctermfg=Green                             " 関数、識別子
 hi PreProc gui=Bold guifg=Yellow cterm=Bold ctermfg=Yellow                              " プリプロセッサメソッド
 hi Type gui=Bold guifg=Cyan cterm=Bold ctermfg=Cyan                                     " 型(クラス、構造体)
@@ -43,7 +43,7 @@ hi PmenuSbar ctermbg=darkgray
 hi PmenuThumb ctermbg=DarkGray                                                          "
 
 " その他
-hi LineNr gui=NONE guifg=Green cterm=NONE ctermfg=DarkGreen                                 " 行番号
+hi LineNr gui=NONE guifg=Green cterm=NONE ctermfg=DarkGreen                             " 行番号
 hi VertSplit gui=NONE guifg=Black guibg=Cyan cterm=NONE ctermfg=Black ctermbg=Cyan      " :vspの境界線
 
 " TagList.vim
