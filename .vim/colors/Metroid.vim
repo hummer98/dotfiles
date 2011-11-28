@@ -46,7 +46,14 @@ hi PmenuThumb ctermbg=DarkGray                                                  
 hi LineNr gui=NONE guifg=Green cterm=NONE ctermfg=DarkGreen                                 " 行番号
 hi VertSplit gui=NONE guifg=Black guibg=Cyan cterm=NONE ctermfg=Black ctermbg=Cyan      " :vspの境界線
 
-" ステータスライン
+" TagList.vim
+" hi MyTagListTagName gui=NONE guifg=Black guibg=MediumSpringGreen cterm=NONE ctermfg=Black ctermbg=DarkGreen
+" hi MyTagListTagScope gui=NONE guifg=Black guibg=MediumSpringGreen cterm=NONE ctermfg=Black ctermbg=DarkGreen
+" hi MyTagListTitle gui=NONE guifg=Black guibg=MediumSpringGreen cterm=NONE ctermfg=Black ctermbg=DarkGreen
+" hi MyTagListComment gui=NONE guifg=Black guibg=MediumSpringGreen cterm=NONE ctermfg=Black ctermbg=DarkGreen
+hi MyTagListFileName gui=NONE guifg=Black guibg=MediumSpringGreen cterm=NONE ctermfg=Black ctermbg=DarkGreen
+
+" Status Line
 hi StatusLine gui=NONE guifg=Black guibg=MediumSpringGreen cterm=NONE ctermfg=Black ctermbg=DarkGreen   " アクティブなステータスライン
 hi StatusLineNC gui=NONE guifg=Black guibg=AquaMarine cterm=NONE ctermfg=Black ctermbg=Blue  " 非アクティブなステータスライン
 hi Question gui=NONE guifg=Black guibg=Yellow cterm=NONE ctermfg=Black ctermbg=Yellow   " プロンプトメッセージ
