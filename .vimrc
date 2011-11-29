@@ -1,6 +1,10 @@
 " for Plugin ---------------------------
-if filereadable(expand('~/.vimrc.plugin'))
-  source ~/.vimrc.plugin
+if filereadable(expand('~/.vimrc.neobundle'))
+  source ~/.vimrc.neobundle
+
+  if filereadable(expand('~/.vimrc.plugin'))
+    source ~/.vimrc.plugin
+  endif
 endif
 
 " Common -------------------------------

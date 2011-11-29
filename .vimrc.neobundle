@@ -1,0 +1,34 @@
+" for NeoBundle ------------------------
+filetype off
+if has('vim_starting')
+  set rtp+=~/.vim/neobundle
+  call neobundle#rc(expand('~/.vim/neobundle'))
+endif
+NeoBundle 'git://github.com/Shougo/echodoc.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+"NeoBundle 'git://github.com/Shougo/vim-vcs.git'
+NeoBundle 'git://github.com/Shougo/vimfiler.git'
+NeoBundle 'git://github.com/Shougo/vimshell.git'
+NeoBundle 'git://github.com/thinca/vim-quickrun.git'
+NeoBundle 'git://github.com/thinca/vim-ref.git'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+filetype plugin on
+filetype indent on
+
+NeoBundle 'The-NERD-Commenter'
+NeoBundle 'surround.vim'
+NeoBundle 'taglist.vim'
+NeoBundle 'textmanip.vim'
+
+" Web develop
+NeoBundle 'html5.vim'
+NeoBundle 'jQuery'
+NeoBundle 'css_color.vim'
+
+" LL develop
+NeoBundle 'python.vim'
+
+" option
+NeoBundle 'TwitVim'
