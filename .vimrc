@@ -79,6 +79,11 @@ augroup END
 :hi CursorLine gui=underline
 hi CursorLine ctermbg=black guibg=black
 
+" Clipboard ----------------------------
+if has('clipboard')
+  set clipboard+=autoselect
+  set clipboard+=unnamed
+endif
 
 " StatusLine ---------------------------
 set laststatus=2                        " ステータスラインを2行に
@@ -102,8 +107,8 @@ endif
 " nnoremap <C-a> :<C-u>call append(expand('.'), '')<Cr>j
 
 " edit .vimrc
-nnoremap <Space>.   :<C-u>edit $MYVIMRC<Enter>
-nnoremap <Space>s.  :<C-u>source $MYVIMRC<Enter>
+nnoremap <Leader>.   :<C-u>edit $MYVIMRC<Enter>
+nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
 nnoremap <C-h>      :<C-u>help<Space>
 
 
