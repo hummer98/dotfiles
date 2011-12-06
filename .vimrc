@@ -113,11 +113,12 @@ nnoremap <C-h>      :<C-u>help<Space>
 
 
 " When insert mode, enable hjkl and enable go to home/end
-imap <C-o> <END>
-imap <C-a> <HOME>
-imap <C-h> <LEFT>
-imap <C-j> <DOWN>
-imap <C-k> <UP>
+imap <C-o> <End>
+imap <C-a> <Home>
+" imap <C-h> <LEFT>
+imap <C-h> <BackSpace>
+imap <C-j> <Down>
+imap <C-k> <Up>
 imap <C-l> <Right>
 
 " auto insert --------------------------
