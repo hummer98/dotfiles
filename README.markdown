@@ -1,22 +1,23 @@
 yuzuemon/dotfiles
 ====
 
-information
+# information
 ----
 * vimrc
 * zshrc
 * tmux.conf
 
-preferences
+# preferences
 ----
 # clone remote repository to local
-git clone git@github.com:yuzuemon/dotfiles.git
+* git clone git@github.com:yuzuemon/dotfiles.git
+
 # link files
-ln -s ~/dotfiles/.vim ~/.vim
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+* ln -s ~/dotfiles/.vim ~/.vim
+* ln -s ~/dotfiles/.vimrc ~/.vimrc
 ...
 
 # install plugins
-vi ~/dotfiles/.vimrc.neobundle
-:NeoBundleInstall!
+* vi ~/dotfiles/.vimrc.neobundle
+* :NeoBundleInstall!
 
