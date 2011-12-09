@@ -64,7 +64,7 @@ set listchars=tab:>\                    " 不可視文字の表示方法
 set notitle                             " タイトル書き換えない
 set scrolloff=5                         " 行送り
 set display=uhex                        " 印字不可能文字を16進数で表示
-set paste                               " ペーストモード
+" set paste                               " ペーストモード(neocomplcacheが動作為コメントアウト)
 
 hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue " 全角スペースの定義
 match ZenkakuSpace /　/                 " 全角スペースの色を変更
