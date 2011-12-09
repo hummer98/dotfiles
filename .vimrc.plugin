@@ -9,7 +9,7 @@ let g:quickrun_config={'*': {'split': ''}}
 set splitbelow
 set splitright
 
-" for neocomplcache
+" for neocomplcache --------------------
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
@@ -20,7 +20,15 @@ smap <C-k> <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g> neocomplcache#undo_completion()
 noremap <expr><C-l> neocomplcache#complete_common_string()
 inoremap <expr><C-e> neocomplcache#cancel_popup()
+
 " let g:neocomplcache_enable_auto_select = 1
+
+" Define keyword.
+if !exists('g:neocomplcache_keyword_patterns')
+  let g:neocomplcache_keyword_patterns = {}
+endif
+let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+
 " Shell like behavior(not recommended).
 " set completeopt+=longest
 " let g:neocomplcache_enable_auto_select = 1
@@ -37,21 +45,23 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
-    let g:neocomplcache_omni_patterns = {}
+  let g:neocomplcache_omni_patterns = {}
 endif
 " let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
-" for zen-coding C-E
+" for zen-coding -----------------------
+" use zen-coding c-e
 let g:user_zen_expandabbr_key = '<c-e>'
 
-" for NERDCommenterToggle
+" for NERDCommenterToggle --------------
+" use NERDCommenterToggle c-o
 let g:NERDCreateDefaultMappings = 0
 let NERDSpaceDelims = 1
 nmap <c-o> <Plug>NERDCommenterToggle
 vmap <c-o> <Plug>NERDCommenterToggle
 
-" for unite.vim
+" for unite.vim ------------------------
 let g:unite_update_time = 1000
 call unite#set_substitute_pattern('file', '\$\w\+', '\=eval(submatch(0))', 200)
 
