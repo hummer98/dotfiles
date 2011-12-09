@@ -37,9 +37,9 @@ hi DiffText guibg=DarkGreen ctermfg=Black ctermbg=DarkGreen                     
 hi DiffChange guibg=Gray30 ctermbg=DarkCyan ctermfg=White
 
 " ポップアップメニュー(未整理)
-hi Pmenu ctermbg=lightcyan ctermfg=black
-hi PmenuSel ctermbg=blue ctermfg=black
-hi PmenuSbar ctermbg=darkgray
+hi Pmenu ctermbg=DarkMagenta ctermfg=White
+hi PmenuSel ctermbg=Blue ctermfg=Black
+hi PmenuSbar ctermbg=DarkGray
 hi PmenuThumb ctermbg=DarkGray                                                          "
 
 " その他

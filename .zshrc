@@ -89,6 +89,9 @@ alias ld='ls -ahGp | grep /'
 alias ll='ls -ahGlp'
 alias lld='ls -ahGlp | grep /'
 alias sl='sl -ae'
+
+alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias vim='vi'
 alias gvi='gvim'
 alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
 
