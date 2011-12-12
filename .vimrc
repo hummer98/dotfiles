@@ -1,9 +1,9 @@
 " for Plugin ---------------------------
-if filereadable(expand('~/.vimrc.neobundle'))
-  source ~/.vimrc.neobundle
+if filereadable(expand('~/dotfiles/.vimrc.neobundle'))
+  source ~/dotfiles/.vimrc.neobundle
 
-  if filereadable(expand('~/.vimrc.plugin'))
-    source ~/.vimrc.plugin
+  if filereadable(expand('~/dotfiles/.vimrc.plugin'))
+    source ~/dotfiles/.vimrc.plugin
   endif
 endif
 
@@ -12,7 +12,7 @@ autocmd!
 set nocompatible                        " vim
 " let mapleader = "\\"                    " キーマップリーダー
 let mapleader = " "                    " キーマップリーダー
-if filereadable(expand('~/.vim/colors/Metroid.vim'))
+if filereadable(expand('~/dotfiles/.vim/colors/Metroid.vim'))
   color Metroid
 endif
 set background=light
