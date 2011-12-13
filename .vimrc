@@ -83,7 +83,7 @@ hi CursorLine ctermbg=black guibg=black
 " Clipboard ----------------------------
 if has('clipboard')
   set clipboard+=autoselect
-  set clipboard+=unnamed
+  " set clipboard+=unnamed
 endif
 
 " StatusLine ---------------------------
