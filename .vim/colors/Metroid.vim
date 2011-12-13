@@ -1,5 +1,5 @@
 " Vim color file
-" Maintainer:   yNk
+" Maintainer:   yuzuemon
 
 set background=dark
 hi clear

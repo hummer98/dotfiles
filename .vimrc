@@ -13,7 +13,7 @@ set nocompatible                        " vim
 " let mapleader = "\\"                    " キーマップリーダー
 let mapleader = " "                    " キーマップリーダー
 if filereadable(expand('~/dotfiles/.vim/colors/Metroid.vim'))
-  color Metroid
+  colorscheme metroid
 endif
 set background=light
 
