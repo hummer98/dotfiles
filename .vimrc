@@ -12,9 +12,10 @@ autocmd!
 set nocompatible                        " vim
 " let mapleader = "\\"                    " キーマップリーダー
 let mapleader = " "                    " キーマップリーダー
-if filereadable(expand('~/dotfiles/.vim/colors/Metroid.vim'))
+if filereadable(expand('~/dotfiles/.vim/colors/metroid.vim'))
   colorscheme metroid
 endif
+color metroid
 set background=light
 
 " File ---------------------------------
