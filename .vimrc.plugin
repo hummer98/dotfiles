@@ -19,7 +19,7 @@ imap <C-k> <Plug>(neocomplcache_snippets_expand)
 smap <C-k> <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g> neocomplcache#undo_completion()
 noremap <expr><C-l> neocomplcache#complete_common_string()
-inoremap <expr><C-e> neocomplcache#cancel_popup()
+" inoremap <expr><C-e> neocomplcache#cancel_popup()
 
 " let g:neocomplcache_enable_auto_select = 1
 
