@@ -4,7 +4,7 @@ export LANG=ja_JP.UTF-8                 # ニッポン！
 autoload -U compinit                    # 強力な補完機能らしく、これがないとzsh使っていると言えないのだとか
 compinit
 
-export EDITOR=gvim                      # vim最強伝説
+export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim          # vim最強伝説
 # bindkey -v                              # vim(ry
 bindkey -e                              # emacs(ry
 
