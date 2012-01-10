@@ -36,7 +36,7 @@ RPROMPT="%T"                            # 時刻表示
 setopt transient_rprompt                # 右まできたら、時刻非表示
 
 setopt prompt_subst                     # 便利らしい
-setopt correct
+# setopt correct # うざい
 
 
 # cd
