@@ -53,6 +53,7 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 " for zen-coding -----------------------
 " use zen-coding c-e
 let g:user_zen_expandabbr_key = '<c-e>'
+let g:user_zen_settings = {'indentation': '  '}
 
 " for NERDCommenterToggle --------------
 " use NERDCommenterToggle c-o
