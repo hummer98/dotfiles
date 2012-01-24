@@ -1,9 +1,9 @@
 " for Plugin ---------------------------
-if filereadable(expand('~/dotfiles/.vimrc.neobundle'))
-  source ~/dotfiles/.vimrc.neobundle
+if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
+  source $HOME/dotfiles/.vimrc.neobundle
 
-  if filereadable(expand('~/dotfiles/.vimrc.plugin'))
-    source ~/dotfiles/.vimrc.plugin
+  if filereadable(expand('$HOME/dotfiles/.vimrc.plugin'))
+    source $HOME/dotfiles/.vimrc.plugin
   endif
 endif
 
@@ -12,7 +12,7 @@ autocmd!
 set nocompatible                        " vim
 " let mapleader = "\\"                    " キーマップリーダー
 let mapleader = " "                    " キーマップリーダー
-if filereadable(expand('~/dotfiles/.vim/colors/metroid.vim'))
+if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
   colorscheme metroid
 endif
 color metroid
@@ -213,12 +213,65 @@ function! s:coding_style_complete(...) "{{{
   return keys(s:coding_styles)
 endfunction "}}}
 
+" for HTML -----------------------
+autocmd BufNewFile *.html 0r $HOME/dotfiles/.vim/template/html.txt
+
 " for JavaScript -----------------------
 autocmd Filetype javascript setl autoindent
 autocmd FileType javascript setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for Python ---------------------------
+autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/python.txt
+autocmd Filetype python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" for Ruby -----------------------
+autocmd Filetype ruby setl autoindent
+autocmd FileType ruby setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" for YAML -----------------------
+autocmd Filetype yaml setl autoindent
+autocmd FileType yaml setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType yaml setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" Execute python script C-P
+function! s:Exec()
+  exe "!" . &ft . " %"
+:endfunction
+command! Exec call <SID>ExecPy()
+autocmd FileType python map <silent> <C-p> :call <SID>Exec()<CR>
+autocmd FileType ruby map <silent> <C-p> :call <SID>Exec()<CR>
+"autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
+
+" for Jive -----------------------------
+au BufRead,BufNewFile *.htme setfiletype c
+
+" Grep ---------------------------------
+command! -complete=file -nargs=+ Grep call s:grep([<f-args>])
+function! s:grep(args)
+  execute 'vimgrep' '/'.a:args[-1].'/' join(a:args[:-2])
+endfunction
+
+" for Vimdiff --------------------------
+"if &diff
+"    setup for diff mode
+"else
+"    setup for non-diff mode
+"endif
+
+autocmd FocusGained * :echo "Active"
+autocmd FocusLost   * :echo "Unactive"
+
+" for JavaScript -----------------------
+autocmd Filetype javascript setl autoindent
+autocmd FileType javascript setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" for Python ---------------------------
+autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/python.txt
 autocmd Filetype python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl expandtab tabstop=2 shiftwidth=2 softtabstop=0

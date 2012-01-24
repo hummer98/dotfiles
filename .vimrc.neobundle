@@ -1,8 +1,8 @@
 " for NeoBundle ------------------------
 filetype off
 if has('vim_starting')
-  set rtp+=~/dotfiles/.vim/neobundle
-  call neobundle#rc(expand('~/dotfiles/.vim/neobundle'))
+  set rtp+=$HOME/dotfiles/.vim/neobundle
+  call neobundle#rc(expand('$HOME/dotfiles/.vim/neobundle'))
 endif
 NeoBundle 'git://github.com/Shougo/echodoc.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
