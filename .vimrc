@@ -71,14 +71,11 @@ hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue "
 match ZenkakuSpace /　/                 " 全角スペースの色を変更
 
 set cursorline                          " カーソル行をハイライト
-augroup cch
-  autocmd! cch
-  autocmd WinLeave * set nocursorline
-  autocmd WinEnter,BufRead * set cursorline
+augroup vimrc-auto-cursorline
+  autocmd!
+  autocmd CursorMoved,CursorMovedI,WinLeave * setlocal nocursorline
+  autocmd CursorHold,CursorHoldI * setlocal cursorline
 augroup END
-:hi clear CursorLine
-:hi CursorLine gui=underline
-hi CursorLine ctermbg=black guibg=black
 
 " Clipboard ----------------------------
 if has('clipboard')
