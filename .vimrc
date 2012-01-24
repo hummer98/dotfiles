@@ -41,7 +41,7 @@ set backspace=indent,eol,start          " バックスペースで特殊記号�
 set formatoptions=lmoq                  " 整形オプション，マルチバイト系を追加
 set whichwrap=b,s,h,s,<,>,[,]           " カーソルを行頭、行末で止まらないようにする
 
-" Complement Command -------------------
+" Complement command -------------------
 set wildmenu                            " コマンド補完を強化
 set wildmode=list:full                  " リスト表示，最長マッチ
 
@@ -65,17 +65,23 @@ set listchars=tab:>\                    " 不可視文字の表示方法
 set notitle                             " タイトル書き換えない
 set scrolloff=5                         " 行送り
 set display=uhex                        " 印字不可能文字を16進数で表示
-" set paste                               " ペーストモード(neocomplcacheが動作為コメントアウト)
+" set paste                               " ペーストモード(neocomplcacheが動作しない為コメントアウト)
 
-hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue " 全角スペースの定義
-match ZenkakuSpace /　/                 " 全角スペースの色を変更
 
-set cursorline                          " カーソル行をハイライト
+" Change full-pitch space's color
+hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue
+match ZenkakuSpace /　/
+
+" Set auto cursorline ------------------
 augroup vimrc-auto-cursorline
   autocmd!
   autocmd CursorMoved,CursorMovedI,WinLeave * setlocal nocursorline
   autocmd CursorHold,CursorHoldI * setlocal cursorline
 augroup END
+
+" View active status -------------------
+autocmd FocusGained * :echo "Active"
+autocmd FocusLost   * :echo "Unactive"
 
 " Clipboard ----------------------------
 if has('clipboard')
@@ -120,13 +126,14 @@ imap <C-k> <Up>
 imap <C-l> <Right>
 
 " auto insert --------------------------
-imap <silent> <C-i>d <C-R>=strftime("%Y年%m月%e日")<CR>     " date
-imap <silent> <C-i>t <C-R>=strftime("%H:%M")<CR>            " time
-imap <silent> <C-i>c <C-R>=getcwd()<CR>                     " current directory
+" date, time, current directory
+imap <silent> <C-i>d <C-R>=strftime("%Y年%m月%e日")<CR>
+imap <silent> <C-i>t <C-R>=strftime("%H:%M")<CR>
+imap <silent> <C-i>c <C-R>=getcwd()<CR>
 
 " locate and return character 'above' current cursor position
 " http://www.ibm.com/developerworks/jp/linux/library/l-vim-script-1/
-function LookupWard()
+function! LookupWard()
   let column_num      = virtcol('.')
   let target_pattern  = '\%' . column_num . 'v.'
   let target_line_num = search(target_pattern . '*\S', 'bnW')
@@ -194,7 +201,6 @@ command! Exec call <SID>ExecOpera()
 nmap <C-p> :call <SID>ExecOpera()<CR>
 
 
-
 filetype plugin on
 let s:coding_styles = {}
 let s:coding_styles['MDC'] = 'set expandtab tabstop=2 shiftwidth=2 softtabstop&'
@@ -234,15 +240,6 @@ autocmd Filetype yaml setl autoindent
 autocmd FileType yaml setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType yaml setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
-" Execute python script C-P
-function! s:Exec()
-  exe "!" . &ft . " %"
-:endfunction
-command! Exec call <SID>ExecPy()
-autocmd FileType python map <silent> <C-p> :call <SID>Exec()<CR>
-autocmd FileType ruby map <silent> <C-p> :call <SID>Exec()<CR>
-"autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
-
 " for Jive -----------------------------
 au BufRead,BufNewFile *.htme setfiletype c
 
@@ -259,54 +256,3 @@ endfunction
 "    setup for non-diff mode
 "endif
 
-autocmd FocusGained * :echo "Active"
-autocmd FocusLost   * :echo "Unactive"
-
-" for JavaScript -----------------------
-autocmd Filetype javascript setl autoindent
-autocmd FileType javascript setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
-
-" for Python ---------------------------
-autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/python.txt
-autocmd Filetype python setl autoindent
-autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
-
-" for Ruby -----------------------
-autocmd Filetype ruby setl autoindent
-autocmd FileType ruby setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
-
-" for YAML -----------------------
-autocmd Filetype yaml setl autoindent
-autocmd FileType yaml setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType yaml setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
-
-" Execute python script C-P
-function! s:Exec()
-  exe "!" . &ft . " %"
-:endfunction
-command! Exec call <SID>ExecPy()
-autocmd FileType python map <silent> <C-p> :call <SID>Exec()<CR>
-autocmd FileType ruby map <silent> <C-p> :call <SID>Exec()<CR>
-"autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
-
-" for Jive -----------------------------
-au BufRead,BufNewFile *.htme setfiletype c
-
-" Grep ---------------------------------
-command! -complete=file -nargs=+ Grep call s:grep([<f-args>])
-function! s:grep(args)
-  execute 'vimgrep' '/'.a:args[-1].'/' join(a:args[:-2])
-endfunction
-
-" for Vimdiff --------------------------
-"if &diff
-"    setup for diff mode
-"else
-"    setup for non-diff mode
-"endif
-
-autocmd FocusGained * :echo "Active"
-autocmd FocusLost   * :echo "Unactive"
