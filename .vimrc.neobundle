@@ -26,9 +26,9 @@ NeoBundle 'taglist.vim'
 NeoBundle 'textmanip.vim'
 
 " Web develop
+NeoBundle 'css_color.vim'
 NeoBundle 'html5.vim'
 NeoBundle 'jQuery'
-NeoBundle 'css_color.vim'
 
 " LL develop
 NeoBundle 'python.vim'
