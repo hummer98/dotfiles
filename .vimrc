@@ -232,8 +232,13 @@ autocmd FileType python setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for Ruby -----------------------
 autocmd Filetype ruby setl autoindent
-autocmd FileType ruby setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType ruby setl smartindent cinwords=if,elsif,else,for,while,try,except,finally,def,class
 autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" for Ruby -----------------------
+autocmd Filetype perl setl autoindent
+autocmd FileType perl setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
+autocmd FileType perl setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for YAML -----------------------
 autocmd Filetype yaml setl autoindent
