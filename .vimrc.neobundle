@@ -8,7 +8,7 @@ NeoBundle 'git://github.com/Shougo/echodoc.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/Shougo/vim-vcs.git'
+" NeoBundle 'git://github.com/Shougo/vim-vcs.git'
 NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimshell.git'
 " NeoBundle 'git://github.com/Shougo/git-vim.git'
@@ -17,6 +17,8 @@ NeoBundle 'git://github.com/thinca/vim-ref.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
+NeoBundle 'git://github.com/tpope/vim-fugitive.git'
+
 filetype plugin on
 filetype indent on
 
