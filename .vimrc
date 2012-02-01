@@ -235,7 +235,8 @@ autocmd Filetype ruby setl autoindent
 autocmd FileType ruby setl smartindent cinwords=if,elsif,else,for,while,try,except,finally,def,class
 autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
-" for Ruby -----------------------
+" for Perl -----------------------
+autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/perl.txt
 autocmd Filetype perl setl autoindent
 autocmd FileType perl setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
 autocmd FileType perl setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
