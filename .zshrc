@@ -83,17 +83,25 @@ bindkey "^N" history-beginning-search-forward-end
 
 
 setopt complete_aliases                 # デフォルトのコマンドをベースに補完
-# for BSD
-alias o='open'
-alias ls='ls -ahGp'
-alias ld='ls -ahGp | grep /'
-alias ll='ls -ahGlp'
-alias lld='ls -ahGlp | grep /'
+
+case "$OSTYPE" in
+# BSD (contains Mac)
+darwin*)
+  alias o='open'
+  alias ls='ls -ahGp'
+  alias ld='ls -ahGp | grep /'
+  alias ll='ls -ahGlp'
+  alias lld='ls -ahGlp | grep /'
+  ;;
 # for GNU
-# alias ls='ls -ahp --color=auto'
-# alias ld='ls -ahp --color=auto | grep /'
-# alias ll='ls -ahlp --color=auto'
-# alias lld='ls -ahlp --color=auto | grep /'
+linux*)
+  alias ls='ls -ahp --color=auto'
+  alias ld='ls -ahp --color=auto | grep /'
+  alias ll='ls -ahlp --color=auto'
+  alias lld='ls -ahlp --color=auto | grep /'
+  ;;
+esac
+
 alias sl='sl -ae'
 
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
