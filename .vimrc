@@ -220,8 +220,9 @@ endfunction "}}}
 autocmd BufNewFile *.html 0r $HOME/dotfiles/.vim/template/html.txt
 
 " for JavaScript -----------------------
+autocmd BufNewFile *.js 0r $HOME/dotfiles/.vim/template/javascript.txt
 autocmd Filetype javascript setl autoindent
-autocmd FileType javascript setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType javascript setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
 autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for Python ---------------------------
@@ -236,14 +237,14 @@ autocmd FileType ruby setl smartindent cinwords=if,elsif,else,for,while,try,exce
 autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for Perl -----------------------
-autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/perl.txt
+autocmd BufNewFile *.pl 0r $HOME/dotfiles/.vim/template/perl.txt
 autocmd Filetype perl setl autoindent
 autocmd FileType perl setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
 autocmd FileType perl setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for YAML -----------------------
 autocmd Filetype yaml setl autoindent
-autocmd FileType yaml setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType yaml setl smartindent
 autocmd FileType yaml setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for Jive -----------------------------
