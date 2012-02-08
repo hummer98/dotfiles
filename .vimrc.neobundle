@@ -17,6 +17,7 @@ NeoBundle 'git://github.com/thinca/vim-ref.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
+NeoBundle 'git://github.com/taku-o/vim-catn.git'
 " NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 
 filetype plugin on
