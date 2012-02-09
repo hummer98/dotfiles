@@ -55,12 +55,12 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 let g:user_zen_expandabbr_key = '<c-e>'
 let g:user_zen_settings = {'indentation': '  '}
 
-" for NERDCommenterToggle --------------
-" use NERDCommenterToggle c-o
+" for NERDCommenter --------------------
+" use NERDCommenterToggle c-s
 let g:NERDCreateDefaultMappings = 0
 let NERDSpaceDelims = 1
-nmap <c-o> <Plug>NERDCommenterToggle
-vmap <c-o> <Plug>NERDCommenterToggle
+nmap <c-s> <Plug>NERDCommenterToggle
+vmap <c-s> <Plug>NERDCommenterToggle
 
 " for unite.vim ------------------------
 let g:unite_update_time = 1000
