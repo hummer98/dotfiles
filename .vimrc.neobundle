@@ -6,6 +6,7 @@ if has('vim_starting')
 endif
 NeoBundle 'git://github.com/Shougo/echodoc.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete.git'
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 " NeoBundle 'git://github.com/Shougo/vim-vcs.git'
@@ -18,6 +19,7 @@ NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/taku-o/vim-catn.git'
+NeoBundle 'git://github.com/Sixeight/unite-grep.vim.git'
 " NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 
 filetype plugin on
