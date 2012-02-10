@@ -150,6 +150,9 @@ imap <silent> <C-y> <C-R><C-R>=LookupWard()<CR>
 " nmap <C-i> Yp:s/\d\+/\=(submatch(0)+1)/g<CR>
 nmap <C-i> Yp:s/\d\+/\=(submatch(0)+1)/<CR>
 
+" json sort
+nmap <Leader>j !python -m json.tool<CR>
+
 " When insert mode, change statusline
 let g:hi_insert = 'hi StatusLine gui=None guifg=Black guibg=yellow cterm=None ctermfg=Black ctermbg=Yellow'
 
