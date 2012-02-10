@@ -1,0 +1,13 @@
+// ==UserScript==
+// @name      hoge.user.js
+// @namespace yuzuemon
+// @include   http://www.example.co.jp/*
+// ==/UserScript==
+
+(function(){
+  // oyakusoku
+  var w = window;
+  var d = w.document;
+
+})();
+

@@ -103,7 +103,6 @@ if exists('&ambiwidth')
 endif
 
 
-
 " --------------------------------------
 "              my config
 " --------------------------------------
@@ -119,11 +118,11 @@ nnoremap <C-h>      :<C-u>help<Space>
 " When insert mode, enable hjkl and enable go to home/end
 imap <C-o> <End>
 imap <C-a> <Home>
-" imap <C-h> <LEFT>
 imap <C-h> <BackSpace>
-imap <C-j> <Down>
-imap <C-k> <Up>
-imap <C-l> <Right>
+" imap <C-h> <LEFT>
+" imap <C-j> <Down>
+" imap <C-k> <Up>
+" imap <C-l> <Right>
 
 " auto insert --------------------------
 " date, time, current directory
@@ -219,13 +218,17 @@ function! s:coding_style_complete(...) "{{{
   return keys(s:coding_styles)
 endfunction "}}}
 
-" for HTML -----------------------
+" for HTML -----------------------------
 autocmd BufNewFile *.html 0r $HOME/dotfiles/.vim/template/html.txt
 
 " for JavaScript -----------------------
+autocmd BufNewFile *.js 0r $HOME/dotfiles/.vim/template/javascript.txt
 autocmd Filetype javascript setl autoindent
-autocmd FileType javascript setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType javascript setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
 autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" for StyleSheet -----------------------
+autocmd BufNewFile *.css 0r $HOME/dotfiles/.vim/template/stylesheet.txt
 
 " for Python ---------------------------
 autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/python.txt
@@ -233,14 +236,20 @@ autocmd Filetype python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
-" for Ruby -----------------------
+" for Ruby -----------------------------
 autocmd Filetype ruby setl autoindent
-autocmd FileType ruby setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType ruby setl smartindent cinwords=if,elsif,else,for,while,try,except,finally,def,class
 autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
-" for YAML -----------------------
+" for Perl -----------------------------
+autocmd BufNewFile *.pl 0r $HOME/dotfiles/.vim/template/perl.txt
+autocmd Filetype perl setl autoindent
+autocmd FileType perl setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
+autocmd FileType perl setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" for YAML -----------------------------
 autocmd Filetype yaml setl autoindent
-autocmd FileType yaml setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType yaml setl smartindent
 autocmd FileType yaml setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for Jive -----------------------------
