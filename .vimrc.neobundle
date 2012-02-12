@@ -1,9 +1,9 @@
 " for NeoBundle ------------------------
 filetype off
 if has('vim_starting')
-  if filereadable(expand('$HOME/dotfiles/.vim/neobundle/neobundle.vim'))
+  if filereadable(expand('$HOME/dotfiles/.vim/neobundle/neobundle.vim/autoload/neobundle.vim'))
     set rtp+=$HOME/dotfiles/.vim/neobundle/neobundle.vim
-  elseif filereadable(expand('$HOME/dotfiles/.vim/neobundle.vim')
+  elseif filereadable(expand('$HOME/dotfiles/.vim/neobundle.vim/autoload/neobundle.vim'))
     set rtp+=$HOME/dotfiles/.vim/neobundle.vim
   endif
 
