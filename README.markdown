@@ -13,7 +13,7 @@ This repository is my dotfiles.
 
 ## How to Setup
 
-git clone git@github.com:yuzuemon/dotfiles.git
-./dotfiles/setup.sh
-vi ~/dotfiles/.vimrc.neobundle
-:NeoBundleInstall!
+1. git clone git@github.com:yuzuemon/dotfiles.git
+2. ./dotfiles/setup.sh
+3. vi ~/dotfiles/.vimrc.neobundle
+4. :NeoBundleInstall!
