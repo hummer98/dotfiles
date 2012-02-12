@@ -8,6 +8,6 @@ do
     echo "シンボリックリンクが存在します: $file"
   else
     ln -s $HOME/dotfiles/$file $HOME/$file
-    echo "シンボリックリンクを貼りました: $file"
+    echo "シンボリックリンクを張りました: $file"
   fi
 done
