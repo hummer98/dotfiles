@@ -14,6 +14,7 @@ This repository is my dotfiles.
 ## How to Setup
 
 1. git clone git@github.com:yuzuemon/dotfiles.git
-2. ./dotfiles/setup.sh
-3. vi ~/dotfiles/.vimrc.neobundle
-4. :NeoBundleInstall!
+1. cd ./dotfiles
+1. ./setup.sh
+1. vi ./.vimrc.neobundle
+1. :NeoBundleInstall!
