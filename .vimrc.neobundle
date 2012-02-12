@@ -1,9 +1,15 @@
 " for NeoBundle ------------------------
 filetype off
 if has('vim_starting')
-  set rtp+=$HOME/dotfiles/.vim/neobundle
+  if filereadable(expand('$HOME/dotfiles/.vim/neobundle/neobundle.vim'))
+    set rtp+=$HOME/dotfiles/.vim/neobundle/neobundle.vim
+  elseif filereadable(expand('$HOME/dotfiles/.vim/neobundle.vim')
+    set rtp+=$HOME/dotfiles/.vim/neobundle.vim
+  endif
+
   call neobundle#rc(expand('$HOME/dotfiles/.vim/neobundle'))
 endif
+
 NeoBundle 'git://github.com/Shougo/echodoc.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete.git'
@@ -23,16 +29,13 @@ NeoBundle 'git://github.com/taku-o/vim-catn.git'
 NeoBundle 'git://github.com/Sixeight/unite-grep.vim.git'
 " NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 
-filetype plugin on
-filetype indent on
-
+" Get from vim-scripts repository
 NeoBundle 'The-NERD-Commenter'
 NeoBundle 'surround.vim'
 NeoBundle 'taglist.vim'
 NeoBundle 'textmanip.vim'
 
 " Web develop
-NeoBundle 'css_color.vim'
 NeoBundle 'html5.vim'
 NeoBundle 'jQuery'
 
@@ -41,3 +44,6 @@ NeoBundle 'python.vim'
 
 " option
 NeoBundle 'TwitVim'
+
+filetype plugin on
+filetype indent on
