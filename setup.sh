@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 DOT_FILES=( .bazaar .gitconfig .gitignore_global .gvimrc .vim .vimrc .tmux.conf .zshrc )
 
