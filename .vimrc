@@ -72,8 +72,7 @@ set scrolloff=5                         " 行送り
 set display=uhex                        " 印字不可能文字を16進数で表示
 " set paste                               " ペーストモード(neocomplcacheが動作しない為コメントアウト)
 
-
-" Change full-pitch space's color
+" Change full-pitch space's color ------
 hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue
 match ZenkakuSpace /　/
 
