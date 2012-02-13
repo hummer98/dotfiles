@@ -4,8 +4,8 @@ DOT_FILES=( .bazaar .gitconfig .gitignore_global .gvimrc .vim .vimrc .tmux.conf 
 
 for file in ${DOT_FILES[@]}
 do
-  if [ -L $HOME/$file ]; then
-    echo "シンボリックリンクが存在します: $file"
+  if [ -a $HOME/$file ]; then
+    echo "既にファイルかディレクトリかシンボリックリンクが存在します: $file"
   else
     ln -s $HOME/dotfiles/$file $HOME/$file
     echo "シンボリックリンクを張りました: $file"
