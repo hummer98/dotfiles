@@ -50,18 +50,6 @@ endif
 " let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 
-" for zen-coding -----------------------
-" use zen-coding c-e
-let g:user_zen_expandabbr_key = '<c-e>'
-let g:user_zen_settings = {'indentation': '  '}
-
-" for NERDCommenter --------------------
-" use NERDCommenterToggle c--
-let g:NERDCreateDefaultMappings = 0
-let NERDSpaceDelims = 1
-nmap <c-_> <Plug>NERDCommenterToggle
-vmap <c-_> <Plug>NERDCommenterToggle
-
 " for unite.vim ------------------------
 let g:unite_update_time = 1000
 call unite#set_substitute_pattern('file', '\$\w\+', '\=eval(submatch(0))', 200)
@@ -104,6 +92,18 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
 " for operator-replace
 nmap R <Plug>(operator-replace)
+
+" for zen-coding -----------------------
+" use zen-coding c-e
+let g:user_zen_expandabbr_key = '<c-e>'
+let g:user_zen_settings = {'indentation': '  '}
+
+" for NERDCommenter --------------------
+" use NERDCommenterToggle c--
+let g:NERDCreateDefaultMappings = 0
+let NERDSpaceDelims = 1
+nmap <c-_> <Plug>NERDCommenterToggle
+vmap <c-_> <Plug>NERDCommenterToggle
 
 " for Twitter
 " let twitvim_login_b64 = "eXV6dWVtb246dmFsa3lyaWUNCg=="
