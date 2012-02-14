@@ -90,7 +90,6 @@ autocmd FocusLost   * :echo "Unactive"
 " Clipboard ----------------------------
 if has('clipboard')
   set clipboard+=autoselect
-  " set clipboard+=unnamed,autoselect
 endif
 
 " StatusLine ---------------------------
@@ -103,7 +102,7 @@ set encoding=utf-8
 set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp
 set ffs=unix,dos,mac                    " LF, CRLF, CR
 if exists('&ambiwidth')
-    set ambiwidth=double                " UTF-8の□や○でカーソル位置がずれないようにす
+  set ambiwidth=double                " UTF-8の□や○でカーソル位置がずれないようにす
 endif
 
 
