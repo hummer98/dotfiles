@@ -1,13 +1,13 @@
+if filereadable(expand('$HOME/dotfiles/.vimrc.filetype'))
+  source $HOME/dotfiles/.vimrc.filetype
+endif
+
 " for Plugin ---------------------------
 if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
   source $HOME/dotfiles/.vimrc.neobundle
 
   if filereadable(expand('$HOME/dotfiles/.vimrc.plugin'))
     source $HOME/dotfiles/.vimrc.plugin
-  endif
-
-  if filereadable(expand('$HOME/dotfiles/.vimrc.filetype'))
-    source $HOME/dotfiles/.vimrc.filetype
   endif
 endif
 
@@ -217,4 +217,3 @@ endfunction
 "else
 "    setup for non-diff mode
 "endif
-
