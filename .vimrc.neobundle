@@ -25,8 +25,9 @@ NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/mattn/mkdpreview-vim.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
-NeoBundle 'git://github.com/taku-o/vim-catn.git'
+NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
 NeoBundle 'git://github.com/Sixeight/unite-grep.vim.git'
+NeoBundle 'git://github.com/taku-o/vim-catn.git'
 " NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 
 " Get from vim-scripts repository
