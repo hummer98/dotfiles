@@ -109,6 +109,7 @@ alias vim='vi'
 alias gvi='gvim'
 alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
 alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
+alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor'
 
 alias expdiff='bzr cdiff | iconv -f cp932'
 
