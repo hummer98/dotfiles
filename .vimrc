@@ -116,6 +116,7 @@ endif
 nnoremap <Leader>.   :<C-u>edit $MYVIMRC<Enter>
 nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
 nnoremap <C-h>      :<C-u>help<Space>
+map <C-e> <ESC>
 
 
 " When insert mode, enable hjkl and enable go to home/end

@@ -100,7 +100,7 @@ nmap R <Plug>(operator-replace)
 
 " for zen-coding -----------------------
 " use zen-coding c-e
-let g:user_zen_expandabbr_key = '<c-e>'
+let g:user_zen_expandabbr_key = '<c-z>'
 let g:user_zen_settings = {'indentation': '  '}
 
 " for NERDCommenter --------------------
