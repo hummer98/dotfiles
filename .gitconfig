@@ -11,3 +11,5 @@
   trustExitCode = true
 [color]
   diff = auto
+[alias]
+	co = checkout
