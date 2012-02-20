@@ -115,7 +115,7 @@ endif
 " edit .vimrc
 nnoremap <Leader>.   :<C-u>edit $MYVIMRC<Enter>
 nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
-nnoremap <C-h>      :<C-u>help<Space>
+nnoremap <C-h>       :<C-u>help<Space>
 map <C-e> <ESC>
 
 
@@ -127,6 +127,11 @@ imap <C-h> <BackSpace>
 " imap <C-j> <Down>
 " imap <C-k> <Up>
 " imap <C-l> <Right>
+
+" Set toggle setting
+nnoremap <Leader>1 :<C-u>set number!<CR>
+nnoremap <Leader>2 :<C-u>set relativenumber!<CR>
+nnoremap <Leader>3 :<C-u>set paste!<CR>
 
 " auto insert --------------------------
 " date, time, current directory
