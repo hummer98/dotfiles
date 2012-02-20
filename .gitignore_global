@@ -1,2 +1,8 @@
 *~
+*.a
+*.dat
+*.o
+*.py[co]
+*.so
+*.sw[nop]
 .DS_Store
