@@ -1,17 +1,3 @@
-" for Template -------------------------
-if filereadable(expand('$HOME/dotfiles/.vimrc.filetype'))
-  source $HOME/dotfiles/.vimrc.filetype
-endif
-
-" for Plugin ---------------------------
-if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
-  source $HOME/dotfiles/.vimrc.neobundle
-
-  if filereadable(expand('$HOME/dotfiles/.vimrc.plugin'))
-    source $HOME/dotfiles/.vimrc.plugin
-  endif
-endif
-
 " Common -------------------------------
 autocmd!
 set nocompatible                        " vim
@@ -22,6 +8,20 @@ if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
 endif
 color metroid
 set background=light
+
+" for Plugin ---------------------------
+if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
+  source $HOME/dotfiles/.vimrc.neobundle
+
+  if filereadable(expand('$HOME/dotfiles/.vimrc.plugin'))
+    source $HOME/dotfiles/.vimrc.plugin
+  endif
+endif
+
+" for Template -------------------------
+if filereadable(expand('$HOME/dotfiles/.vimrc.filetype'))
+  source $HOME/dotfiles/.vimrc.filetype
+endif
 
 " File ---------------------------------
 set autoread                            " 更新時自動再読込み
