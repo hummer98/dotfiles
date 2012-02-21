@@ -1,3 +1,4 @@
+" for Template -------------------------
 if filereadable(expand('$HOME/dotfiles/.vimrc.filetype'))
   source $HOME/dotfiles/.vimrc.filetype
 endif

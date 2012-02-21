@@ -14,19 +14,19 @@ function! s:coding_style_complete(...) "{{{
 endfunction "}}}
 
 " for HTML -----------------------------
-autocmd BufNewFile *.html 0r $HOME/dotfiles/.vim/template/html.txt
+autocmd BufNewFile *.html 0r $HOME/.vim/template/html.txt
 
 " for JavaScript -----------------------
-autocmd BufNewFile *.js 0r $HOME/dotfiles/.vim/template/javascript.txt
+autocmd BufNewFile *.js 0r $HOME/.vim/template/javascript.txt
 autocmd Filetype javascript setl autoindent
 autocmd FileType javascript setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
 autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for StyleSheet -----------------------
-autocmd BufNewFile *.css 0r $HOME/dotfiles/.vim/template/stylesheet.txt
+autocmd BufNewFile *.css 0r $HOME/.vim/template/stylesheet.txt
 
 " for Python ---------------------------
-autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/python.txt
+autocmd BufNewFile *.py 0r $HOME/.vim/template/python.txt
 autocmd Filetype python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
@@ -37,7 +37,7 @@ autocmd FileType ruby setl smartindent cinwords=if,elsif,else,for,while,try,exce
 autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for Perl -----------------------------
-autocmd BufNewFile *.pl 0r $HOME/dotfiles/.vim/template/perl.txt
+autocmd BufNewFile *.pl 0r $HOME/.vim/template/perl.txt
 autocmd Filetype perl setl autoindent
 autocmd FileType perl setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
 autocmd FileType perl setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
@@ -48,4 +48,4 @@ autocmd FileType yaml setl smartindent
 autocmd FileType yaml setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for Jive -----------------------------
-au BufRead,BufNewFile *.htme setfiletype c
+autocmd BufRead,BufNewFile *.htme setfiletype c
