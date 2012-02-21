@@ -1,12 +1,12 @@
 # common -------------------------------
-export LANG=ja_JP.UTF-8                 # ニッポン！
+export LANG=ja_JP.UTF-8
 
-autoload -U compinit                    # 強力な補完機能らしく、これがないとzsh使っていると言えないのだとか
+autoload -U compinit                    # 強力な補完機能
 compinit
 
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim          # vim最強伝説
-# bindkey -v                              # vim(ry
-bindkey -e                              # emacs(ry
+export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+# bindkey -v                              # vim
+bindkey -e                              # emacs
 
 # color
 autoload colors                         # カラーセット
@@ -109,7 +109,7 @@ alias vim='vi'
 alias gvi='gvim'
 alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
 alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
-alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor'
+alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
 
 alias expdiff='bzr cdiff | iconv -f cp932'
 
