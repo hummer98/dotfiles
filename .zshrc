@@ -102,6 +102,9 @@ linux*)
   ;;
 esac
 
+# add PATH
+PATH=$HOME/bin:$PATH
+
 alias sl='sl -ae'
 
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
