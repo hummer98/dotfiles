@@ -11,6 +11,8 @@ This repository is my dotfiles.
 * tmux
 * Zsh
 
+except ~/bin
+
 ## How to Setup
 
 1. git clone git@github.com:yuzuemon/dotfiles.git
