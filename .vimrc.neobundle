@@ -10,6 +10,7 @@ if has('vim_starting')
   call neobundle#rc(expand('$HOME/dotfiles/.vim/neobundle'))
 endif
 
+" from github
 NeoBundle 'git://github.com/Shougo/echodoc.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache-snippets-complete.git'
@@ -28,10 +29,9 @@ NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/h1mesuke/unite-outline.git'
 NeoBundle 'git://github.com/Sixeight/unite-grep.vim.git'
 NeoBundle 'git://github.com/taku-o/vim-catn.git'
-" NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 NeoBundle 'git://github.com/kokukuma/vim-unite-bzr.git'
 
-" Get from vim-scripts repository
+" from vim-scripts repository
 NeoBundle 'The-NERD-Commenter'
 NeoBundle 'surround.vim'
 NeoBundle 'taglist.vim'
