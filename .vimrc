@@ -7,7 +7,6 @@ if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
   colorscheme metroid
 endif
 color metroid
-set background=light
 
 " for Plugin ---------------------------
 if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
@@ -133,6 +132,8 @@ imap <C-h> <BackSpace>
 nnoremap <Leader>1 :<C-u>set number!<CR>
 nnoremap <Leader>2 :<C-u>set relativenumber!<CR>
 nnoremap <Leader>3 :<C-u>set paste!<CR>
+nnoremap <Leader>4 :<C-u>to vsp<CR>
+nnoremap <Leader>5 :<C-u>bo vsp<CR>
 
 " auto insert --------------------------
 " date, time, current directory
