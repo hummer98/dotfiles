@@ -111,7 +111,13 @@ let NERDSpaceDelims = 1
 nmap <c-_> <Plug>NERDCommenterToggle
 vmap <c-_> <Plug>NERDCommenterToggle
 
-" for Twitter
+" for open-browser ---------------------
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
+
+" for Twitter --------------------------
 " let twitvim_login_b64 = "eXV6dWVtb246dmFsa3lyaWUNCg=="
 
 " for textmanip.vim
