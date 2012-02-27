@@ -37,10 +37,10 @@ hi DiffText guibg=DarkGreen ctermfg=Black ctermbg=DarkGreen                     
 hi DiffChange guibg=Gray30 ctermbg=DarkCyan ctermfg=White
 
 " ポップアップメニュー(未整理)
-hi Pmenu ctermbg=DarkMagenta ctermfg=White
-hi PmenuSel ctermbg=Blue ctermfg=Black
-hi PmenuSbar ctermbg=DarkGray
-hi PmenuThumb ctermbg=DarkGray                                                          "
+hi Pmenu ctermbg=Magenta ctermfg=White
+hi PmenuSel cterm=Bold ctermbg=White ctermfg=Magenta
+hi PmenuSbar ctermbg=LightGreen
+hi PmenuThumb ctermbg=White
 
 " その他
 hi LineNr gui=NONE guifg=Green cterm=NONE ctermfg=DarkGreen                             " 行番号
