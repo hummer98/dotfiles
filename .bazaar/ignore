@@ -1,6 +1,5 @@
-*.a
 *.dat
-*.o
+*.[ao]
 *.py[co]
 *.so
 *.sw[nop]
