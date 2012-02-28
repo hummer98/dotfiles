@@ -38,7 +38,7 @@ hi DiffChange guibg=Gray30 ctermbg=DarkCyan ctermfg=White
 
 " ポップアップメニュー(未整理)
 hi Pmenu ctermbg=Magenta ctermfg=White
-hi PmenuSel cterm=Bold ctermbg=White ctermfg=Magenta
+hi PmenuSel ctermbg=Magenta ctermfg=DarkGreen
 hi PmenuSbar ctermbg=LightGreen
 hi PmenuThumb ctermbg=White
 
