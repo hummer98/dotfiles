@@ -111,7 +111,7 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
 " for operator-replace
-nmap R <Plug>(operator-replace)
+nmap _ <Plug>(operator-replace)
 
 " for zen-coding -----------------------
 " use zen-coding c-e
