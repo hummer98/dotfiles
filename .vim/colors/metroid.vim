@@ -32,14 +32,14 @@ hi FoldColumn guibg=DarkGray ctermbg=DarkGray                                   
 
 " diff
 hi DiffAdd guibg=DarkMagenta ctermbg=DarkMagenta                                        " 片側にある行
-hi DiffDelete guifg=Black guibg=LightYellow ctermfg=Black ctermbg=LightYellow           " 片側にない行
+hi DiffDelete guifg=Black guibg=LightYellow ctermfg=Black ctermbg=Yellow                " 片側にない行
 hi DiffText guibg=DarkGreen ctermfg=Black ctermbg=DarkGreen                             " 差異のある箇所
 hi DiffChange guibg=Gray30 ctermbg=DarkCyan ctermfg=White
 
 " ポップアップメニュー(未整理)
-hi Pmenu ctermbg=Magenta ctermfg=White
-hi PmenuSel ctermbg=Magenta ctermfg=DarkGreen
-hi PmenuSbar ctermbg=LightGreen
+hi Pmenu      guifg=White guibg=Magenta ctermfg=White ctermbg=Magenta
+hi PmenuSel   guifg=Magenta guibg=LightGreen ctermbg=Magenta ctermfg=LightGreen
+hi PmenuSbar  ctermbg=LightGreen
 hi PmenuThumb ctermbg=White
 
 " その他
