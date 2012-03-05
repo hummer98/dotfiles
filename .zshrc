@@ -84,10 +84,10 @@ bindkey "^N" history-beginning-search-forward-end
 
 setopt complete_aliases                 # デフォルトのコマンドをベースに補完
 
+alias o='open'
 case "$OSTYPE" in
 # BSD (contains Mac)
 darwin*)
-  alias o='open'
   alias ls='ls -ahGp'
   alias ld='ls -ahGp | grep /'
   alias ll='ls -ahGlp'
