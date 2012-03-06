@@ -14,6 +14,6 @@ do
     fi
   else
     ln -s $HOME/dotfiles/$file $HOME/$file
-    echo "シンボリックリンクを張りました: $file"
+    echo "シンボリックリンクを貼りますた: $file"
   fi
 done
