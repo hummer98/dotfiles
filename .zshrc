@@ -105,7 +105,7 @@ esac
 # add PATH
 PATH=$HOME/bin:$PATH
 export JAVA_HOME=/usr/bin/java
-export HADOOP_HOME=~/hadoop
+export HADOOP_HOME=/usr/local/bin/hadoop
 
 alias sl='sl -ae'
 
