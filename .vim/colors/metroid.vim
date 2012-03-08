@@ -11,7 +11,7 @@ let g:colors_name = "metroid"
 " テキスト
 hi Normal gui=NONE guifg=White guibg=Black                                              " 通常
 hi NonText guifg=LightBlue ctermfg=LightBlue                                            " EOF以降の~など
-hi Comment gui=Italic guifg=LightGreen cterm=Italic ctermfg=Black ctermbg=LightGreen                 " コメント
+hi Comment gui=Italic guifg=DarkGreen cterm=Italic ctermfg=Black ctermbg=DarkGreen                 " コメント
 hi Statement gui=Bold guifg=Magenta cterm=Bold ctermfg=Magenta                            " 命令、分岐
 hi Identifier gui=Bold guifg=Green cterm=Bold ctermfg=Green                             " 関数、識別子
 hi PreProc gui=Bold guifg=Yellow cterm=Bold ctermfg=Yellow                              " プリプロセッサメソッド
