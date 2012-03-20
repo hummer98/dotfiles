@@ -4,7 +4,13 @@ export LANG=ja_JP.UTF-8
 autoload -U compinit                    # 強力な補完機能
 compinit
 
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+case "$OSTYPE" in
+# MacOS
+darwin*)
+  export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+  ;;
+esac
+
 # bindkey -v                              # vim
 bindkey -e                              # emacs
 
@@ -86,7 +92,7 @@ setopt complete_aliases                 # デフォルトのコマンドをベ�
 
 alias o='open'
 case "$OSTYPE" in
-# BSD (contains Mac)
+# BSD (contains MacOS)
 darwin*)
   alias ls='ls -ahGp'
   alias ld='ls -ahGp | grep /'
@@ -109,12 +115,17 @@ export HADOOP_HOME=/usr/local/bin/hadoop
 
 alias sl='sl -ae'
 
-alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+case "$OSTYPE" in
+# MacOS
+darwin*)
+  alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+  alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
+  alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
+  alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
+  ;;
+esac
 alias vim='vi'
 alias gvi='gvim'
-alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
-alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
-alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
 
 alias expdiff='bzr cdiff | iconv -f cp932'
 
