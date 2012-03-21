@@ -26,6 +26,7 @@ NeoBundle 'git://github.com/thinca/vim-ref.git'
 NeoBundle 'git://github.com/thinca/vim-openbuf.git'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'git://github.com/mattn/mkdpreview-vim.git'
+NeoBundle 'git://github.com/mattn/benchvimrc-vim.git'
 NeoBundle 'git://github.com/kana/vim-operator-user.git'
 NeoBundle 'git://github.com/kana/vim-operator-replace.git'
 NeoBundle 'git://github.com/tyru/open-browser.vim.git'
@@ -40,11 +41,9 @@ NeoBundle 'surround.vim'
 NeoBundle 'taglist.vim'
 NeoBundle 'textmanip.vim'
 
-" Web develop
+" for development
 NeoBundle 'html5.vim'
 NeoBundle 'jQuery'
-
-" LL develop
 NeoBundle 'python.vim'
 
 " option
