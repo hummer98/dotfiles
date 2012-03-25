@@ -92,15 +92,19 @@ setopt complete_aliases                 # デフォルトのコマンドをベ�
 
 alias o='open'
 case "$OSTYPE" in
-# BSD (contains MacOS)
-darwin*)
+darwin*)                                # for MacOS
   alias ls='ls -ahGp'
   alias ld='ls -ahGp | grep /'
   alias ll='ls -ahGlp'
   alias lld='ls -ahGlp | grep /'
   ;;
-# for GNU
-linux*)
+freebsd*)                               # for FreeBSD
+  alias ls='ls -ahGp'
+  alias ld='ls -ahGp | grep /'
+  alias ll='ls -ahGlp'
+  alias lld='ls -ahGlp | grep /'
+  ;;
+linux*)                                 # for GNU
   alias ls='ls -ahp --color=auto'
   alias ld='ls -ahp --color=auto | grep /'
   alias ll='ls -ahlp --color=auto'
@@ -116,12 +120,14 @@ export HADOOP_HOME=/usr/local/bin/hadoop
 alias sl='sl -ae'
 
 case "$OSTYPE" in
-# MacOS
 darwin*)
   alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
   alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
   alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
   alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
+  ;;
+freebsd*)
+  alias vi='~/bin/vim'
   ;;
 esac
 alias vim='vi'
