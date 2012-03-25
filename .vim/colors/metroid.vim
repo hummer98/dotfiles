@@ -25,7 +25,7 @@ hi Exception gui=Bold guifg=Yellow cterm=Bold ctermfg=Yellow                    
 " テキスト状態
 hi Visual guibg=Blue ctermbg=Blue                                                       " アクティブ選択範囲
 hi VisualNOS guibg=DarkBlue ctermbg=DarkBlue                                            " 非アクティブな選択範囲
-hi Search gui=Bold guifg=White guibg=Yellow cterm=Bold ctermfg=White ctermbg=Yellow     " 検索文字列
+hi Search gui=Bold guifg=White guibg=Yellow cterm=Bold ctermfg=Black ctermbg=Yellow     " 検索文字列
 hi IncSearch gui=Reverse,Bold cterm=Reverse,Bold                                        " インクリメンタル中の検索文字列
 hi Folded guifg=Green guibg=DarkGray ctermbg=DarkGray                                   " 折りたたまれた行
 hi FoldColumn guibg=DarkGray ctermbg=DarkGray                                           " 折りたたまれた部分
