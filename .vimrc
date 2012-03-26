@@ -126,6 +126,11 @@ imap '' ''<Left>
 imap "" ""<Left>
 imap <> <><Left>
 
+" Replace yank text
+nnoremap <silent>cy ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+vnoremap <silent>cy c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+nnoremap <silent>ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+
 " When insert mode, enable hjkl and enable go to home/end
 imap <C-o> <End>
 imap <C-a> <Home>
