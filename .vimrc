@@ -118,12 +118,19 @@ nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
 nnoremap <C-h>       :<C-u>help<Space>
 map <C-e> <ESC>
 
+" auto left
+imap () ()<Left>
+imap [] []<Left>
+imap {} {}<Left>
+imap '' ''<Left>
+imap "" ""<Left>
+imap <> <><Left>
 
 " When insert mode, enable hjkl and enable go to home/end
 imap <C-o> <End>
 imap <C-a> <Home>
 imap <C-h> <BackSpace>
-" imap <C-h> <LEFT>
+" imap <C-h> <Left>
 " imap <C-j> <Down>
 " imap <C-k> <Up>
 " imap <C-l> <Right>
