@@ -11,15 +11,15 @@ let g:colors_name = "metroid"
 " テキスト
 hi Normal gui=NONE guifg=White guibg=Black                                              " 通常
 hi NonText guifg=LightBlue ctermfg=LightBlue                                            " EOF以降の~など
-hi Comment gui=Italic guifg=DarkGreen cterm=Italic ctermfg=Black ctermbg=DarkGreen                 " コメント
-hi Statement gui=Bold guifg=Magenta cterm=Bold ctermfg=Magenta                            " 命令、分岐
+hi Comment gui=Italic guifg=DarkGreen cterm=Italic ctermfg=Black ctermbg=DarkGreen      " コメント
+hi Statement gui=Bold guifg=Magenta cterm=Bold ctermfg=Magenta                          " 命令、分岐
 hi Identifier gui=Bold guifg=Green cterm=Bold ctermfg=Green                             " 関数、識別子
 hi PreProc gui=Bold guifg=Yellow cterm=Bold ctermfg=Yellow                              " プリプロセッサメソッド
 hi Type gui=Bold guifg=Cyan cterm=Bold ctermfg=Cyan                                     " 型(クラス、構造体)
 hi Constant gui=Bold guifg=LightBlue cterm=Bold ctermfg=LightBlue                       " 定数(文字列、文字、数、Boolean)
 hi Special gui=Bold guifg=LightBlue cterm=Bold ctermfg=LightBlue                        " 特殊記号
-hi Conditional gui=Bold guifg=Yellow cterm=Bold ctermfg=Yellow                          " if, not
-hi Repeat gui=Bold guifg=Yellow cterm=Bold ctermfg=Yellow                               " for
+hi Conditional gui=Bold guifg=Magenta cterm=Bold ctermfg=Magenta                        " if, not
+hi Repeat gui=Bold guifg=Magenta cterm=Bold ctermfg=Magenta                             " for
 hi Exception gui=Bold guifg=Yellow cterm=Bold ctermfg=Yellow                            " try
 
 " テキスト状態

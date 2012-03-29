@@ -121,7 +121,6 @@ map <C-e> <ESC>
 " auto left
 imap () ()<Left>
 imap [] []<Left>
-imap {} {}<Left>
 imap '' ''<Left>
 imap "" ""<Left>
 imap <> <><Left>
