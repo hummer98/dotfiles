@@ -77,9 +77,6 @@ call unite#set_substitute_pattern('file', '^\\', '~/*')
 
 call unite#set_substitute_pattern('file', '^;v', '~/.vim/*')
 call unite#set_substitute_pattern('file', '^;r', '\=$VIMRUNTIME."/*"')
-if has('win32') || has('win64')
-  call unite#set_substitute_pattern('file', '^;p', 'C:/Program Files/*')
-endif
 call unite#set_substitute_pattern('file', '\*\*\+', '*', -1)
 call unite#set_substitute_pattern('file', '^\~', escape($HOME, '\'), -2)
 call unite#set_substitute_pattern('file', '\\\@<! ', '\\ ', -20)
