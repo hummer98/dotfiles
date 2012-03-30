@@ -36,7 +36,6 @@ NeoBundle 'git://github.com/kokukuma/vim-unite-bzr.git'
 " from vim-scripts repository
 NeoBundle 'The-NERD-Commenter'
 NeoBundle 'surround.vim'
-NeoBundle 'taglist.vim'
 NeoBundle 'textmanip.vim'
 
 " for development
