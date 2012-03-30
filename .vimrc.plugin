@@ -91,6 +91,7 @@ let g:unite_enable_start_insert=1
 " unite mapping
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 nnoremap <silent> ,uc :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,uo :<C-u>Unite outline<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
 nnoremap <silent> ,ut :<C-u>Unite tab<CR>
@@ -119,6 +120,9 @@ nmap _ <Plug>(operator-replace)
 " use zen-coding c-e
 let g:user_zen_expandabbr_key = '<c-z>'
 let g:user_zen_settings = {'indentation': '  '}
+
+" for taglist --------------------------
+let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function'
 
 " for NERDCommenter --------------------
 " use NERDCommenterToggle c--
