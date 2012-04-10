@@ -30,7 +30,7 @@ case ${UID} in
     PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
   ;;
 *)
-  PROMPT="%B%{${fg[green]}%}%/ %%%{${reset_color}%} "
+  PROMPT="%B%{${fg[green]}%}%/ %%%{${reset_color}%}%b "
   # PROMPT="%B%n@%m:%(5~,%-2~/.../%2~,%~)%# "
   PROMPT2="%B%{${fg[red]}%}%_ %%%{${reset_color}%} "
   SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
