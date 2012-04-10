@@ -30,8 +30,10 @@ case ${UID} in
     PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
   ;;
 *)
-  PROMPT="%B%{${fg[green]}%}%/ %%%{${reset_color}%}%b "
+  # PROMPT="%B%{${fg[green]}%}%/ %%%{${reset_color}%}%b "
+  # PROMPT="%B%{${fg[green]}%}%n %~ %%%{${reset_color}%}%b "
   # PROMPT="%B%n@%m:%(5~,%-2~/.../%2~,%~)%# "
+  PROMPT="%B%{${fg[green]}%} %~ %%%{${reset_color}%}%b "
   PROMPT2="%B%{${fg[red]}%}%_ %%%{${reset_color}%}%b "
   SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
