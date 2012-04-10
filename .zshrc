@@ -32,10 +32,10 @@ case ${UID} in
 *)
   PROMPT="%B%{${fg[green]}%}%/ %%%{${reset_color}%}%b "
   # PROMPT="%B%n@%m:%(5~,%-2~/.../%2~,%~)%# "
-  PROMPT2="%B%{${fg[red]}%}%_ %%%{${reset_color}%} "
-  SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
+  PROMPT2="%B%{${fg[red]}%}%_ %%%{${reset_color}%}%b "
+  SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-    PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
+    PROMPT="%B%{${fg[white]}%}${HOST%%.*} ${PROMPT}%b"
   ;;
 esac
 
