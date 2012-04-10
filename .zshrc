@@ -31,6 +31,7 @@ case ${UID} in
   ;;
 *)
   PROMPT="%B%{${fg[green]}%}%/ %%%{${reset_color}%} "
+  # PROMPT="%B%n@%m:%(5~,%-2~/.../%2~,%~)%# "
   PROMPT2="%B%{${fg[red]}%}%_ %%%{${reset_color}%} "
   SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
@@ -41,7 +42,7 @@ esac
 RPROMPT="%T"                            # 時刻表示
 setopt transient_rprompt                # 右まできたら、時刻非表示
 
-setopt prompt_subst                     # 便利らしい
+setopt prompt_subst                     # 便利
 # setopt correct # うざい
 
 
