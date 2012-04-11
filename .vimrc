@@ -29,7 +29,7 @@ set noswapfile                          " スワップファイルを作らな�
 set nobackup                            " バックアップを取らない
 set noreadonly                          " リードオンリーにしない
 autocmd BufWritePre * :%s/\s\+$//ge     " 保存時に行末の空白を除去する
-" autocmd BufWritePre * :%s/\t/  /ge     " 保存時にtabをスペース2つに変換する
+" autocmd BufWritePre * :%s/\t/  /ge      " 保存時にtabをスペース2つに変換する
 syntax on                               " シンタックスカラーリングオン
 
 " Indent -------------------------------
@@ -39,6 +39,7 @@ syntax on                               " シンタックスカラーリング�
 set expandtab                           " tabをスペースに変換
 " set tabstop=4 shiftwidth=4 softtabstop=0
 set tabstop=2 shiftwidth=2 softtabstop=0
+" set textwidth=78                        " 自動改行する文字位置
 set autoindent smartindent              " 自動インデント，スマートインデント
 set backspace=indent,eol,start          " バックスペースで特殊記号も削除可能に
 
@@ -116,8 +117,10 @@ endif
 nnoremap <Leader>.   :<C-u>edit $MYVIMRC<Enter>
 nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
 nnoremap <C-h>       :<C-u>help<Space>
-map <C-e> <ESC>
-imap <C-e> <ESC>
+
+" <C-e>
+nnoremap <C-e> <ESC>
+inoremap <C-e> <ESC>
 
 " auto left
 imap () ()<Left>
