@@ -44,7 +44,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # RPROMPT="%T"                            # 時刻表示
 setopt transient_rprompt                # 右まできたら、時刻非表示
 
-setopt prompt_subst                     # 便利
+setopt prompt_subst                     # 補完候補自動選択
 # setopt correct # うざい
 
 
