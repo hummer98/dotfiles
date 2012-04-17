@@ -21,27 +21,27 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # prompt
 # PROMPT="[@${HOST%%.*} %1~]%(!.#.$)"   # 表示フォーマット
-case ${UID} in
-0)
-  PROMPT="%B%{${fg[red]}%}%/#%{${reset_color}%}%b "
-  PROMPT2="%B%{${fg[red]}%}%_#%{${reset_color}%}%b "
-  SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
-  [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-    PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
-  ;;
-*)
-  # PROMPT="%B%{${fg[green]}%}%/ %%%{${reset_color}%}%b "
-  # PROMPT="%B%{${fg[green]}%}%n %~ %%%{${reset_color}%}%b "
-  # PROMPT="%B%n@%m:%(5~,%-2~/.../%2~,%~)%# "
-  PROMPT="%B%{${fg[green]}%}%~ %%%{${reset_color}%}%b "
-  PROMPT2="%B%{${fg[red]}%}%_ %%%{${reset_color}%}%b "
-  SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
-  [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-    PROMPT="%B%{${fg[white]}%}${HOST%%.*} ${PROMPT}%b"
-  ;;
-esac
+# case ${UID} in
+# 0)
+  # PROMPT="%B%{${fg[red]}%}%/#%{${reset_color}%}%b "
+  # PROMPT2="%B%{${fg[red]}%}%_#%{${reset_color}%}%b "
+  # SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
+  # [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
+    # PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
+  # ;;
+# *)
+  # # PROMPT="%B%{${fg[green]}%}%/ %%%{${reset_color}%}%b "
+  # # PROMPT="%B%{${fg[green]}%}%n %~ %%%{${reset_color}%}%b "
+  # # PROMPT="%B%n@%m:%(5~,%-2~/.../%2~,%~)%# "
+  # PROMPT="%B%{${fg[green]}%}%~ %%%{${reset_color}%}%b "
+  # PROMPT2="%B%{${fg[red]}%}%_ %%%{${reset_color}%}%b "
+  # SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
+  # [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
+    # PROMPT="%B%{${fg[white]}%}${HOST%%.*} ${PROMPT}%b"
+  # ;;
+# esac
 
-RPROMPT="%T"                            # 時刻表示
+# RPROMPT="%T"                            # 時刻表示
 setopt transient_rprompt                # 右まできたら、時刻非表示
 
 setopt prompt_subst                     # 便利
