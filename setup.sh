@@ -20,7 +20,7 @@ done
 
 # for oh-my-zsh
 if [ -d $HOME/.oh-my-zsh ]; then
-  ln -s $HOME/dotfiles/.oh-my-zsh/.zshrc.zsh $HOME/.zshrc.zsh
+  ln -s $HOME/dotfiles/.oh-my-zsh/.zshrc.zsh $HOME/.zshrc
   ln -s $HOME/dotfiles/.oh-my-zsh/custom_zshrc.zsh $HOME/.oh-my-zsh/custom/custom_zshrc.zsh
   ln -s $HOME/dotfiles/.oh-my-zsh/metroid.zsh-theme $HOME/.oh-my-zsh/themes/metroid.zsh-theme
   echo "シンボリックリンクを貼りますた"

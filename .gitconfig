@@ -1,14 +1,14 @@
 [user]
-  name = yuzuemon
-  email = killerqueen64@gmail.com
+	name = yuzuemon
+	email = killerqueen64@gmail.com
 [core]
-  excludesfile = /Users/yuzuru.nakamura/.gitignore_global
+	excludesfile = /Users/metroid/.gitignore_global
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [color]
   diff = auto
 [alias]

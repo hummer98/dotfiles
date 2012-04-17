@@ -19,9 +19,9 @@ autoload colors                         # カラーセット
 colors
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
-# setopt transient_rprompt                # 右まできたら、時刻非表示
+setopt transient_rprompt                # 右まできたら、時刻非表示
 
-setopt prompt_subst                     # 便利
+setopt prompt_subst                     # 候補自動補完
 # setopt correct # うざい
 unsetopt correct_all
 
@@ -47,7 +47,6 @@ setopt list_packed                      # リストを詰めて表示
 setopt list_types                       # 補完一覧ファイル種別表示
 setopt nolistbeep                       # 補完候補表示時のビープ音無効
 setopt noautoremoveslash                # 末尾の/の自動削除機能無効
-# autoload predict-on                   # auto fill (※ 強力過ぎる)
 # predict-on
 
 
