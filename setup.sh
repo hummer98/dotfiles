@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOT_FILES=( .bazaar .gitconfig .gitignore_global .gvimrc .vim .vimrc .tmux.conf .zshrc )
+DOT_FILES=( .bazaar .gitconfig .gitignore_global .gvimrc .vim .vimrc .tmux.conf )
 
 for file in ${DOT_FILES[@]}
 do
@@ -17,3 +17,13 @@ do
     echo "シンボリックリンクを貼りますた: $file"
   fi
 done
+
+# for oh-my-zsh
+if [ -d $HOME/.oh-my-zsh ]; then
+  ln -S $HOME/dotfiles/.oh-my-zsh/.zshrc.zsh $HOME/$file
+  ln -S $HOME/dotfiles/.oh-my-zsh/custom_zshrc.zsh $HOME/.oh-my-zsh/custom/$file
+  ln -S $HOME/dotfiles/.oh-my-zsh/metroid.zsh-theme $HOME/.oh-my-zsh/themes/$file
+  echo "シンボリックリンクを貼りますた: $file"
+else
+  echo "No directory! $HOME/.oh-my-zsh \n git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh"
+fi
