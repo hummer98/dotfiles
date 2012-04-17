@@ -41,9 +41,7 @@ case ${UID} in
 ;;
 esac
 
-
 RPROMPT="%T"                            # 時刻表示
-
 
 setopt transient_rprompt                # 右まできたら、時刻非表示
 setopt prompt_subst                     # 候補自動補完
@@ -126,13 +124,17 @@ darwin*)
   alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
   alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
   alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
+  alias vim='vi'
+  alias gvi='gvim'
   ;;
 freebsd*)
   alias vi='~/bin/vim'
+  alias vim='vi'
+  ;;
+linux*)                                 # for GNU
+  alias vi='vim'
   ;;
 esac
-alias vim='vi'
-alias gvi='gvim'
 
 alias expdiff='bzr cdiff | iconv -f cp932'
 
