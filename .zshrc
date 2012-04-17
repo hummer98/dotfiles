@@ -112,7 +112,6 @@ linux*)                                 # for GNU
 esac
 
 # add PATH
-PATH=$HOME/bin:$PATH
 export JAVA_HOME=/usr/bin/java
 export HADOOP_HOME=/usr/local/bin/hadoop
 
@@ -132,7 +131,16 @@ freebsd*)
   alias vim='vi'
   ;;
 linux*)                                 # for GNU
-  alias vi='vim'
+  case "$USER" in
+  metroid)
+    alias vi='vim'
+    alias vim='vi'
+    ;;
+  *)
+    alias vi='~/bin/vim'
+    alias vim='vi'
+    ;;
+  esac
   ;;
 esac
 
@@ -140,4 +148,3 @@ alias expdiff='bzr cdiff | iconv -f cp932'
 
 # if .zshrc.mine is find, that readed for source.
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
-
