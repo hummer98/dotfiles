@@ -57,7 +57,7 @@ kterm*|xterm)
   precmd() {
     echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
   }
-  ;;
+;;
 esac
 
 
@@ -96,19 +96,19 @@ darwin*)                                # for MacOS
   alias ld='ls -ahGp | grep /'
   alias ll='ls -ahGlp'
   alias lld='ls -ahGlp | grep /'
-  ;;
+;;
 freebsd*)                               # for FreeBSD
   alias ls='ls -ahGp'
   alias ld='ls -ahGp | grep /'
   alias ll='ls -ahGlp'
   alias lld='ls -ahGlp | grep /'
-  ;;
+;;
 linux*)                                 # for GNU
   alias ls='ls -ahp --color=auto'
   alias ld='ls -ahp --color=auto | grep /'
   alias ll='ls -ahlp --color=auto'
   alias lld='ls -ahlp --color=auto | grep /'
-  ;;
+;;
 esac
 
 # add PATH
@@ -125,23 +125,21 @@ darwin*)
   alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
   alias vim='vi'
   alias gvi='gvim'
-  ;;
+;;
 freebsd*)
-  alias vi='~/bin/vim'
+  alias vi='~/bin/vim'                  # さくらのレンタルサーバ
   alias vim='vi'
-  ;;
-linux*)                                 # for GNU
+;;
+linux*)
   case "$USER" in
-  metroid)
-    alias vi='vim'
-    alias vim='vi'
-    ;;
+  metroid*)
+    alias vi='/usr/bin/vim'             # さくらのVPS
+  ;;
   *)
     alias vi='~/bin/vim'
-    alias vim='vi'
-    ;;
-  esac
   ;;
+  esac
+;;
 esac
 
 alias expdiff='bzr cdiff | iconv -f cp932'
