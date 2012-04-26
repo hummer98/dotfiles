@@ -136,7 +136,7 @@ linux*)
     alias vi='/usr/bin/vim'             # さくらのVPS
   ;;
   *)
-    alias vi='~/bin/vim'
+    alias vi='~/local/bin/vim'          #
   ;;
   esac
 ;;
