@@ -123,12 +123,10 @@ darwin*)
   alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
   alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
   alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
-  alias vim='vi'
   alias gvi='gvim'
 ;;
 freebsd*)
   alias vi='~/bin/vim'                  # さくらのレンタルサーバ
-  alias vim='vi'
 ;;
 linux*)
   case "$USER" in
@@ -142,6 +140,7 @@ linux*)
 ;;
 esac
 
+alias vim='vi'
 alias expdiff='bzr cdiff | iconv -f cp932'
 
 # if .zshrc.mine is find, that readed for source.
