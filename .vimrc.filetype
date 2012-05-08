@@ -23,7 +23,7 @@ autocmd BufNewFile *.html 0r $HOME/.vim/template/html.txt
 autocmd BufNewFile *.js 0r $HOME/.vim/template/javascript.txt
 autocmd Filetype javascript setl autoindent
 autocmd FileType javascript setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
-autocmd FileType javascript setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
+autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for StyleSheet -----------------------
 autocmd BufNewFile *.css 0r $HOME/.vim/template/stylesheet.txt
