@@ -112,6 +112,7 @@ linux*)                                 # for GNU
 esac
 
 # add PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export JAVA_HOME=/usr/bin/java
 export HADOOP_HOME=/usr/local/bin/hadoop
 
