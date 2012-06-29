@@ -112,7 +112,10 @@ linux*)                                 # for GNU
 esac
 
 # add PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+case "$OSTYPE" in
+darwin*)
+  export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
+::
 export JAVA_HOME=/usr/bin/java
 export HADOOP_HOME=/usr/local/bin/hadoop
 
