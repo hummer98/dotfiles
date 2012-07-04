@@ -1,5 +1,4 @@
 filetype plugin on
-from google.appengine.ext.api import urlfetch
 let s:coding_styles = {}
 let s:coding_styles['MDC'] = 'set expandtab tabstop=2 shiftwidth=2 softtabstop&'
 let s:coding_styles['defacto'] = 'set noexpandtab tabstop=4 shiftwidth=4 softtabstop&'
