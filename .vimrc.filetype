@@ -1,4 +1,5 @@
 filetype plugin on
+from google.appengine.ext.api import urlfetch
 let s:coding_styles = {}
 let s:coding_styles['MDC'] = 'set expandtab tabstop=2 shiftwidth=2 softtabstop&'
 let s:coding_styles['defacto'] = 'set noexpandtab tabstop=4 shiftwidth=4 softtabstop&'
@@ -32,7 +33,7 @@ autocmd BufNewFile *.css 0r $HOME/.vim/template/stylesheet.txt
 autocmd BufNewFile *.py 0r $HOME/.vim/template/python.txt
 autocmd Filetype python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+autocmd FileType python setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
 
 " for Ruby -----------------------------
 autocmd Filetype ruby setl autoindent
