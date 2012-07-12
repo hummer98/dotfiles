@@ -113,39 +113,39 @@ esac
 
 # add PATH
 case "$OSTYPE" in
-darwin*)
-  export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
-::
+  darwin*)
+    export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
+  ;;
+esac
 export JAVA_HOME=/usr/bin/java
 export HADOOP_HOME=/usr/local/bin/hadoop
 
-alias sl='sl -ae'
 
+# add alias
 case "$OSTYPE" in
-darwin*)
-  alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-  alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
-  alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
-  alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
-  alias gvi='gvim'
-;;
-freebsd*)
-  alias vi='~/bin/vim'                  # さくらのレンタルサーバ
-;;
-linux*)
-  case "$USER" in
-  metroid*)
-    alias vi='/usr/bin/vim'             # さくらのVPS
+  darwin*)
+    alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
+    alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
+    alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
+    alias gvi='gvim'
   ;;
-  *)
-    alias vi='~/local/bin/vim'          #
+  freebsd*) # さくらのレンタルサーバ
+    alias vi='~/bin/vim'
   ;;
-  esac
-;;
+  linux*)
+    case "$USER" in
+      metroid*) # さくらのVPS
+        alias vi='/usr/bin/vim'
+      ;;
+      *) #
+        alias vi='~/local/bin/vim'
+      ;;
+    esac
+  ;;
 esac
 
 alias vim='vi'
+alias sl='sl -ae'
 alias expdiff='bzr cdiff | iconv -f cp932'
 
-# if .zshrc.mine is find, that readed for source.
-[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
