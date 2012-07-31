@@ -4,13 +4,6 @@ export LANG=ja_JP.UTF-8
 autoload -U compinit                    # 強力な補完機能
 compinit
 
-case "$OSTYPE" in
-# MacOS
-darwin*)
-  export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-  ;;
-esac
-
 # bindkey -v                              # vim
 bindkey -e                              # emacs
 
@@ -47,7 +40,7 @@ setopt transient_rprompt                # 右まできたら、時刻非表示
 setopt prompt_subst                     # 候補自動補完
 
 # cd
-setopt auto_cd                          # 自動的にcd
+setopt auto_cd                          # ディレクトリ名実行で自動的にcd
 setopt auto_pushd                       # cd履歴表示
 setopt pushd_ignore_dups                # 同じディレクトリを履歴に追加しない
 
@@ -89,7 +82,6 @@ bindkey "^N" history-beginning-search-forward-end
 
 setopt complete_aliases                 # デフォルトのコマンドをベースに補完
 
-alias o='open'
 case "$OSTYPE" in
 darwin*)                                # for MacOS
   alias ls='ls -ahGp'
@@ -114,7 +106,7 @@ esac
 # add PATH
 case "$OSTYPE" in
   darwin*)
-    export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11/bin
+    export PATH=$HOME/bin:/usr/local/bin:$PATH
   ;;
 esac
 export JAVA_HOME=/usr/bin/java
@@ -124,6 +116,7 @@ export HADOOP_HOME=/usr/local/bin/hadoop
 # add alias
 case "$OSTYPE" in
   darwin*)
+    export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
     alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
     alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
@@ -145,6 +138,7 @@ case "$OSTYPE" in
   ;;
 esac
 
+alias o='open'
 alias vim='vi'
 alias sl='sl -ae'
 alias expdiff='bzr cdiff | iconv -f cp932'
