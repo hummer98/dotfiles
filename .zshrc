@@ -131,9 +131,6 @@ case "$OSTYPE" in
       metroid*) # さくらのVPS
         alias vi='/usr/bin/vim'
       ;;
-      bkapps) #
-        alias vi='~/local/bin/vim'
-      ;;
     esac
   ;;
 esac
