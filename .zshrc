@@ -136,7 +136,6 @@ case "$OSTYPE" in
 esac
 
 alias o='open'
-alias vim='vi'
 alias sl='sl -ae'
 alias expdiff='bzr cdiff | iconv -f cp932'
 
