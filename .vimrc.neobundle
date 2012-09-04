@@ -47,8 +47,5 @@ NeoBundle 'jQuery'
 " option
 NeoBundle 'TwitVim'
 
-" neta
-" NeoBundle 'git://github.com/koron/u-nya-vim.git'
-
 filetype plugin on
 filetype indent on
