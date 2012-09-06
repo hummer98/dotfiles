@@ -42,7 +42,8 @@ NeoBundle 'surround.vim'
 " for development
 NeoBundle 'html5.vim'
 NeoBundle 'jQuery'
-"NeoBundle 'python.vim'
+" NeoBundle 'python.vim'
+NeoBundle 'perldoc'
 
 " option
 NeoBundle 'TwitVim'
