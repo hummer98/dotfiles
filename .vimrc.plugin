@@ -134,11 +134,17 @@ let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
+" for jump2pm.vim ----------------------
+" au FileType perl :setlocal path+=追加したいパス
+noremap fg :call Search_pm('vne')<ENTER>
+noremap ff :call Search_pm('e')<ENTER>
+noremap fd :call Search_pm('sp')<ENTER>
+noremap ft :call Search_pm('tabe')<ENTER>
 
 " for Twitter --------------------------
 " let twitvim_login_b64 = "eXV6dWVtb246dmFsa3lyaWUNCg=="
 
-" for textmanip.vim
+" for textmanip.vim --------------------
 vmap <C-j> <Plug>(Textmanip.move_selection_down)
 vmap <C-k> <Plug>(Textmanip.move_selection_up)
 vmap <C-h> <Plug>(Textmanip.move_selection_left)

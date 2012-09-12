@@ -43,6 +43,7 @@ NeoBundle 'surround.vim'
 NeoBundle 'html5.vim'
 NeoBundle 'jQuery'
 " NeoBundle 'python.vim'
+NeoBundle 'git://github.com/nakatakeshi/jump2pm.vim.git'
 
 " option
 NeoBundle 'TwitVim'
