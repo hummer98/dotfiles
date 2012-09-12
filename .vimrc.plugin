@@ -136,10 +136,10 @@ vmap gx <Plug>(openbrowser-smart-search)
 
 " for jump2pm.vim ----------------------
 " au FileType perl :setlocal path+=追加したいパス
-noremap fg :call Search_pm('vne')<ENTER>
-noremap ff :call Search_pm('e')<ENTER>
-noremap fd :call Search_pm('sp')<ENTER>
-noremap ft :call Search_pm('tabe')<ENTER>
+noremap fg :call Search_pm('vne')<CR>
+noremap ff :call Search_pm('e')<CR>
+noremap fd :call Search_pm('sp')<CR>
+noremap ft :call Search_pm('tabe')<CR>
 
 " for Twitter --------------------------
 " let twitvim_login_b64 = "eXV6dWVtb246dmFsa3lyaWUNCg=="
