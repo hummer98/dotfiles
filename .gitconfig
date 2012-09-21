@@ -2,8 +2,7 @@
 	name = yuzuemon
 	email = killerqueen64@gmail.com
 [core]
-	excludesfile = /Users/yuzuru.nakamura/.gitignore_global
-	editor = /Applications/MacVim.app/Contents/MacOS/Vim
+	excludesfile = $HOME/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
