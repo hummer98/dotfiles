@@ -132,6 +132,7 @@ imap <> <><Left>
 " Replace the keymap of insert mode(for overlaps with tmux)
 imap <C-i> <C-t>
 imap <C-u> <C-d>
+imap <TAB> <TAB>
 
 " Auto fill
 nnoremap <silent>cy ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
