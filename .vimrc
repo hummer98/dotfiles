@@ -57,7 +57,7 @@ set ignorecase                          " 大文字小文字無視
 set smartcase                           " 大文字ではじめたら大文字小文字無視しない
 set incsearch                           " インクリメンタルサーチ
 set hlsearch                            " 検索文字をハイライト
-" nmap <ESC><ESC> :set nohlsearch<ESC>    " ESC2回押しでクリア
+nmap <ESC><ESC> :set nohlsearch<ESC>    " ESC2回押しでクリア
 " vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<CR><CR> "visual modeで選択したテキストを検索する
 
 " View ---------------------------------
