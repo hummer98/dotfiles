@@ -22,6 +22,11 @@ if filereadable(expand('$HOME/dotfiles/.vimrc.filetype'))
   source $HOME/dotfiles/.vimrc.filetype
 endif
 
+" for Office --------------------------
+if filereadable(expand('$HOME/dotfiles/.vimrc.office'))
+  source $HOME/dotfiles/.vimrc.office
+endif
+
 " File ---------------------------------
 set autoread                            " 更新時自動再読込み
 set hidden                              " 編集中でも他のファイルを開けるようにする
