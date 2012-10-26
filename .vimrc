@@ -100,7 +100,7 @@ set statusline=%<%F\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l
 " Charset, Line ending -----------------
 set termencoding=utf-8
 set encoding=utf-8
-set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp
+set fileencodings=utf-8,euc-jp,cp932,iso-2022-jp
 set ffs=unix,dos,mac                    " LF, CRLF, CR
 if exists('&ambiwidth')
   set ambiwidth=double                " UTF-8の□や○でカーソル位置がずれないようにす
@@ -128,6 +128,10 @@ imap [] []<Left>
 imap '' ''<Left>
 imap "" ""<Left>
 imap <> <><Left>
+
+imap <C-i> <C-t>
+imap <C-u> <C-d>
+imap <tab> <tab>
 
 " Replace yank text
 nnoremap <silent>cy ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
