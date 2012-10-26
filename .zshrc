@@ -109,7 +109,8 @@ case "$OSTYPE" in
     export PATH=$HOME/bin:/usr/local/bin:$PATH
   ;;
 esac
-export JAVA_HOME=/usr/bin/java
+# export JAVA_HOME=/usr/bin/java
+export JAVA_HOME=/Library/Java/Home
 export HADOOP_HOME=/usr/local/bin/hadoop
 
 
