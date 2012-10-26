@@ -1,17 +1,17 @@
 [user]
-	name = yuzuemon
-	email = killerqueen64@gmail.com
+  name = yuzuemon
+  email = killerqueen64@gmail.com
 [core]
-	excludesfile = /Users/yuzuru.nakamura/.gitignore_global
-	editor = /Applications/MacVim.app/Contents/MacOS/Vim
+  excludesfile = $HOME/.gitignore_global
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [color]
-	diff = auto
-	ui = true
+  diff = auto
+  ui = true
 [alias]
-	co = checkout
+  co = checkout
+  tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'

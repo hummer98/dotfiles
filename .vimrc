@@ -22,6 +22,11 @@ if filereadable(expand('$HOME/dotfiles/.vimrc.filetype'))
   source $HOME/dotfiles/.vimrc.filetype
 endif
 
+" for Office --------------------------
+if filereadable(expand('$HOME/dotfiles/.vimrc.office'))
+  source $HOME/dotfiles/.vimrc.office
+endif
+
 " File ---------------------------------
 set autoread                            " 更新時自動再読込み
 set hidden                              " 編集中でも他のファイルを開けるようにする
@@ -57,7 +62,7 @@ set ignorecase                          " 大文字小文字無視
 set smartcase                           " 大文字ではじめたら大文字小文字無視しない
 set incsearch                           " インクリメンタルサーチ
 set hlsearch                            " 検索文字をハイライト
-" nmap <ESC><ESC> :set nohlsearch<ESC>    " ESC2回押しでクリア
+nmap <ESC><ESC> :set nohlsearch<ESC>    " ESC2回押しでクリア
 " vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<CR><CR> "visual modeで選択したテキストを検索する
 
 " View ---------------------------------
@@ -129,11 +134,12 @@ imap '' ''<Left>
 imap "" ""<Left>
 imap <> <><Left>
 
+" Replace the keymap of insert mode(for overlaps with tmux)
 imap <C-i> <C-t>
 imap <C-u> <C-d>
 imap <tab> <tab>
 
-" Replace yank text
+" Auto fill
 nnoremap <silent>cy ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 vnoremap <silent>cy c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 nnoremap <silent>ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>

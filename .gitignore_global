@@ -6,3 +6,4 @@
 *.sw[nop]
 .DS_Store
 .vim/neobundle
+.vimrc.office
