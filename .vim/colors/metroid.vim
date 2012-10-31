@@ -37,7 +37,7 @@ hi DiffText guibg=DarkGreen ctermfg=Black ctermbg=DarkGreen                     
 hi DiffChange guibg=Gray30 ctermbg=DarkCyan ctermfg=White
 
 " ポップアップメニュー(未整理)
-hi Pmenu      guifg=White guibg=Magenta ctermfg=White ctermbg=Magenta
+hi Pmenu      guifg=Black guibg=Magenta ctermfg=Black ctermbg=Magenta
 hi PmenuSel   guifg=LightGreen guibg=Magenta ctermbg=Magenta ctermfg=LightGreen
 hi PmenuSbar  ctermbg=LightGreen
 hi PmenuThumb ctermbg=White
@@ -61,4 +61,3 @@ hi ModeMsg gui=NONE guifg=Green cterm=NONE ctermfg=DarkGreen                    
 hi MoreMsg gui=NONE guifg=Magenta cterm=NONE ctermfg=Magenta                            " --継続--メッセージ
 hi WarningMsg gui=NONE guifg=Yellow cterm=NONE ctermfg=Yellow                           " 警告メッセージ
 hi ErrorMsg gui=NONE guifg=White guibg=Magenta cterm=NONE ctermfg=White ctermbg=Magenta " エラーメッセージ
-
