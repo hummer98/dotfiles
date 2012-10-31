@@ -2,7 +2,7 @@
   name = yuzuemon
   email = killerqueen64@gmail.com
 [core]
-  excludesfile = ~/.gitignore_global
+  excludesfile = $HOME/.gitignore_global
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path =
@@ -22,4 +22,3 @@
   d2 = diff HEAD~~
   d3 = diff HEAD~~~
   tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
-
