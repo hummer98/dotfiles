@@ -124,9 +124,6 @@ case "$OSTYPE" in
     alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
     alias gvi='gvim'
   ;;
-  freebsd*) # さくらのレンタルサーバ
-    alias vi='~/bin/vim'
-  ;;
   linux*)
     case "$USER" in
       metroid*) # さくらのVPS
