@@ -19,7 +19,7 @@ NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/Shougo/vim-vcs.git'
 NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'git://github.com/Shougo/vimshell.git'
-NeoBundle 'git://github.com/Shougo/vimproc.git'
+NeoBundle 'git://github.com/Shougo/vimproc.git', {'build': {'mac': 'make -f make_mac.mak'}}
 NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 " NeoBundle 'git://github.com/thinca/vim-ref.git'
 " NeoBundle 'git://github.com/thinca/vim-openbuf.git'
@@ -40,7 +40,7 @@ NeoBundle 'surround.vim'
 " NeoBundle 'textmanip.vim'
 
 " option
-NeoBundle 'TwitVim'
+NeoBundleLazy 'TwitVim'
 
 filetype plugin on
 filetype indent on
