@@ -50,5 +50,10 @@ autocmd Filetype yaml setl autoindent
 autocmd FileType yaml setl smartindent
 autocmd FileType yaml setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
+" for SQL -----------------------------
+autocmd Filetype sql setl autoindent
+autocmd FileType sql setl smartindent
+autocmd FileType sql setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
+
 " for Jive -----------------------------
 autocmd BufRead,BufNewFile *.htme setfiletype c
