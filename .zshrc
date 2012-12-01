@@ -118,35 +118,33 @@ bindkey "^N" history-beginning-search-forward-end
 setopt complete_aliases                 # デフォルトのコマンドをベースに補完
 
 case "$OSTYPE" in
-darwin*)                                # for MacOS
-  alias ls='ls -ahGp'
-  alias ld='ls -ahGp | grep /'
-  alias ll='ls -ahGlp'
-  alias lld='ls -ahGlp | grep /'
-;;
-freebsd*)                               # for FreeBSD
-  alias ls='ls -ahGp'
-  alias ld='ls -ahGp | grep /'
-  alias ll='ls -ahGlp'
-  alias lld='ls -ahGlp | grep /'
-;;
-linux*)                                 # for GNU
-  alias ls='ls -ahp --color=auto'
-  alias ld='ls -ahp --color=auto | grep /'
-  alias ll='ls -ahlp --color=auto'
-  alias lld='ls -ahlp --color=auto | grep /'
-;;
+  darwin*)                                # for MacOS
+    alias ls='ls -ahGp'
+    alias ld='ls -ahGp | grep /'
+    alias ll='ls -ahGlp'
+    alias lld='ls -ahGlp | grep /'
+  ;;
+  freebsd*)                               # for FreeBSD
+    alias ls='ls -ahGp'
+    alias ld='ls -ahGp | grep /'
+    alias ll='ls -ahGlp'
+    alias lld='ls -ahGlp | grep /'
+  ;;
+  linux*)                                 # for GNU
+    alias ls='ls -ahp --color=auto'
+    alias ld='ls -ahp --color=auto | grep /'
+    alias ll='ls -ahlp --color=auto'
+    alias lld='ls -ahlp --color=auto | grep /'
+  ;;
 esac
 
 # add PATH
 case "$OSTYPE" in
   darwin*)
     export PATH=$HOME/bin:/usr/local/bin:$PATH
+    export JAVA_HOME=/Library/Java/Home
   ;;
 esac
-# export JAVA_HOME=/usr/bin/java
-export JAVA_HOME=/Library/Java/Home
-export HADOOP_HOME=/usr/local/bin/hadoop
 
 
 # add alias
@@ -158,6 +156,8 @@ case "$OSTYPE" in
     alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
     alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
     alias gvi='gvim'
+    alias sl='sl -ae'
+    alias expdiff='bzr cdiff | iconv -f cp932'
   ;;
   linux*)
     case "$USER" in
@@ -169,6 +169,4 @@ case "$OSTYPE" in
 esac
 
 alias o='open'
-alias sl='sl -ae'
-alias expdiff='bzr cdiff | iconv -f cp932'
 
