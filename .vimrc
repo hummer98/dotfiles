@@ -123,9 +123,11 @@ nnoremap <Leader>.   :<C-u>edit $MYVIMRC<Enter>
 nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
 nnoremap <C-h>       :<C-u>help<Space>
 
-" <C-e>
+" <ESC>
 nnoremap <C-e> <ESC>
 inoremap <C-e> <ESC>
+nnoremap <C-/> <ESC> " 効いてない気がする
+inoremap <C-/> <ESC>
 
 " auto left
 imap () ()<Left>
