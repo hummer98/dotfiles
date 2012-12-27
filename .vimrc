@@ -5,8 +5,8 @@ set nocompatible                        " vim
 let mapleader = " "                    " キーマップリーダー
 if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
   colorscheme metroid
+  color metroid
 endif
-color metroid
 
 " for Plugin ---------------------------
 if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
