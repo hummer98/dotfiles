@@ -1,11 +1,19 @@
 # common -------------------------------
 export LANG=ja_JP.UTF-8
-
 autoload -U compinit                    # 強力な補完機能
 compinit
-
-# bindkey -v                              # vim
+# bindkey -v                            # vim
 bindkey -e                              # emacs
+
+# mosh
+compdef mosh=ssh
+
+# z
+. `brew --prefix`/etc/profile.d/z.sh
+function precmd () {
+  z --add "$(pwd -P)"
+}
+
 
 # color
 autoload colors                         # カラーセット
@@ -73,6 +81,7 @@ RPROMPT='[`rprompt-git-current-branch`%~]'
 
 setopt transient_rprompt                # 右まできたら、時刻非表示
 setopt prompt_subst                     # 候補自動補完
+
 
 # cd
 setopt auto_cd                          # ディレクトリ名実行で自動的にcd
