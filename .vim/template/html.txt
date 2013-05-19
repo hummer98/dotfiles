@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+    <title></title>
+  <script src='/lib/js/hoge.js'></script>
+  <link rel='stylesheet' type='text/css' href='/lib/css/hoge.css' media='all' />
+</head>
+<body id='alias'>
+  <div class='base'>
+
+  </div>
+</body>
+</html>

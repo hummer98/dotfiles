@@ -257,3 +257,4 @@ endfunction
 "else
 "    setup for non-diff mode
 "endif
+

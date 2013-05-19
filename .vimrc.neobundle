@@ -1,0 +1,39 @@
+" for NeoBundle ------------------------
+set nocompatible
+if has('vim_starting')
+  if filereadable(expand('$HOME/dotfiles/.vim/neobundle/neobundle.vim/autoload/neobundle.vim'))
+    set rtp+=$HOME/dotfiles/.vim/neobundle/neobundle.vim
+  elseif filereadable(expand('$HOME/dotfiles/.vim/neobundle.vim/autoload/neobundle.vim'))
+    set rtp+=$HOME/dotfiles/.vim/neobundle.vim
+  endif
+
+  call neobundle#rc(expand('$HOME/dotfiles/.vim/neobundle'))
+endif
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" from github
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache.git'
+NeoBundle 'Shougo/neosnippet.git'
+NeoBundle 'Shougo/vimfiler.git'
+NeoBundle 'Shougo/vimshell.git'
+NeoBundle 'Shougo/vimproc.git', {'build': {'mac': 'make -f make_mac.mak'}}
+NeoBundle 'thinca/vim-quickrun.git'
+NeoBundle 'mattn/zencoding-vim.git'
+NeoBundle 'h1mesuke/unite-outline.git'
+NeoBundle 'Sixeight/unite-grep.git'
+NeoBundle 'taku-o/vim-catn.git'
+" NeoBundle 'git://github.com/hallettj/jslint.vim.git'
+NeoBundle 'nakatakeshi/jump2pm.vim.git'
+
+" from vim-scripts repository
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'The-NERD-tree'
+NeoBundle 'surround.vim'
+
+" option
+NeoBundleLazy 'TwitVim'
+
+filetype plugin indent on
+NeoBundleCheck
