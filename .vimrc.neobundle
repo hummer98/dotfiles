@@ -14,23 +14,23 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " from github
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache.git'
-NeoBundle 'Shougo/neosnippet.git'
-NeoBundle 'Shougo/vimfiler.git'
-NeoBundle 'Shougo/vimshell.git'
-NeoBundle 'Shougo/vimproc.git', {'build': {'mac': 'make -f make_mac.mak'}}
-NeoBundle 'thinca/vim-quickrun.git'
-NeoBundle 'mattn/zencoding-vim.git'
-NeoBundle 'h1mesuke/unite-outline.git'
-NeoBundle 'Sixeight/unite-grep.git'
-NeoBundle 'taku-o/vim-catn.git'
-" NeoBundle 'git://github.com/hallettj/jslint.vim.git'
-NeoBundle 'nakatakeshi/jump2pm.vim.git'
+NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make -f make_mac.mak'}}
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'Sixeight/unite-grep'
+NeoBundle 'taku-o/vim-catn'
+" NeoBundle 'git://github.com/hallettj/jslint.vim'
+NeoBundle 'nakatakeshi/jump2pm.vim'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-surround'
 
 " from vim-scripts repository
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'The-NERD-tree'
-NeoBundle 'surround.vim'
 
 " option
 NeoBundleLazy 'TwitVim'
