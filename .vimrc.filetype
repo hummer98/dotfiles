@@ -1,0 +1,59 @@
+filetype plugin on
+let s:coding_styles = {}
+let s:coding_styles['MDC'] = 'set expandtab tabstop=2 shiftwidth=2 softtabstop&'
+let s:coding_styles['defacto'] = 'set noexpandtab tabstop=4 shiftwidth=4 softtabstop&'
+let s:coding_styles['My style'] = 'set expandtab tabstop=4 shiftwidth=4 softtabstop&'
+
+command!
+\   -bar -nargs=1 -complete=customlist,s:coding_style_complete
+\   CodingStyle
+\   execute get(s:coding_styles, <f-args>, '')
+
+function! s:coding_style_complete(...) "{{{
+  return keys(s:coding_styles)
+endfunction "}}}
+
+" for text -----------------------------
+autocmd BufNewFile *.txt 0r $HOME/.vim/template/text.txt
+
+" for HTML -----------------------------
+autocmd BufNewFile *.html 0r $HOME/.vim/template/html.txt
+
+" for JavaScript -----------------------
+autocmd BufNewFile *.js 0r $HOME/.vim/template/javascript.txt
+autocmd Filetype javascript setl autoindent
+autocmd FileType javascript setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
+autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" for StyleSheet -----------------------
+autocmd BufNewFile *.css 0r $HOME/.vim/template/stylesheet.txt
+
+" for Python ---------------------------
+autocmd BufNewFile *.py 0r $HOME/.vim/template/python.txt
+autocmd Filetype python setl autoindent
+autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
+
+" for Ruby -----------------------------
+autocmd Filetype ruby setl autoindent
+autocmd FileType ruby setl smartindent cinwords=if,elsif,else,for,while,try,except,finally,def,class
+autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" for Perl -----------------------------
+autocmd BufNewFile *.pl 0r $HOME/.vim/template/perl.txt
+autocmd Filetype perl setl autoindent
+autocmd FileType perl setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
+autocmd FileType perl setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
+
+" for YAML -----------------------------
+autocmd Filetype yaml setl autoindent
+autocmd FileType yaml setl smartindent
+autocmd FileType yaml setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
+" for SQL -----------------------------
+autocmd Filetype sql setl autoindent
+autocmd FileType sql setl smartindent
+autocmd FileType sql setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
+
+" for Jive -----------------------------
+autocmd BufRead,BufNewFile *.htme setfiletype c
