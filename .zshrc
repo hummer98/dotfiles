@@ -1,12 +1,18 @@
 # common -------------------------------
 export LANG=ja_JP.UTF-8
-autoload -U compinit                    # 強力な補完機能
-compinit
+autoload -U compinit; compinit          # 強力な補完機能
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
+                             /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
+                             /usr/local/git/bin
+
 # bindkey -v                            # vim
 bindkey -e                              # emacs
 
 # mosh
 compdef mosh=ssh
+
+# zsh-completionsを利用する
+fpath=($HOME/.zsh-completions $fpath)
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
@@ -108,8 +114,8 @@ setopt noautoremoveslash                # 末尾の/の自動削除機能無効
 
 # history
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=10000000
+SAVEHIST=10000000
 
 setopt hist_ignore_dups                 # 重複を記録しない
 setopt hist_reduce_blanks               # スペース排除

@@ -3,7 +3,7 @@ color Metroid
 
 if has('mac')
   set transparency=20     " opacity
-  set guifont=Ricty:h16   " font
+  set guifont=Ricty:h14   " font
   set columns=114         " width
   set lines=200           " line
   set antialias

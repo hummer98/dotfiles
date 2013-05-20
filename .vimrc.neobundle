@@ -31,8 +31,6 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-surround'
 
 " from vim-scripts repository
-
-" option
 NeoBundleLazy 'TwitVim'
 
 filetype plugin indent on
