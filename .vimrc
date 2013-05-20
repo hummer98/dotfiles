@@ -1,14 +1,15 @@
 " Common -------------------------------
 autocmd!
-set nocompatible                        " vim
-" let mapleader = "\\"                    " キーマップリーダー
-let mapleader = " "                    " キーマップリーダー
+set nocompatible                        " use vim
+let mapleader = " "                     " set mapleader
+
+
+" External File ------------------------
 if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
   colorscheme metroid
   color metroid
 endif
 
-" for Plugin ---------------------------
 if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
   source $HOME/dotfiles/.vimrc.neobundle
 
@@ -17,18 +18,17 @@ if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
   endif
 endif
 
-" for Template -------------------------
 if filereadable(expand('$HOME/dotfiles/.vimrc.filetype'))
   source $HOME/dotfiles/.vimrc.filetype
 endif
 
-" for Office --------------------------
 if filereadable(expand('$HOME/dotfiles/.vimrc.office'))
   source $HOME/dotfiles/.vimrc.office
 endif
 
+
 " File ---------------------------------
-set autoread                            " 更新時自動再読込み
+set autoread                            " 更新時自動再読み込み
 set hidden                              " 編集中でも他のファイルを開けるようにする
 set noswapfile                          " スワップファイルを作らない
 set nobackup                            " バックアップを取らない
@@ -37,24 +37,24 @@ autocmd BufWritePre * :%s/\s\+$//ge     " 保存時に行末の空白を除去�
 " autocmd BufWritePre * :%s/\t/  /ge      " 保存時にtabをスペース2つに変換する
 syntax on                               " シンタックスカラーリングオン
 
+
 " Indent -------------------------------
-" tabstop:                                Tab文字を画面上で何文字分に展開するか
-" shiftwidth:                             cindentやautoindent時に挿入されるインデントの幅
-" softtabstop:                            Tabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
 set expandtab                           " tabをスペースに変換
-" set tabstop=4 shiftwidth=4 softtabstop=0
-set tabstop=2 shiftwidth=2 softtabstop=0
+set tabstop=2 shiftwidth=2 softtabstop=0  " tab展開文字数, autoindent時のインデント数,Tabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
 " set textwidth=78                        " 自動改行する文字位置
 set autoindent smartindent              " 自動インデント，スマートインデント
 set backspace=indent,eol,start          " バックスペースで特殊記号も削除可能に
+
 
 " Assist imputting ---------------------
 set formatoptions=lmoq                  " 整形オプション，マルチバイト系を追加
 set whichwrap=b,s,h,s,<,>,[,]           " カーソルを行頭、行末で止まらないようにする
 
-" Complement command -------------------
+
+" Complement Command -------------------
 set wildmenu                            " コマンド補完を強化
 set wildmode=list:full                  " リスト表示，最長マッチ
+
 
 " Search -------------------------------
 set wrapscan                            " 最後まで検索したら先頭へ戻る
@@ -62,8 +62,8 @@ set ignorecase                          " 大文字小文字無視
 set smartcase                           " 大文字ではじめたら大文字小文字無視しない
 set incsearch                           " インクリメンタルサーチ
 set hlsearch                            " 検索文字をハイライト
-nmap <ESC><ESC> :set nohlsearch<ESC>    " ESC2回押しでクリア
-" vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<CR><CR> "visual modeで選択したテキストを検索する
+nmap <ESC><ESC> :nohlsearch<CR>         " ESC2回押しでクリア
+
 
 " View ---------------------------------
 set showmatch                           " 括弧の対応をハイライト
@@ -78,9 +78,11 @@ set scrolloff=5                         " 行送り
 set display=uhex                        " 印字不可能文字を16進数で表示
 " set paste                               " ペーストモード(neocomplcacheが動作しない為コメントアウト)
 
+
 " Change full-pitch space's color ------
 hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue
 match ZenkakuSpace /　/
+
 
 " Set auto cursorline ------------------
 augroup vimrc-auto-cursorline
@@ -89,23 +91,27 @@ augroup vimrc-auto-cursorline
   autocmd CursorHold,CursorHoldI * setlocal cursorline
 augroup END
 
-" View active status -------------------
+
+" View active status (only gvim) -------
 autocmd FocusGained * :echo "Active"
 autocmd FocusLost   * :echo "Unactive"
+
 
 " Clipboard ----------------------------
 if has('clipboard')
   set clipboard+=autoselect
 endif
 
+
 " StatusLine ---------------------------
 set laststatus=2                        " ステータスラインを2行に
 set statusline=%<%F\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V%8P
 
+
 " Charset, Line ending -----------------
 set termencoding=utf-8
 set encoding=utf-8
-set fileencodings=utf-8,euc-jp,cp932,iso-2022-jp
+set fileencodings=iso-2022-jp,utf-8,euc-jp,cp932
 set ffs=unix,dos,mac                    " LF, CRLF, CR
 if exists('&ambiwidth')
   set ambiwidth=double                " UTF-8の□や○でカーソル位置がずれないようにす
@@ -123,26 +129,22 @@ nnoremap <Leader>.   :<C-u>edit $MYVIMRC<Enter>
 nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
 nnoremap <C-h>       :<C-u>help<Space>
 
-" <C-e>
+
+" <ESC>
 nnoremap <C-e> <ESC>
 inoremap <C-e> <ESC>
 
 " auto left
-imap () ()<Left>
-imap [] []<Left>
-imap '' ''<Left>
-imap "" ""<Left>
-imap <> <><Left>
+"imap () ()<Left>
+"imap [] []<Left>
+"imap '' ''<Left>
+"imap "" ""<Left>
+"imap <> <><Left>
 
 " Replace the keymap of insert mode(for overlaps with tmux)
 imap <C-i> <C-t>
 imap <C-u> <C-d>
 imap <tab> <tab>
-
-" Auto fill
-nnoremap <silent>cy ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
-vnoremap <silent>cy c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
-nnoremap <silent>ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 
 " When insert mode, enable hjkl and enable go to home/end
 imap <C-o> <End>
@@ -152,6 +154,11 @@ imap <C-h> <BackSpace>
 " imap <C-j> <Down>
 " imap <C-k> <Up>
 " imap <C-l> <Right>
+
+" Auto fill
+nnoremap <silent>cy ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+vnoremap <silent>cy c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
+nnoremap <silent>ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 
 " Set toggle setting
 nnoremap <Leader>1 :<C-u>set number!<CR>
@@ -250,3 +257,4 @@ endfunction
 "else
 "    setup for non-diff mode
 "endif
+
