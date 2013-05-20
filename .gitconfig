@@ -2,7 +2,7 @@
   name = yuzuemon
   email = killerqueen64@gmail.com
 [core]
-  excludesfile = $HOME/.gitignore_global
+  excludesfile = ~/dotfiles/.gitignore_global
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path =
