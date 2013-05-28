@@ -71,17 +71,16 @@ set showcmd                             " 入力中のコマンドを表示
 set showmode                            " 現在のモードを表示
 set number                              " 行番号表示
 set nowrap                              " 画面幅で折り返す
-set list                                " 不可視文字表示
-set listchars=tab:>\                    " 不可視文字の表示方法
 set notitle                             " タイトル書き換えない
 set scrolloff=5                         " 行送り
 set display=uhex                        " 印字不可能文字を16進数で表示
 " set paste                               " ペーストモード(neocomplcacheが動作しない為コメントアウト)
 
-
-" Change full-pitch space's color ------
+" 不可視文字
+set list                                " 不可視文字を表示
+set listchars=tab:>\                    " 不可視文字の表示方法
 hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue
-match ZenkakuSpace /　/
+match ZenkakuSpace /　/                 " 全角文字
 
 
 " Set auto cursorline ------------------

@@ -139,12 +139,6 @@ case "$OSTYPE" in
     alias ll='ls -ahGlp'
     alias lld='ls -ahGlp | grep /'
   ;;
-  freebsd*)                               # for FreeBSD
-    alias ls='ls -ahGp'
-    alias ld='ls -ahGp | grep /'
-    alias ll='ls -ahGlp'
-    alias lld='ls -ahGlp | grep /'
-  ;;
   linux*)                                 # for GNU
     alias ls='ls -ahp --color=auto'
     alias ld='ls -ahp --color=auto | grep /'
@@ -184,4 +178,5 @@ case "$OSTYPE" in
 esac
 
 alias o='open'
+alias history='history -f'
 
