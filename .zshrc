@@ -120,7 +120,7 @@ SAVEHIST=10000000
 setopt hist_ignore_dups                 # 重複を記録しない
 setopt hist_reduce_blanks               # スペース排除
 setopt share_history                    # 履歴ファイルを共有
-setopt EXTENDED_HISTORY                 # zshの開始終了を記録
+setopt extended_history                 # zshの開始終了を記録
 
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
