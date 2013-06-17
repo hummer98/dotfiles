@@ -112,6 +112,21 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 " for operator-replace
 nmap _ <Plug>(operator-replace)
 
+
+" for jslint ---------------------------
+augroup call_jslint
+  autocmd! call_jslint
+  autocmd FileType javascript call s:javascript_filetype_settings()
+augroup END
+
+function! s:javascript_filetype_settings()
+  autocmd BufLeave     <buffer> call jslint#clear()
+  autocmd BufWritePost <buffer> call jslint#check()
+  autocmd CursorMoved  <buffer> call jslint#message()
+endfunction
+
+
+
 " for zen-coding -----------------------
 " use zen-coding c-e
 let g:user_zen_expandabbr_key = '<c-z>'
