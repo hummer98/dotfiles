@@ -1,7 +1,12 @@
 " for Plugin ---------------------------
 " for quickrun.vim
-let g:quickrun_config={'*': {'split': '10'}}
-" ここ設定変えるからダメな気がする
+let g:quickrun_config = {
+  \ 'javascript': {
+  \   'commond': 'node',
+  \   'tempfile': '{tempname()}.js'
+  \   },
+  \ '*': {'split': '10'}
+  \ }
 set splitbelow
 set splitright
 
