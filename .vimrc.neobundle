@@ -20,7 +20,7 @@ NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make -f make_mac.mak'}}
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Sixeight/unite-grep'
-" NeoBundle 'hallettj/jslint.vim'
+NeoBundle 'basyura/jslint.vim'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'mattn/zencoding-vim'
 NeoBundle 'nakatakeshi/jump2pm.vim'
