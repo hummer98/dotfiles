@@ -6,6 +6,8 @@
 // @version   1.0
 // ==/UserScript==
 
+"use strict";
+
 (function(d, w){
 
 })(document, window);
