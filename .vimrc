@@ -195,7 +195,7 @@ nmap <C-i> Yp:s/\d\+/\=(submatch(0)+1)/<CR>
 nmap <Leader>j !python -m json.tool<CR>
 
 " When insert mode, change statusline
-let g:hi_insert = 'hi StatusLine gui=None guifg=Black guibg=yellow cterm=None ctermfg=Black ctermbg=Yellow'
+let g:hi_insert = 'hi StatusLine cterm=None ctermfg=0 ctermbg=3 gui=None guifg=Black guibg=Yellow'
 
 if has('syntax')
   augroup InsertHook
