@@ -5,7 +5,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
                              /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
                              /usr/local/git/bin
 
-# bindkey -v                            # vim
 bindkey -e                              # emacs
 
 # mosh
@@ -163,7 +162,8 @@ case "$OSTYPE" in
     alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
     alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
-    alias cotEditor='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
+    alias cot='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
+    alias sub='/Applications/Sublime\ Text\ 2.app/Contents/MacOS/Sublime\ Text\ 2 "$@"'
     alias gvi='gvim'
     alias sl='sl -ae'
     alias expdiff='bzr cdiff | iconv -f cp932'
