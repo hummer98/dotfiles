@@ -2,7 +2,7 @@ filetype plugin on
 let s:coding_styles = {}
 let s:coding_styles['MDC'] = 'set expandtab tabstop=2 shiftwidth=2 softtabstop&'
 let s:coding_styles['defacto'] = 'set noexpandtab tabstop=4 shiftwidth=4 softtabstop&'
-let s:coding_styles['My style'] = 'set expandtab tabstop=4 shiftwidth=4 softtabstop&'
+let s:coding_styles['My style'] = 'set expandtab tabstop=2 shiftwidth=2 softtabstop&'
 
 command!
 \   -bar -nargs=1 -complete=customlist,s:coding_style_complete
