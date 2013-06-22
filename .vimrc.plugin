@@ -144,6 +144,8 @@ endfunction
 let g:user_zen_expandabbr_key = '<c-z>'
 let g:user_zen_settings = {'indentation': '  '}
 
+" for surroud.vim ----------------------
+noremap <c-3> ysst
 
 " for NERDCommenter --------------------
 " use NERDCommenterToggle c--
