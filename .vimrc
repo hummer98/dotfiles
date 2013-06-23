@@ -132,6 +132,11 @@ nnoremap <C-h>       :<C-u>help<Space>
 " <ESC>
 nnoremap <C-e> <ESC>
 inoremap <C-e> <ESC>
+" inoremap ee <ESC>
+
+" auto centering
+nnoremap n nzz
+nnoremap N Nzz
 
 " auto left
 "imap () ()<Left>
@@ -165,6 +170,8 @@ nnoremap <Leader>2 :<C-u>set relativenumber!<CR>
 nnoremap <Leader>3 :<C-u>set paste!<CR>
 nnoremap <Leader>4 :<C-u>to vsp<CR>
 nnoremap <Leader>5 :<C-u>bo vsp<CR>
+
+cmap w!! w !sudo tee > /dev/null %
 
 " auto insert --------------------------
 " date, time, current directory
