@@ -7,3 +7,6 @@ body {
   font-size:0.9em;
   text-shadow: 2px 2px 5px rgba(0,0,0,.3);
 }
+@media screen and (min-width: 640px;){}
+@media screen and (min-width: 768px;){}
+@media screen and (min-width: 1024px;){}
