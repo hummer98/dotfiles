@@ -10,8 +10,8 @@ bindkey -e                              # emacs
 # mosh
 compdef mosh=ssh
 
-# zsh-completionsを利用する
-fpath=($HOME/.zsh-completions $fpath)
+# zsh-completionsを利用する(need 'brew install zsh-completions')
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
