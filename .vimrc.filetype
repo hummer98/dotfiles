@@ -18,6 +18,7 @@ autocmd BufNewFile *.txt 0r $HOME/.vim/template/skeleton.txt
 
 " for HTML -----------------------------
 autocmd BufNewFile *.html 0r $HOME/.vim/template/skeleton.html
+autocmd BufNewFile *.jade 0r $HOME/.vim/template/skeleton.jade
 
 " for JavaScript -----------------------
 autocmd BufNewFile *.js 0r $HOME/.vim/template/skeleton.js
@@ -27,6 +28,7 @@ autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
 " for StyleSheet -----------------------
 autocmd BufNewFile *.css 0r $HOME/.vim/template/skeleton.css
+autocmd BufNewFile *.less 0r $HOME/.vim/template/skeleton.less
 
 " for Python ---------------------------
 autocmd BufNewFile *.py 0r $HOME/.vim/template/skeleton.py
