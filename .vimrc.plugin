@@ -1,23 +1,4 @@
-" for Plugin ---------------------------
-" for quickrun.vim
-let g:quickrun_config = {
-  \ '_': {
-  \   'runner': 'vimproc',
-  \   'runner/vimproc/updatetime': '60',
-  \   'outputter': 'buffer',
-  \   'split': 'botright 50vsp',
-  \   'close_on_empty': 1,
-  \   'hook/time/enable': 1
-  \   },
-  \ 'javascript': {
-  \   'commond': 'node',
-  \   'tempfile': '{tempname()}.js'
-  \   }
-  \ }
-" 'split': 'botright 10sp',
-" <C-c>
-nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-
+" Plugin -------------------------------
 " for neocomplcache --------------------
 " Define Settings
 let g:acp_enableAtStartup = 0
@@ -166,6 +147,36 @@ noremap fg :call Jump2pm('vne')<CR>
 noremap ff :call Jump2pm('e')<CR>
 noremap fd :call Jump2pm('sp')<CR>
 noremap ft :call Jump2pm('tabe')<CR>
+
+" for vim-quickrun
+let g:quickrun_config = {
+  \ '_': {
+  \   'runner': 'vimproc',
+  \   'runner/vimproc/updatetime': '60',
+  \   'outputter': 'buffer',
+  \   'split': 'botright 50vsp',
+  \   'close_on_empty': 1,
+  \   'hook/time/enable': 1
+  \   },
+  \ 'javascript': {
+  \   'commond': 'node',
+  \   'tempfile': '{tempname()}.js'
+  \   }
+  \ }
+" 'split': 'botright 10sp',
+" <C-c>
+nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
+
+
+" for taglist.vim ----------------------
+set tags=tags
+if filereadable(expand('/Applications/MacVim.app/Contents/MacOS/ctags'))
+  let Tlist_Ctags_Cmd = '/Applications/MacVim.app/Contents/MacOS/ctags'
+endif
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Show_One_File = 1
+nnoremap <silent> <leader>l :TlistToggle<CR>
+
 
 " for Twitter --------------------------
 " let twitvim_login_b64 = "eXV6dWVtb246dmFsa3lyaWUNCg=="
