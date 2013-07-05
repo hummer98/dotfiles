@@ -21,7 +21,7 @@ NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make -f make_mac.mak'}}
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Sixeight/unite-grep'
 NeoBundle 'h1mesuke/unite-outline'
-NeoBundleLazy 'basyura/jslint.vim', {"autoload": {"filetypes": 'javascript'}}
+NeoBundleLazy 'yuzuemon/jslint.vim', {"autoload": {"filetypes": 'javascript'}}
 NeoBundleLazy 'mattn/zencoding-vim', {"autoload": {"filetypes": 'html'}}
 NeoBundle 'nakatakeshi/jump2pm.vim'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -29,7 +29,6 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'taku-o/vim-catn'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-surround'
-
 
 " from vim-scripts repository
 NeoBundleLazy 'TwitVim'
