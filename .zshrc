@@ -93,6 +93,9 @@ setopt auto_cd                          # ディレクトリ名実行で自動�
 setopt auto_pushd                       # cd履歴表示
 setopt pushd_ignore_dups                # 同じディレクトリを履歴に追加しない
 
+# Input / Output
+setopt dvorak
+
 # terminal
 case "${TERM}" in
 kterm*|xterm)
