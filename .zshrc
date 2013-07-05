@@ -108,6 +108,7 @@ setopt list_packed                      # リストを詰めて表示
 setopt list_types                       # 補完一覧ファイル種別表示
 setopt nolistbeep                       # 補完候補表示時のビープ音無効
 setopt noautoremoveslash                # 末尾の/の自動削除機能無効
+setopt combining_chars                  # 補完時に濁点・半濁点を<3099>、<309a>のようにさせない
 # predict-on
 
 
