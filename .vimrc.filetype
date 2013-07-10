@@ -14,7 +14,8 @@ function! s:coding_style_complete(...) "{{{
 endfunction "}}}
 
 " for text -----------------------------
-autocmd BufNewFile *.txt 0r $HOME/.vim/template/skeleton.txt
+autocmd BufNewFile *.txt 0r $HOME/.vim/template/skeleton.md
+autocmd BufNewFile *.md 0r $HOME/.vim/template/skeleton.md
 
 " for HTML -----------------------------
 autocmd BufNewFile *.html 0r $HOME/.vim/template/skeleton.html
