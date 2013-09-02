@@ -1,5 +1,6 @@
 # main viewの左端にコミットIDを表示する
 set show-id = yes
+
 # 垂直方向に分割する
 set vertical-split = no
 
