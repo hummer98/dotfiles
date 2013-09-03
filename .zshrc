@@ -171,6 +171,7 @@ case "$OSTYPE" in
     alias gvi='gvim'
     alias sl='sl -ae'
     alias expdiff='bzr cdiff | iconv -f cp932'
+    alias rm='rmtrash'
   ;;
   linux*)
     case "$USER" in
