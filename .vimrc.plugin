@@ -37,7 +37,6 @@ inoremap <expr><BS>  neocomplcache#smart_close_popup()."\<C-h>"
 " <TAB>: completion.
 " inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" inoremap <expr><C-y>  neocomplcache#close_popup() " duplicate zen-coding
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 " Enable omni completion.
@@ -120,11 +119,12 @@ function! s:javascript_filetype_settings()
 endfunction
 
 
-
-" for zen-coding -----------------------
-" use zen-coding c-e
-let g:user_zen_expandabbr_key = '<c-z>'
-let g:user_zen_settings = {'indentation': '  '}
+" for emmet-vim ------------------------
+let g:user_emmet_settings = {
+\ 'indentation' : '  ',
+\ 'lang' : 'ja',
+\}
+let g:user_emmet_expandabbr_key = '<c-z>'
 
 " for surroud.vim ----------------------
 noremap <c-3> ysst
