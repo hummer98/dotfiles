@@ -164,6 +164,7 @@ let g:quickrun_config = {
   \   }
   \ }
 " 'split': 'botright 10sp',
+" 'exec': '~/local/bin/python %o %s'
 " <C-c>
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 
