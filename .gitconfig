@@ -3,6 +3,7 @@
   email = killerqueen64@gmail.com
 [core]
   excludesfile = ~/dotfiles/.gitignore_global
+  precomposeunicode = true
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path =
