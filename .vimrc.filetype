@@ -61,3 +61,6 @@ autocmd FileType sql setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
 
 " for Jive -----------------------------
 autocmd BufRead,BufNewFile *.htme setfiletype c
+
+" for mtml -----------------------------
+autocmd BufRead,BufNewFile *.mtml setfiletype html
