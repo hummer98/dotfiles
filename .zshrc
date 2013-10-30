@@ -179,3 +179,4 @@ esac
 alias o='open'
 alias history='history -f'
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
