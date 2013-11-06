@@ -144,21 +144,10 @@ case "$OSTYPE" in
   ;;
 esac
 
-# add PATH
-case "$OSTYPE" in
-  darwin*)
-    export PATH=$HOME/bin:/usr/local/bin:$PATH
-    export JAVA_HOME=/Library/Java/Home
-    export PATH=$HOME/local/py3/bin:$PATH
-    export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-  ;;
-esac
-
 
 # add alias
 case "$OSTYPE" in
   darwin*)
-    export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
     alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
     alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
