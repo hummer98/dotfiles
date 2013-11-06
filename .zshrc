@@ -149,6 +149,8 @@ case "$OSTYPE" in
   darwin*)
     export PATH=$HOME/bin:/usr/local/bin:$PATH
     export JAVA_HOME=/Library/Java/Home
+    export PATH=$HOME/local/py3/bin:$PATH
+    export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
   ;;
 esac
 
@@ -179,4 +181,3 @@ esac
 alias o='open'
 alias history='history -f'
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
