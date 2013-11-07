@@ -86,6 +86,13 @@ setopt prompt_subst                     # 候補自動補完
 setopt auto_cd                          # ディレクトリ名実行で自動的にcd
 setopt auto_pushd                       # cd履歴表示
 setopt pushd_ignore_dups                # 同じディレクトリを履歴に追加しない
+function chpwd() {
+  if [ 20 -gt `ls -1 | wc -l` ]; then
+    ll
+  else
+    ls
+  fi
+}
 
 # Input / Output
 setopt dvorak
