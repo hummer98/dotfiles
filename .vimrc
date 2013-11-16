@@ -10,22 +10,8 @@ if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
   color metroid
 endif
 
-if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
-  source $HOME/dotfiles/.vimrc.neobundle
-
-  if filereadable(expand('$HOME/dotfiles/.vimrc.plugin'))
-    source $HOME/dotfiles/.vimrc.plugin
-  endif
-endif
-
-if filereadable(expand('$HOME/dotfiles/.vimrc.filetype'))
-  source $HOME/dotfiles/.vimrc.filetype
-endif
-
-if filereadable(expand('$HOME/dotfiles/.vimrc.office'))
-  source $HOME/dotfiles/.vimrc.office
-endif
-
+set rtp+=$HOME/dotfiles/.vim/
+runtime! conf.d/*.vimrc
 
 " File ---------------------------------
 set autoread                            " 更新時自動再読み込み
