@@ -11,7 +11,7 @@ if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
 endif
 
 set rtp+=$HOME/dotfiles/.vim/
-runtime! conf.d/*.vimrc
+runtime! conf.d/*.vim
 
 " File ---------------------------------
 set autoread                            " 更新時自動再読み込み
