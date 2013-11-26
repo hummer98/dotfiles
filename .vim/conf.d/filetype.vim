@@ -20,6 +20,7 @@ autocmd BufNewFile *.md 0r $HOME/.vim/template/skeleton.md
 " for HTML -----------------------------
 autocmd BufNewFile *.html 0r $HOME/.vim/template/skeleton.html
 autocmd BufNewFile *.jade 0r $HOME/.vim/template/skeleton.jade
+autocmd BufRead,BufNewFile *.mtml setfiletype html
 
 " for JavaScript -----------------------
 autocmd BufNewFile *.js 0r $HOME/.vim/template/skeleton.js
@@ -61,6 +62,3 @@ autocmd FileType sql setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
 
 " for Jive -----------------------------
 autocmd BufRead,BufNewFile *.htme setfiletype c
-
-" for mtml -----------------------------
-autocmd BufRead,BufNewFile *.mtml setfiletype html
