@@ -163,9 +163,16 @@ endfunction
 
 
 " for emmet-vim ------------------------
+" pv = provide
 let g:user_emmet_settings = {
 \ 'indentation' : '  ',
 \ 'lang' : 'ja',
+\ 'eruby': {
+\   'snippets': {
+\     'pv' : "<% ${cursor} %>",
+\     'pv-': "<%= ${cursor} %>",
+\   },
+\ },
 \}
 let g:user_emmet_expandabbr_key = '<c-z>'
 

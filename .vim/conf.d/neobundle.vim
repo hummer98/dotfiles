@@ -30,6 +30,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'taku-o/vim-catn'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-surround'
+" NeoBundle 'tpope/vim-rails'
 
 " from vim-scripts repository
 NeoBundle 'taglist.vim'
