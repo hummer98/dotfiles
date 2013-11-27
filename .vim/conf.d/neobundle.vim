@@ -23,7 +23,7 @@ NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Sixeight/unite-grep'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundleLazy 'yuzuemon/jslint.vim', {"autoload": {"filetypes": 'javascript'}}
-NeoBundleLazy 'mattn/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby']}}
+NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'nakatakeshi/jump2pm.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
