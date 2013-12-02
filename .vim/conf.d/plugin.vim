@@ -9,6 +9,8 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplete#max_list = 50
 let g:neocomplete#enable_auto_select = 1
 
+let g:neocomplete#force_overwrite_completefunc = 1
+
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {

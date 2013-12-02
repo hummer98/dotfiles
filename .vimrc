@@ -9,6 +9,9 @@ if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
   colorscheme metroid
   color metroid
 endif
+if !has('gui_running')                  " for https://github.com/itchyny/lightline.vim
+  set t_Co=256
+endif
 
 set rtp+=$HOME/dotfiles/.vim/
 runtime! conf.d/*.vim

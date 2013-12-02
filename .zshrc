@@ -98,6 +98,7 @@ kterm*|xterm)
   }
 ;;
 esac
+export TERM=xterm-256color
 
 
 # auto complete

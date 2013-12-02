@@ -29,6 +29,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'taku-o/vim-catn'
 NeoBundle 'thinca/vim-quickrun'
+" NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-rails',{"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'tpope/vim-surround'
 
