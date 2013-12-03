@@ -2,15 +2,13 @@
 autocmd!
 set nocompatible                        " use vim
 let mapleader = " "                     " set mapleader
+set t_Co=256                            " 256color
 
 
 " External File ------------------------
 if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
   colorscheme metroid
   color metroid
-endif
-if !has('gui_running')                  " for https://github.com/itchyny/lightline.vim
-  set t_Co=256
 endif
 
 set rtp+=$HOME/dotfiles/.vim/
@@ -63,22 +61,19 @@ set nowrap                              " 画面幅で折り返す
 set notitle                             " タイトル書き換えない
 set scrolloff=5                         " 行送り
 set display=uhex                        " 印字不可能文字を16進数で表示
-" set paste                               " ペーストモード(neocomplcacheが動作しない為コメントアウト)
+" set paste                               " ペーストモード(neocompleteが動作しない為コメントアウト)
+set cursorline                          " カーソル行に下線
+
 
 " 不可視文字
 set list                                " 不可視文字を表示
 set listchars=tab:>\                    " 不可視文字の表示方法
-hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue
+hi ZenkakuSpace guibg=DarkBlue gui=underline ctermfg=LightBlue cterm=underline
 match ZenkakuSpace /　/                 " 全角文字
 
 
-" Set auto cursorline ------------------
-augroup vimrc-auto-cursorline
-  autocmd!
-  autocmd CursorMoved,CursorMovedI,WinLeave * setlocal nocursorline
-  autocmd CursorHold,CursorHoldI * setlocal cursorline
-augroup END
-
+" hitest
+command! HiTest :source $VIMRUNTIME/syntax/hitest.vim
 
 " View active status (only gvim) -------
 autocmd FocusGained * :echo "Active"
@@ -102,7 +97,7 @@ set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932
 set ffs=unix,dos,mac                    " LF, CRLF, CR
 if exists('&ambiwidth')
-  set ambiwidth=double                " UTF-8の□や○でカーソル位置がずれないようにす
+  set ambiwidth=double                  " UTF-8の□や○でカーソル位置がずれないようにす
 endif
 
 
@@ -121,11 +116,12 @@ nnoremap <C-h>       :<C-u>help<Space>
 " <ESC>
 nnoremap <C-e> <ESC>
 inoremap <C-e> <ESC>
-" inoremap ee <ESC>
+
 
 " auto centering
 nnoremap n nzz
 nnoremap N Nzz
+
 
 " auto left
 "imap () ()<Left>
@@ -191,36 +187,36 @@ nmap <C-i> Yp:s/\d\+/\=(submatch(0)+1)/<CR>
 " json sort
 nmap <Leader>j !python -m json.tool<CR>
 
+" conflict lightline.vim
 " When insert mode, change statusline
-let g:hi_insert = 'hi StatusLine cterm=None ctermfg=0 ctermbg=3 gui=None guifg=Black guibg=Yellow'
+" let g:hi_insert = 'hi StatusLine cterm=None ctermfg=0 ctermbg=3 gui=None guifg=Black guibg=Yellow'
+" if has('syntax')
+  " augroup InsertHook
+    " autocmd!
+    " autocmd InsertEnter * call s:StatusLine('Enter')
+    " autocmd InsertLeave * call s:StatusLine('Leave')
+  " augroup END
+" endif
 
-if has('syntax')
-  augroup InsertHook
-    autocmd!
-    autocmd InsertEnter * call s:StatusLine('Enter')
-    autocmd InsertLeave * call s:StatusLine('Leave')
-  augroup END
-endif
+" let s:slhlcmd = ''
+" function! s:StatusLine(mode)
+  " if a:mode == 'Enter'
+    " silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
+    " silent exec g:hi_insert
+  " else
+    " highlight clear StatusLine
+    " silent exec s:slhlcmd
+  " endif
+" endfunction
 
-let s:slhlcmd = ''
-function! s:StatusLine(mode)
-  if a:mode == 'Enter'
-    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-    silent exec g:hi_insert
-  else
-    highlight clear StatusLine
-    silent exec s:slhlcmd
-  endif
-endfunction
-
-function! s:GetHighlight(hi)
-  redir => hl
-  exec 'highlight '.a:hi
-  redir END
-  let hl = substitute(hl, '[\r\n]', '', 'g')
-  let hl = substitute(hl, 'xxx', '', '')
-  return hl
-endfunction
+" function! s:GetHighlight(hi)
+  " redir => hl
+  " exec 'highlight '.a:hi
+  " redir END
+  " let hl = substitute(hl, '[\r\n]', '', 'g')
+  " let hl = substitute(hl, 'xxx', '', '')
+  " return hl
+" endfunction
 
 " for Click to Search ---------------------
 set scrolloff=0
@@ -246,11 +242,3 @@ command! -complete=file -nargs=+ Grep call s:grep([<f-args>])
 function! s:grep(args)
   execute 'vimgrep' '/'.a:args[-1].'/' join(a:args[:-2])
 endfunction
-
-" for Vimdiff --------------------------
-"if &diff
-"    setup for diff mode
-"else
-"    setup for non-diff mode
-"endif
-
