@@ -27,6 +27,7 @@ NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby']
 NeoBundle 'nakatakeshi/jump2pm.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'scrooloose/syntastic'
 NeoBundle 'taku-o/vim-catn'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/dictionary.vim'
