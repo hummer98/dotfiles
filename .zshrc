@@ -161,7 +161,8 @@ case "$OSTYPE" in
   linux*)
     case "$USER" in
       metroid*) # さくらのVPS
-        alias vi='/usr/bin/vim'
+        # alias vi='/usr/bin/vim'
+        alias vi='$HOME/local/bin/vim'
       ;;
     esac
   ;;
