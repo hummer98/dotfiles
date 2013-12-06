@@ -182,41 +182,10 @@ imap <silent> <C-y> <C-R><C-R>=LookupWard()<CR>
 
 " incremental copy
 " nmap <C-i> Yp:s/\d\+/\=(submatch(0)+1)/g<CR>
-nmap <C-i> Yp:s/\d\+/\=(submatch(0)+1)/<CR>
+nmap <C-p> Yp:s/\d\+/\=(submatch(0)+1)/<CR>
 
 " json sort
 nmap <Leader>j !python -m json.tool<CR>
-
-" conflict lightline.vim
-" When insert mode, change statusline
-" let g:hi_insert = 'hi StatusLine cterm=None ctermfg=0 ctermbg=3 gui=None guifg=Black guibg=Yellow'
-" if has('syntax')
-  " augroup InsertHook
-    " autocmd!
-    " autocmd InsertEnter * call s:StatusLine('Enter')
-    " autocmd InsertLeave * call s:StatusLine('Leave')
-  " augroup END
-" endif
-
-" let s:slhlcmd = ''
-" function! s:StatusLine(mode)
-  " if a:mode == 'Enter'
-    " silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-    " silent exec g:hi_insert
-  " else
-    " highlight clear StatusLine
-    " silent exec s:slhlcmd
-  " endif
-" endfunction
-
-" function! s:GetHighlight(hi)
-  " redir => hl
-  " exec 'highlight '.a:hi
-  " redir END
-  " let hl = substitute(hl, '[\r\n]', '', 'g')
-  " let hl = substitute(hl, 'xxx', '', '')
-  " return hl
-" endfunction
 
 " for Click to Search ---------------------
 set scrolloff=0
@@ -228,14 +197,6 @@ nnoremap <silent> <LeftMouse>   <Esc>:set eventignore=all<CR><LeftMouse>:set eve
 nnoremap          <2-LeftMouse> g*
 " Single-click for searching the word selected in visual-mode.
 vmap              <LeftMouse> <Plug>(visualstar-g*)
-
-" for Opera ----------------------------
-" opera -remote \"openURL()\"
-function! s:ExecOpera()
-  exe "! opera -remote \"openURL(%)\""
-:endfunction
-command! Exec call <SID>ExecOpera()
-nmap <C-p> :call <SID>ExecOpera()<CR>
 
 " Grep ---------------------------------
 command! -complete=file -nargs=+ Grep call s:grep([<f-args>])
