@@ -173,6 +173,7 @@ let g:user_emmet_settings = {
 \   'snippets': {
 \     'pv' : "<% ${cursor} %>",
 \     'pv-': "<%= ${cursor} %>",
+\     'pve': "<% end %>",
 \   },
 \ },
 \}
