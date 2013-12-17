@@ -151,11 +151,13 @@ nnoremap <silent>ciy ciw<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 
 " Set toggle setting
 nnoremap <Leader>1 :<C-u>set number!<CR>
-nnoremap <Leader>2 :<C-u>set wrap!<CR>
+nnoremap <Leader>2 :<C-u>set relativenumber!<CR>
 nnoremap <Leader>3 :<C-u>set paste!<CR>
-nnoremap <Leader>4 :<C-u>to vsp<CR>
-nnoremap <Leader>5 :<C-u>bo vsp<CR>
-nnoremap <Leader>6 :<C-u>set relativenumber!<CR>
+nnoremap <Leader>4 :<C-u>set wrap!<CR>
+nnoremap <Leader>5 :<C-u>to vsp<CR>
+nnoremap <Leader>6 :<C-u>bo vsp<CR>
+nnoremap <Leader>7 :<C-u>to sp<CR>
+nnoremap <Leader>9 :<C-u>q<CR>
 
 cmap w!! w !sudo tee > /dev/null %
 
