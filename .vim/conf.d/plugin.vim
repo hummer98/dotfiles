@@ -103,7 +103,9 @@ endif
 
 
 " for unite.vim ------------------------
-let g:unite_update_time = 1000
+let g:unite_update_time = 500
+let g:unite_enable_start_insert=0 " unite starts in insert mode
+
 call unite#custom#substitute('file', '\$\w\+', '\=eval(submatch(0))', 200)
 call unite#custom#substitute('file', '[^~.]\zs/', '*/*', 20)
 call unite#custom#substitute('file', '/\ze[^*]', '/*', 10)
@@ -117,25 +119,20 @@ call unite#custom#substitute('file', '^\~', escape($HOME, '\'), -2)
 call unite#custom#substitute('file', '\\\@<! ', '\\ ', -20)
 call unite#custom#substitute('file', '\\ \@!', '/', -30)
 
-" unite starts in insert mode
-let g:unite_enable_start_insert=0
-
 " unite mapping
 nnoremap [unite] <Nop>
 nmap ,u [unite]
+nnoremap <silent>[unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file tab<CR>
 nnoremap <silent>[unite]b :<C-u>Unite buffer<CR>
 nnoremap <silent>[unite]c :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 nnoremap <silent>[unite]f :<C-u>Unite file<CR>
-nnoremap <silent>[unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent>[unite]m :<C-u>Unite file_mru<CR>
+nnoremap <silent>[unite]o :<C-u>Unite outline<CR>
+nnoremap <silent>[unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent>[unite]s :<C-u>Unite session<CR>
 nnoremap <silent>[unite]t :<C-u>Unite tab<CR>
 nnoremap <silent>[unite]tq :<C-u>Unite tab -no-quit<CR>
 nnoremap <silent>[unite]u :<C-u>Unite buffer file_mru tab<CR>
-nnoremap <silent>[unite]s :<C-u>Unite session<CR>
-nnoremap <silent>[unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file tab<CR>
-
-" unite plugin mapping
-nnoremap <silent>[unite]o :<C-u>Unite outline<CR>
 
 " open with separated window
 au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
@@ -146,9 +143,6 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 " close on push esc*2
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
-
-" for operator-replace
-nmap _ <Plug>(operator-replace)
 
 
 " for jslint ---------------------------

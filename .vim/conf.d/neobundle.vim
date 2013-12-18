@@ -13,15 +13,13 @@ endif
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " from github
-" NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'shougo/unite-outline'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak'}}
 NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Sixeight/unite-grep'
-NeoBundle 'h1mesuke/unite-outline'
 NeoBundleLazy 'yuzuemon/jslint.vim', {"autoload": {"filetypes": 'javascript'}}
 NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'nakatakeshi/jump2pm.vim'
