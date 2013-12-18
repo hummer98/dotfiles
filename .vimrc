@@ -154,10 +154,11 @@ nnoremap <Leader>1 :<C-u>set number!<CR>
 nnoremap <Leader>2 :<C-u>set relativenumber!<CR>
 nnoremap <Leader>3 :<C-u>set paste!<CR>
 nnoremap <Leader>4 :<C-u>set wrap!<CR>
-nnoremap <Leader>5 :<C-u>to vsp<CR>
-nnoremap <Leader>6 :<C-u>bo vsp<CR>
-nnoremap <Leader>7 :<C-u>to sp<CR>
-nnoremap <Leader>9 :<C-u>q<CR>
+" Use <C-w> v, <C-w> n, <C-w> q
+" nnoremap <Leader>5 :<C-u>to vsp<CR>
+" nnoremap <Leader>6 :<C-u>bo vsp<CR>
+" nnoremap <Leader>7 :<C-u>to sp<CR>
+" nnoremap <Leader>9 :<C-u>q<CR>
 
 cmap w!! w !sudo tee > /dev/null %
 
