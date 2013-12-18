@@ -231,6 +231,7 @@ nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() 
 set tags=tags
 if filereadable(expand('/Applications/MacVim.app/Contents/MacOS/ctags'))
   let Tlist_Ctags_Cmd = '/Applications/MacVim.app/Contents/MacOS/ctags'
+  let tlist_objc_settings='objc;P:protocols;i:interfaces;I:implementations;M:instance methods;C:implementation methods;Z:protocol methods'
 endif
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Show_One_File = 1
