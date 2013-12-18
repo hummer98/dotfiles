@@ -14,7 +14,7 @@ let colors_name = "metroid"
 if version >= 700
   hi CursorLine guibg=#2d2d2d                                                           " 'cursorline' がオンになっているときのカーソルがある画面上の行
   hi CursorColumn guibg=#2d2d2d                                                         " 'cursorcolumn' がオンになっているときのカーソルがある画面上の桁
-  hi MatchParen guifg=#f6f3e8 guibg=#857b6f gui=bold                                    " 対応する括弧
+  hi MatchParen guifg=White guibg=Magenta gui=bold ctermfg=White ctermbg=Magenta cterm=none " 対応する括弧
   hi Pmenu      guifg=Black guibg=Magenta ctermfg=Black ctermbg=Magenta                 " ポップアップメニュー: 通常の項目
   hi PmenuSel   guifg=DarkGreen guibg=Magenta gui=bold ctermbg=Magenta ctermfg=DarkGreen cterm=none " ポップアップメニュー: 選択されている項目
   hi PmenuSbar  guibg=Black ctermbg=Black                                               " ポップアップメニュー: スクロールバー
