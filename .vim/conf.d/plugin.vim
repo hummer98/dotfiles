@@ -124,7 +124,7 @@ nnoremap [unite] <Nop>
 nmap ,u [unite]
 nnoremap <silent>[unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file tab<CR>
 nnoremap <silent>[unite]b :<C-u>Unite buffer<CR>
-nnoremap <silent>[unite]c :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent>[unite]c :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 nnoremap <silent>[unite]f :<C-u>Unite file<CR>
 nnoremap <silent>[unite]m :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]o :<C-u>Unite outline<CR>
