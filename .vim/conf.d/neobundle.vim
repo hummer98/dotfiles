@@ -26,12 +26,13 @@ NeoBundle 'nakatakeshi/jump2pm.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 " NeoBundle 'scrooloose/syntastic'
-NeoBundle 'taku-o/vim-catn'
-NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/dictionary.vim'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'taku-o/vim-catn'
+NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-rails',{"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tyru/capture'
 
 " from vim-scripts repository
 NeoBundle 'taglist.vim'
