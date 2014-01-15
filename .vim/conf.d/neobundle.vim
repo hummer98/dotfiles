@@ -32,7 +32,7 @@ NeoBundle 'taku-o/vim-catn'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-rails',{"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'tyru/capture'
+NeoBundle 'tyru/capture.vim'
 
 " from vim-scripts repository
 NeoBundle 'taglist.vim'
