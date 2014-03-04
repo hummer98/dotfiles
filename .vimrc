@@ -4,15 +4,15 @@ set nocompatible                        " use vim
 let mapleader = " "                     " set mapleader
 set t_Co=256                            " 256color
 
+" Set RunTimePath ----------------------
+set rtp+=$HOME/dotfiles/.vim/
+runtime! conf.d/*.vim
 
 " External File ------------------------
 if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
   colorscheme metroid
   color metroid
 endif
-
-set rtp+=$HOME/dotfiles/.vim/
-runtime! conf.d/*.vim
 
 " File ---------------------------------
 set autoread                            " 更新時自動再読み込み
