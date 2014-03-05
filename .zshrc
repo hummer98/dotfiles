@@ -150,6 +150,8 @@ case "$OSTYPE" in
   darwin*)
     alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     alias vim='vi'
+    alias vimdiff='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/vimdiff "$@"'
+    alias view='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/view "$@"'
     alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
     alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
     alias cot='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
