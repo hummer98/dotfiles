@@ -145,37 +145,33 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
 
-" for jslint ---------------------------
-augroup call_jslint
-  autocmd! call_jslint
-  autocmd FileType javascript call s:javascript_filetype_settings()
-augroup END
-
-function! s:javascript_filetype_settings()
-  autocmd BufLeave     <buffer> call jslint#clear()
-  autocmd BufWritePost <buffer> call jslint#check()
-  autocmd CursorMoved  <buffer> call jslint#message()
-endfunction
-
-
 " for emmet-vim ------------------------
 " pv = provide
 let g:user_emmet_settings = {
-\ 'indentation' : '  ',
-\ 'lang' : 'ja',
-\ 'eruby': {
-\   'snippets': {
-\     'pv' : "<% ${cursor} %>",
-\     'pv-': "<%= ${cursor} %>",
-\     'pve': "<% end %>",
-\   },
-\ },
-\}
+  \ 'indentation' : '  ',
+  \ 'lang' : 'ja',
+  \ 'eruby': {
+  \   'snippets': {
+  \     'pv' : "<% ${cursor} %>",
+  \     'pv-': "<%= ${cursor} %>",
+  \     'pve': "<% end %>",
+  \   },
+  \ },
+  \}
 let g:user_emmet_expandabbr_key = '<c-z>'
 
 
 " for surroud.vim ----------------------
 noremap <c-3> ysst
+
+
+" for syntastic  -----------------------
+let g:syntastic_mode_map = {
+  \ 'mode': 'active',
+  \ 'active_filetypes': [],
+  \ 'passive_filetypes': ['html']
+  \}
+let g:syntastic_auto_loc_list = 1
 
 
 " for NERDCommenter --------------------
