@@ -16,26 +16,26 @@ endfunction "}}}
 augroup template
   autocmd!
   " for text -----------------------------
-  autocmd BufNewFile *.txt 0r $HOME/.vim/template/skeleton.md
-  autocmd BufNewFile *.md 0r $HOME/.vim/template/skeleton.md
+  autocmd BufNewFile *.txt 0r $HOME/dotfiles/.vim/template/skeleton.md
+  autocmd BufNewFile *.md 0r $HOME/dotfiles/.vim/template/skeleton.md
 
   " for HTML -----------------------------
-  autocmd BufNewFile *.html 0r $HOME/.vim/template/skeleton.html
-  autocmd BufNewFile *.jade 0r $HOME/.vim/template/skeleton.jade
+  autocmd BufNewFile *.html 0r $HOME/dotfiles/.vim/template/skeleton.html
+  autocmd BufNewFile *.jade 0r $HOME/dotfiles/.vim/template/skeleton.jade
   autocmd BufRead,BufNewFile *.mtml setfiletype html
 
   " for JavaScript -----------------------
-  autocmd BufNewFile *.js 0r $HOME/.vim/template/skeleton.js
+  autocmd BufNewFile *.js 0r $HOME/dotfiles/.vim/template/skeleton.js
   autocmd Filetype javascript setl autoindent
   autocmd FileType javascript setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
   autocmd FileType javascript setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
   " for StyleSheet -----------------------
-  autocmd BufNewFile *.css 0r $HOME/.vim/template/skeleton.css
-  autocmd BufNewFile *.less 0r $HOME/.vim/template/skeleton.less
+  autocmd BufNewFile *.css 0r $HOME/dotfiles/.vim/template/skeleton.css
+  autocmd BufNewFile *.less 0r $HOME/dotfiles/.vim/template/skeleton.less
 
   " for Python ---------------------------
-  autocmd BufNewFile *.py 0r $HOME/.vim/template/skeleton.py
+  autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/skeleton.py
   autocmd Filetype python setl autoindent
   autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
   autocmd FileType python setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
@@ -48,7 +48,7 @@ augroup template
   autocmd FileType ruby :inoremap # X#
 
   " for Perl -----------------------------
-  autocmd BufNewFile *.pl 0r $HOME/.vim/template/skeleton.pl
+  autocmd BufNewFile *.pl 0r $HOME/dotfiles/.vim/template/skeleton.pl
   autocmd Filetype perl setl autoindent
   autocmd FileType perl setl smartindent cinwords=if,else,for,while,try,except,finally,def,class
   autocmd FileType perl setl expandtab tabstop=4 shiftwidth=4 softtabstop=0
