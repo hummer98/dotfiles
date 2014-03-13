@@ -25,7 +25,7 @@
   d3 = diff HEAD~~~
   tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 [push]
-  default = matching
+  default = simple
 [pager]
   log = diff-highlight | less
   show = diff-highlight | less
