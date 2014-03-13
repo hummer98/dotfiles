@@ -5,17 +5,18 @@ yuzuemon/dotfiles
 
 This repository is my dotfiles.
 
+* bash
 * Bazaar
 * Git
 * Vim
 * tmux
-* Zsh
+* zsh
 
 except ~/bin
 
 ## How to Setup
 
-1. git clone git@github.com:yuzuemon/dotfiles.git
+1. git clone https://github.com/yuzuemon/dotfiles.git
 1. cd ./dotfiles
 1. ./setup.sh
 1. cd ./.vim
