@@ -41,7 +41,6 @@ case ${UID} in
 ;;
 esac
 
-# RPROMPT="%T"                            # 時刻表示
 # コピペ
 autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
 
@@ -69,12 +68,13 @@ function rprompt-git-current-branch {
     color=%F{red}
   fi
 
-  echo "$color$name$action%f%b "
+  echo "[$color$name$action%f%b]"
 }
 
 setopt prompt_subst
 
-RPROMPT='[`rprompt-git-current-branch`%~]'
+# RPROMPT="%T"                            # 時刻表示
+RPROMPT='`rprompt-git-current-branch`'
 
 # コピペここまで
 
