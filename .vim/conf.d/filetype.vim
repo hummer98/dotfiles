@@ -33,6 +33,7 @@ augroup template
   " for StyleSheet -----------------------
   autocmd BufNewFile *.css 0r $HOME/dotfiles/.vim/template/skeleton.css
   autocmd BufNewFile *.less 0r $HOME/dotfiles/.vim/template/skeleton.less
+  autocmd BufRead,BufNewFile *.less setfiletype css
 
   " for Python ---------------------------
   autocmd BufNewFile *.py 0r $HOME/dotfiles/.vim/template/skeleton.py
