@@ -173,6 +173,18 @@ let g:syntastic_mode_map = {
   \}
 let g:syntastic_auto_loc_list = 1
 
+" for jslint ---------------------------
+" augroup call_jslint
+  " autocmd! call_jslint
+  " autocmd FileType javascript call s:javascript_filetype_settings()
+" augroup END
+
+" function! s:javascript_filetype_settings()
+  " autocmd BufLeave     <buffer> call jslint#clear()
+  " autocmd BufWritePost <buffer> call jslint#check()
+  " autocmd CursorMoved  <buffer> call jslint#message()
+" endfunction
+
 
 " for NERDCommenter --------------------
 " use NERDCommenterToggle c--
