@@ -21,7 +21,7 @@ set noswapfile                          " スワップファイルを作らな�
 set nobackup                            " バックアップを取らない
 set noreadonly                          " リードオンリーにしない
 set undofile                            " undo履歴ファイルを作る
-set undodir=$HOME/var/vim/undo
+set undodir=$HOME/.vimundo
 autocmd BufWritePre * :%s/\s\+$//ge     " 保存時に行末の空白を除去する
 " autocmd BufWritePre * :%s/\t/  /ge      " 保存時にtabをスペース2つに変換する
 syntax on                               " シンタックスカラーリングオン
