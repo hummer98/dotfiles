@@ -20,6 +20,7 @@ set hidden                              " 編集中でも他のファイルを�
 set noswapfile                          " スワップファイルを作らない
 set nobackup                            " バックアップを取らない
 set noreadonly                          " リードオンリーにしない
+set undofile                            " undo履歴ファイルを作る
 set undodir=$HOME/var/vim/undo
 autocmd BufWritePre * :%s/\s\+$//ge     " 保存時に行末の空白を除去する
 " autocmd BufWritePre * :%s/\t/  /ge      " 保存時にtabをスペース2つに変換する
