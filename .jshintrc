@@ -20,12 +20,12 @@
   "undef"         : true,  // ここらから全うにみてない
   "unused"        : true,  //
   "strict"        : false, //
-  "trailing"      : false, //
-  "maxparams"     : false, //
-  "maxdepth"      : false, //
-  "maxstatements" : false, //
-  "maxcomplexity" : false, //
-  "maxlen"        : false, //
+  "trailing"      : false, // Makes it an error to leave a trailing whitespace in your code.
+  "maxparams"     : false, // Set the max number of formal parameters allowed per function.
+  "maxdepth"      : false, // Control how nested do you want your blocks.
+  "maxstatements" : false, // Set the max number of statements allowed per function.
+  "maxcomplexity" : false, // Control cyclomatic complexity throughout your code.
+  "maxlen"        : false, // Set the maxmum length of a line.
 
   // Relaxing Options
   "asi"           : false,
