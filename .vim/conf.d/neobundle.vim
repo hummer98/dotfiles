@@ -22,12 +22,12 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak'}}
 NeoBundle 'Shougo/vimshell.vim'
-NeoBundleLazy 'yuzuemon/jslint.vim', {"autoload": {"filetypes": 'javascript'}}
+" NeoBundleLazy 'yuzuemon/jslint.vim', {"autoload": {"filetypes": 'javascript'}}
 NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'nakatakeshi/jump2pm.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
-" NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'itchyny/dictionary.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'taku-o/vim-catn'
@@ -37,6 +37,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tyru/capture.vim'
 
 " from vim-scripts repository
+NeoBundle 'Align'
 NeoBundle 'taglist.vim'
 NeoBundle 'sudo.vim'
 NeoBundleLazy 'TwitVim'

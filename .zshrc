@@ -1,5 +1,6 @@
 # common -------------------------------
 export LANG=ja_JP.UTF-8
+export LC_ALL=ja_JP.UTF-8
 autoload -U compinit; compinit          # 強力な補完機能
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
                              /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
@@ -185,4 +186,4 @@ function chpwd() {
 }
 
 # nvm
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+source $(brew --prefix nvm)/nvm.sh

@@ -1,0 +1,74 @@
+{
+  // Enforcing options
+  "bitwise"       : true,  // Prohibit bitwise operators.
+  "camelcase"     : true,  // Force all variable names to use either camelCase style or UPPER_CASE with underscores.
+  "curly"         : true,  // Put curly braces around blocks.
+  "eqeqeq"        : true,  // 比較演算子には === または !== を利用
+  "es3"           : false, // ECMAScript3 対応(IE6,7,8)コードの推奨
+  "forin"         : false,
+  "freeze"        : true,  // Array, Date などのネイティブオブジェクトを上書き禁止
+  "immed"         : false, // 括弧で括られていない即時関数の禁止
+  "indent"        : 2,     // インデント
+  "latedef"       : "nofunc",  // 宣言前の変数使用を禁止("nofunc"セット時は関数は除外)
+  "newcap"        : true,  // コンストラクタ関数名は大文字始まりとする
+  "noarg"         : false,
+  "noempty"       : false, // 空ブロックの禁止
+  "nonbsp"        : false, // &nbsp;の使用時に警告表示
+  "nonew"         : false, //
+  "plusplus"      : false, //
+  "quotmark"      : false, //
+  "undef"         : true,  // ここらから全うにみてない
+  "unused"        : true,  //
+  "strict"        : false, //
+  "trailing"      : false, //
+  "maxparams"     : false, //
+  "maxdepth"      : false, //
+  "maxstatements" : false, //
+  "maxcomplexity" : false, //
+  "maxlen"        : false, //
+
+  // Relaxing Options
+  "asi"           : false,
+  "boss"          : false,
+  "debug"         : false,
+  "eqnull"        : false,
+  "esnext"        : false,
+  "evil"          : false,
+  "expr"          : false,
+  "funcscope"     : false,
+  "gcl"           : false,
+  "globalstrict"  : false,
+  "iterator"      : false,
+  "lastsemic"     : false,
+  "laxbreak"      : false,
+  "laxcomma"      : false,
+  "loopfunc"      : false,
+  "maxerr"        : false,
+  "moz"           : false,
+  "multistr"      : false,
+  "notypeof"      : false,
+  "proto"         : false,
+  "scripturl"     : false,
+  "smarttabs"     : false,
+  "shadow"        : false,
+  "sub"           : false,
+  "supernew"      : false,
+  "validthis"     : false,
+  "noyield"       : false,
+
+  // Environments Options
+  "browser"       : true,  // Define globals exposed by modern browsers e.g. window, document.
+  "couch"         : false, // Define globals exposed by CouchDB.
+  "devel"         : true,  // Define globals exposed by development tools e.g. console, alert.
+  "dojo"          : false, // Define globals exposed by Dojo Toolkit.
+  "jquery"        : true,  // Define globals exposed by jQuery.
+  "mootools"      : false, // Define globals exposed by MooTools.
+  "node"          : false, // Define globals exposed by Node.js.
+  "nonstandard"   : false, // Define globals exposed by
+  "phantom"       : false, // Define globals exposed by PhantomJS.
+  "prototypejs"   : false, // Define globals exposed by Prototype.
+  "rhino"         : false, // Define globals exposed by Rhino.
+  "worker"        : false, // Define globals exposed by
+  "wsh"           : false, // Define globals exposed by Windows Script Host.
+  "yui"           : false  // Define globals exposed by YUI.
+}
