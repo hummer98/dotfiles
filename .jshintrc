@@ -2,11 +2,11 @@
   // Enforcing options
   "bitwise"       : true,  // Prohibit bitwise operators.
   "camelcase"     : true,  // Force all variable names to use either camelCase style or UPPER_CASE with underscores.
-  "curly"         : true,  // Put curly braces around blocks.
-  "eqeqeq"        : true,  // 比較演算子には === または !== を利用
-  "es3"           : false, // ECMAScript3 対応(IE6,7,8)コードの推奨
-  "forin"         : false,
-  "freeze"        : true,  // Array, Date などのネイティブオブジェクトを上書き禁止
+  "curly"         : false, // Put curly braces around blocks.
+  "eqeqeq"        : true,  // Prohibits the use of == and != in favor of === and !==.
+  "es3"           : false, // Needs to adhere to ECMAScript 3 specification.(for IE6/7/8/9)
+  "forin"         : false, // Tolerate `for in` loops without `hasOwnPrototype`.
+  "freeze"        : true,  // Prohibits overwriting prototypes of native objects such as Array, Date and so on.
   "immed"         : false, // 括弧で括られていない即時関数の禁止
   "indent"        : 2,     // インデント
   "latedef"       : "nofunc",  // 宣言前の変数使用を禁止("nofunc"セット時は関数は除外)
@@ -17,15 +17,15 @@
   "nonew"         : false, //
   "plusplus"      : false, //
   "quotmark"      : false, //
-  "undef"         : true,  // ここらから全うにみてない
-  "unused"        : true,  //
+  "undef"         : true,  // Prohibits the use of explicitly undeclared variables.
+  "unused"        : true,  // warns when you define and never use your variables.
   "strict"        : false, //
   "trailing"      : false, // Makes it an error to leave a trailing whitespace in your code.
   "maxparams"     : false, // Set the max number of formal parameters allowed per function.
   "maxdepth"      : false, // Control how nested do you want your blocks.
   "maxstatements" : false, // Set the max number of statements allowed per function.
   "maxcomplexity" : false, // Control cyclomatic complexity throughout your code.
-  "maxlen"        : false, // Set the maxmum length of a line.
+  "maxlen"        : false, // Set the maximum length of a line.
 
   // Relaxing Options
   "asi"           : false,
