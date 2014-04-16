@@ -168,10 +168,11 @@ noremap <c-3> ysst
 " for syntastic  -----------------------
 let g:syntastic_mode_map = {
   \ 'mode': 'active',
-  \ 'active_filetypes': [],
+  \ 'active_filetypes': ['javascript'],
   \ 'passive_filetypes': ['html']
   \}
 let g:syntastic_auto_loc_list = 1
+let g:syntastic_javascript_checker = ['jshint']
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
