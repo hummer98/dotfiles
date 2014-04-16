@@ -172,7 +172,7 @@ let g:syntastic_mode_map = {
   \ 'passive_filetypes': ['html']
   \}
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checker = ['jshint']
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
