@@ -187,3 +187,4 @@ function chpwd() {
 
 # nvm
 source $(brew --prefix nvm)/nvm.sh
+export RBENV_ROOT=/usr/local/var/rbenv
