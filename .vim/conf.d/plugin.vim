@@ -127,6 +127,7 @@ nnoremap <silent>[unite]b :<C-u>Unite buffer<CR>
 nnoremap <silent>[unite]c :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 nnoremap <silent>[unite]f :<C-u>Unite file<CR>
 nnoremap <silent>[unite]m :<C-u>Unite file_mru<CR>
+nnoremap <silent>[unite]n :<C-u>Unite file/new<CR>
 nnoremap <silent>[unite]o :<C-u>Unite outline<CR>
 nnoremap <silent>[unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent>[unite]s :<C-u>Unite session<CR>
@@ -168,7 +169,7 @@ noremap <c-3> ysst
 " for syntastic  -----------------------
 let g:syntastic_mode_map = {
   \ 'mode': 'active',
-  \ 'active_filetypes': ['javascript'],
+  \ 'active_filetypes': ['javascript', 'php', 'ruby', 'python', 'vim'],
   \ 'passive_filetypes': ['html']
   \}
 let g:syntastic_auto_loc_list = 1
@@ -300,6 +301,3 @@ let s:p.normal.warning = [ [ s:base023, s:yellow ] ]
 let g:lightline#colorscheme#metroid#palette = lightline#colorscheme#flatten(s:p)
 
 
-" let g:syntastic_mode_map = { 'mode': 'active',
-  " \ 'active_filetypes': ['perl'],
-  " \ 'passive_filetypes': ['php'] }
