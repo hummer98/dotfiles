@@ -170,6 +170,10 @@ case "$OSTYPE" in
   linux*)
     # alias vi='/usr/bin/vim'
     alias vi='$HOME/local/bin/vim'
+
+    # rbenv
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
   ;;
 esac
 
