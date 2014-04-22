@@ -161,14 +161,15 @@ case "$OSTYPE" in
     alias sl='sl -ae'
     alias expdiff='bzr cdiff | iconv -f cp932'
     alias rm='rmtrash'
+
+    # nvm
+    source $(brew --prefix nvm)/nvm.sh
+
+    export RBENV_ROOT=/usr/local/var/rbenv
   ;;
   linux*)
-    case "$USER" in
-      metroid*) # さくらのVPS
-        # alias vi='/usr/bin/vim'
-        alias vi='$HOME/local/bin/vim'
-      ;;
-    esac
+    # alias vi='/usr/bin/vim'
+    alias vi='$HOME/local/bin/vim'
   ;;
 esac
 
@@ -185,6 +186,3 @@ function chpwd() {
   fi
 }
 
-# nvm
-source $(brew --prefix nvm)/nvm.sh
-export RBENV_ROOT=/usr/local/var/rbenv
