@@ -170,21 +170,6 @@ imap <silent> <C-i>d <C-R>=strftime("%Y年%m月%e日")<CR>
 imap <silent> <C-i>t <C-R>=strftime("%H:%M")<CR>
 imap <silent> <C-i>c <C-R>=getcwd()<CR>
 
-" locate and return character 'above' current cursor position
-" http://www.ibm.com/developerworks/jp/linux/library/l-vim-script-1/
-function! LookupWard()
-  let column_num      = virtcol('.')
-  let target_pattern  = '\%' . column_num . 'v.'
-  let target_line_num = search(target_pattern . '*\S', 'bnW')
-
-  if !target_line_num
-    return ""
-  else
-    return matchstr(getline(target_line_num), target_pattern)
-  endif
-endfunction
-imap <silent> <C-y> <C-R><C-R>=LookupWard()<CR>
-
 " incremental copy
 " nmap <C-i> Yp:s/\d\+/\=(submatch(0)+1)/g<CR>
 nmap <C-p> Yp:s/\d\+/\=(submatch(0)+1)/<CR>
