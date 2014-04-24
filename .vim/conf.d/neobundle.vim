@@ -27,13 +27,13 @@ NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby']
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'itchyny/dictionary.vim'
+NeoBundleLazy 'itchyny/dictionary.vim'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'taku-o/vim-catn'
+NeoBundleLazy 'taku-o/vim-catn'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-rails',{"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'tyru/capture.vim'
+NeoBundleLazy 'tyru/capture.vim'
 
 " from vim-scripts repository
 NeoBundle 'Align'
