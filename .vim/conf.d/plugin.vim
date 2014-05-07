@@ -219,7 +219,7 @@ let g:quickrun_config = {
   \   'runner': 'vimproc',
   \   'runner/vimproc/updatetime': '60',
   \   'outputter': 'buffer',
-  \   'split': 'botright 50vsp',
+  \   'split': 'botright 5sp',
   \   'close_on_empty': 1,
   \   'hook/time/enable': 1
   \   },
@@ -228,7 +228,7 @@ let g:quickrun_config = {
   \   'tempfile': '{tempname()}.js'
   \   }
   \ }
-" 'split': 'botright 10sp',
+" 'split': 'botright 50vsp',
 " 'exec': '~/local/bin/python %o %s'
 " <C-c>
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
