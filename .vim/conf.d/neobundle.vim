@@ -23,7 +23,7 @@ NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak'}}
 NeoBundle 'Shougo/vimshell.vim'
 " NeoBundleLazy 'yuzuemon/jslint.vim', {"autoload": {"filetypes": 'javascript'}}
-NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby']}}
+NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby', 'php']}}
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
