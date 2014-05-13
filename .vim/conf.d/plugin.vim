@@ -145,6 +145,9 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
+" for vimfiler.vim ---------------------
+nnoremap <Leader>e  :<C-u>VimFilerExplorer<CR>
+
 
 " for emmet-vim ------------------------
 " pv = provide
