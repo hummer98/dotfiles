@@ -1,8 +1,14 @@
-# main viewの左端にコミットIDを表示する
-set show-id = yes
+set commit-order = topo # Order commits topologically
+set git-colors = no     # Do not read Git's color settings.
+set vertical-split = no # Do not split vertical.
 
-# 垂直方向に分割する
-set vertical-split = no
 
-# color
-color id default default
+# Configure blame view columns using command spanning multiple lines.
+set blame-view = \
+        date:default \
+        author:abbreviated \
+        file-name:auto \
+        id:yes,color \
+        line-number:yes,interval=5 text
+
+
