@@ -165,7 +165,9 @@ case "$OSTYPE" in
     # nvm
     source $(brew --prefix nvm)/nvm.sh
 
-    export RBENV_ROOT=/usr/local/var/rbenv
+    # rbenv
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
   ;;
   linux*)
     # alias vi='/usr/bin/vim'
