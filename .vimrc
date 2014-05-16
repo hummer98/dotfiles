@@ -92,6 +92,10 @@ endif
 set laststatus=2                        " ステータスラインを2行に
 set statusline=%<%F\ #%n%m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%y%=%l,%c%V%8P
 
+" Show full path  ----------------------
+augroup EchoFilePath
+  autocmd WinEnter * execute "normal! 1\<C-g>"
+augroup END
 
 " Charset, Line ending -----------------
 set termencoding=utf-8
