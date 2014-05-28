@@ -3,6 +3,7 @@ autocmd!
 set nocompatible                        " use vim
 let mapleader = " "                     " set mapleader
 set t_Co=256                            " 256color
+set timeout timeoutlen=3000 ttimeoutlen=100 " マッピング3000ms待ち, キーコードは100ms待ち
 
 " Set RunTimePath ----------------------
 set rtp+=$HOME/dotfiles/.vim/
@@ -33,7 +34,6 @@ set tabstop=2 shiftwidth=2 softtabstop=0  " tab展開文字数, autoindent時の
 " set textwidth=78                        " 自動改行する文字位置
 set autoindent smartindent              " 自動インデント，スマートインデント
 set backspace=indent,eol,start          " バックスペースで特殊記号も削除可能に
-
 
 " Assist imputting ---------------------
 set formatoptions=lmoq                  " 整形オプション，マルチバイト系を追加
