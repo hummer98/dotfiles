@@ -34,6 +34,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-rails',{"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'tpope/vim-surround'
 NeoBundleLazy 'tyru/capture.vim'
+NeoBundleLazy 'Yggdroot/indentLine', {"autoload": {"filetypes": ['html']}}
 
 " from vim-scripts repository
 NeoBundle 'Align'
