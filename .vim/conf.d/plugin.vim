@@ -104,7 +104,7 @@ endif
 
 " for unite.vim ------------------------
 let g:unite_update_time = 250
-let g:unite_enable_start_insert=0 " unite starts in insert mode
+let g:unite_enable_start_insert=1 " unite starts in insert mode
 
 call unite#custom#substitute('file', '\$\w\+', '\=eval(submatch(0))', 200)
 call unite#custom#substitute('file', '[^~.]\zs/', '*/*', 20)
