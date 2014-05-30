@@ -3,7 +3,7 @@ autocmd!
 set nocompatible                        " use vim
 let mapleader = " "                     " set mapleader
 set t_Co=256                            " 256color
-set timeout timeoutlen=1000 ttimeoutlen=100 " マッピング1000ms待ち, キーコードは100ms待ち
+set notimeout ttimeout timeoutlen=100   " マッピングについてはタイムアウトしない, 端末のキーコードについてタイムアウトする, 100ms後にタイムアウトする
 
 " Set RunTimePath ----------------------
 set rtp+=$HOME/dotfiles/.vim/
