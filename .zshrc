@@ -161,21 +161,10 @@ case "$OSTYPE" in
     alias sl='sl -ae'
     alias expdiff='bzr cdiff | iconv -f cp932'
     alias rm='rmtrash'
-
-    # nvm
-    source $(brew --prefix nvm)/nvm.sh
-
-    # rbenv
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
+    alias q='qlmanage -p "$@" >& /dev/null'
   ;;
   linux*)
-    # alias vi='/usr/bin/vim'
     alias vi='$HOME/local/bin/vim'
-
-    # rbenv
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
   ;;
 esac
 
