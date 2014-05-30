@@ -133,7 +133,7 @@ nnoremap <silent>[unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent>[unite]s :<C-u>Unite session<CR>
 nnoremap <silent>[unite]t :<C-u>Unite tab<CR>
 nnoremap <silent>[unite]tq :<C-u>Unite tab -no-quit<CR>
-nnoremap <silent>[unite]u :<C-u>Unite buffer file_mru tab<CR>
+nnoremap <silent>[unite]u :<C-u>UniteWithBufferDir buffer file_mru tab<CR>
 
 " open with separated window
 au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
