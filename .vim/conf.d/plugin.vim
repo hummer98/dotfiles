@@ -122,21 +122,21 @@ call unite#custom#substitute('file', '\\ \@!', '/', -30)
 " unite mapping
 nnoremap [unite] <Nop>
 nmap ,u [unite]
-nnoremap <silent>[unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file tab<CR>
-nnoremap <silent>[unite]b :<C-u>Unite buffer<CR>
-nnoremap <silent>[unite]c :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-nnoremap <silent>[unite]cq :<C-u>UniteWithBufferDir -buffer-name=files file file/new -no-quit<CR>
-nnoremap <silent>[unite]f :<C-u>Unite file<CR>
-nnoremap <silent>[unite]m :<C-u>Unite file_mru<CR>
-nnoremap <silent>[unite]n :<C-u>Unite file/new<CR>
-nnoremap <silent>[unite]o :<C-u>Unite outline<CR>
-nnoremap <silent>[unite]oq :<C-u>Unite outline -no-quit<CR>
-nnoremap <silent>[unite]r :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent>[unite]s :<C-u>Unite session<CR>
-nnoremap <silent>[unite]t :<C-u>Unite tab<CR>
-nnoremap <silent>[unite]tq :<C-u>Unite tab -no-quit<CR>
-nnoremap <silent>[unite]u :<C-u>UniteWithBufferDir buffer file_mru tab<CR>
-nnoremap <silent>[unite]uq :<C-u>UniteWithBufferDir buffer file_mru tab -no-quit<CR>
+nnoremap <silent>[unite]a  :<C-u>Unite -buffer-name=files buffer file_mru bookmark file tab<CR>
+nnoremap <silent>[unite]b  :<C-u>Unite buffer<CR>
+nnoremap <silent>[unite]c  :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+nnoremap <silent>[unite]qc :<C-u>UniteWithBufferDir -buffer-name=files file file/new -no-quit<CR>
+nnoremap <silent>[unite]f  :<C-u>Unite file<CR>
+nnoremap <silent>[unite]m  :<C-u>Unite file_mru<CR>
+nnoremap <silent>[unite]n  :<C-u>Unite file/new<CR>
+nnoremap <silent>[unite]o  :<C-u>Unite outline<CR>
+nnoremap <silent>[unite]qo :<C-u>Unite outline -no-quit<CR>
+nnoremap <silent>[unite]r  :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent>[unite]s  :<C-u>Unite session<CR>
+nnoremap <silent>[unite]t  :<C-u>Unite tab<CR>
+nnoremap <silent>[unite]qt :<C-u>Unite tab -no-quit<CR>
+nnoremap <silent>[unite]u  :<C-u>Unite file_mru tab<CR>
+nnoremap <silent>[unite]qu :<C-u>Unite file_mru tab -no-quit<CR>
 
 " open with separated window
 au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
