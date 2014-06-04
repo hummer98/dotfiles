@@ -4,7 +4,7 @@ set nocompatible                        " use vim
 let mapleader = " "                     " set mapleader
 set t_Co=256                            " 256color
 set timeout ttimeout timeoutlen=500 ttimeoutlen=100
-" set notimeout ttimeout timeoutlen=100   " マッピングについてはタイムアウトしない, 端末のキーコードについてタイムアウトする, 100ms後にタイムアウトする
+" set notimeout ttimeout timeoutlen=100   " マッピングについてはタイムアウトしない, 端末キーコードについては100ms後にタイムアウトする
 
 " Set RunTimePath ----------------------
 set rtp+=$HOME/dotfiles/.vim/
