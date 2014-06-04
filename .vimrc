@@ -115,21 +115,24 @@ endif
 " Add blank line
 " nnoremap <C-a> :<C-u>call append(expand('.'), '')<Cr>j
 
-" edit .vimrc
-nnoremap <Leader>.   :<C-u>edit $MYVIMRC<Enter>
-nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
-nnoremap <C-h>       :<C-u>help<Space>
-
+" no ABCD in insert mode
+set <xUp>=OA
+set <xDown>=OB
+set <xRight>=OC
+set <xLeft>=OD
 
 " <ESC>
 nnoremap <C-e> <ESC>
 inoremap <C-e> <ESC>
 
-
 " auto centering
 nnoremap n nzz
 nnoremap N Nzz
 
+" edit .vimrc
+nnoremap <Leader>.   :<C-u>edit $MYVIMRC<Enter>
+nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
+nnoremap <C-h>       :<C-u>help<Space>
 
 " auto left
 "imap () ()<Left>
