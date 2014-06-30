@@ -1,9 +1,0 @@
-*.dat
-*.[ao]
-*.py[co]
-*.so
-*.sw[nop]
-*~
-.#*
-[#]*#
-.DS_Store

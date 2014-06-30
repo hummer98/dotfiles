@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOT_FILES=( .bazaar .gitconfig .gvimrc .vim .vimrc .tmux.conf .zshenv .zshrc .tigrc .jshintrc )
+DOT_FILES=( .gitconfig .gvimrc .vim .vimrc .tmux.conf .zshenv .zshrc .tigrc .jshintrc )
 
 for file in ${DOT_FILES[@]}
 do
