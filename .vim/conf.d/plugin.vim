@@ -6,7 +6,7 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_syntax_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
-let g:neocomplete#max_list = 50
+let g:neocomplete#max_list = 25
 let g:neocomplete#enable_auto_select = 1
 
 let g:neocomplete#force_overwrite_completefunc = 1
