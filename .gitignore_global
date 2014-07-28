@@ -5,6 +5,4 @@
 *.so
 *.sw[nop]
 .DS_Store
-.vim/neobundle
-.vim/neobundle.vim
-.vimrc.office
+node_modules/

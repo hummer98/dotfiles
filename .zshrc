@@ -2,7 +2,9 @@
 export LANG=ja_JP.UTF-8
 export LC_ALL=ja_JP.UTF-8
 autoload -U compinit; compinit          # 強力な補完機能
-zstyle ':completion:*:sudo:*' command-path /usr/bin /usr/sbin /bin /sbin /usr/X11R6/bin
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
+                             /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
+                             /usr/local/git/bin
 
 bindkey -e                              # emacs
 
