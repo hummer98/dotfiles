@@ -155,6 +155,12 @@ imap <C-h> <BackSpace>
 " imap <C-k> <Up>
 " imap <C-l> <Right>
 
+" current buffer's movement
+nnoremap cp :cprevious<CR>
+nnoremap cn :cnext<CR>
+nnoremap cf :cfirst<CR>
+nnoremap cl :clast<CR>
+
 " Auto fill
 nnoremap <silent>cy ce<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
 vnoremap <silent>cy c<C-r>0<ESC>:let@/=@1<CR>:noh<CR>
