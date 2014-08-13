@@ -27,8 +27,8 @@
   d2 = diff HEAD~~
   d3 = diff HEAD~~~
   p  = pull
-  P  = push
-  PU = push -u
+  ps = push
+  psu= push -u
   s  = status
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
