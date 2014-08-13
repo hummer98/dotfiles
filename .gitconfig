@@ -14,8 +14,9 @@
   diff = auto
   ui = true
 [alias]
+  a  = add
   co = checkout
-  s  = status
+  d  = diff
   dm = diff master
   dw = diff --color-words
   dc = diff --cached
@@ -23,6 +24,10 @@
   d1 = diff HEAD~
   d2 = diff HEAD~~
   d3 = diff HEAD~~~
+  p  = pull
+  P  = push
+  PU = push -u
+  s  = status
   tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 [push]
   default = simple

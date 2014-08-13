@@ -126,48 +126,42 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-
-
 setopt complete_aliases                 # デフォルトのコマンドをベースに補完
 
+
+# add alias
 case "$OSTYPE" in
   darwin*)                                # for MacOS
     alias ls='ls -ahGp'
     alias ld='ls -ahGp | grep /'
     alias ll='ls -ahGlp'
     alias lld='ls -ahGlp | grep /'
+
+    alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    alias vim='vi'
+    alias vimdiff='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/vimdiff "$@"'
+    alias vd='vimdiff'
+    alias view='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/view "$@"'
+    alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
+    alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
+    alias cot='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
+    alias gvi='gvim'
+    alias sl='sl -ae'
+    alias rm='rmtrash'
+    alias q='qlmanage -p "$@" >& /dev/null'
   ;;
   linux*)                                 # for GNU
     alias ls='ls -ahp --color=auto'
     alias ld='ls -ahp --color=auto | grep /'
     alias ll='ls -ahlp --color=auto'
     alias lld='ls -ahlp --color=auto | grep /'
-  ;;
-esac
 
-
-# add alias
-case "$OSTYPE" in
-  darwin*)
-    alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-    alias vim='vi'
-    alias vimdiff='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/vimdiff "$@"'
-    alias view='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/view "$@"'
-    alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -g "$@"'
-    alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
-    alias cot='/Applications/CotEditor.app/Contents/MacOS/CotEditor "$@"'
-    alias sub='/Applications/Sublime\ Text\ 2.app/Contents/MacOS/Sublime\ Text\ 2 "$@"'
-    alias gvi='gvim'
-    alias sl='sl -ae'
-    alias expdiff='bzr cdiff | iconv -f cp932'
-    alias rm='rmtrash'
-    alias q='qlmanage -p "$@" >& /dev/null'
-  ;;
-  linux*)
     alias vi='$HOME/local/bin/vim'
   ;;
 esac
 
+alias g='git'
+alias t='tig'
 alias o='open'
 alias history='history -f'
 
