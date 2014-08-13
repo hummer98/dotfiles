@@ -15,6 +15,7 @@
   ui = true
 [alias]
   a  = add
+  au = add -u
   cm = commit -m
   co = checkout
   cb = checkout -b
@@ -26,6 +27,7 @@
   d1 = diff HEAD~
   d2 = diff HEAD~~
   d3 = diff HEAD~~~
+  m  = merge
   p  = pull
   ps = push
   psu= push -u
