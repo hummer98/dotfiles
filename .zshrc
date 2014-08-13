@@ -165,6 +165,10 @@ alias t='tig'
 alias o='open'
 alias history='history -f'
 
+# global alias
+alias -g B='`git branch -a | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
+alias -g H='`curl -sL https://api.github.com/users/yuzuemon/repos | jq -r ".[].full_name" | peco --prompt "GITHUB REPOS>" | head -n 1`'
+
 
 # auto ll
 function chpwd() {
