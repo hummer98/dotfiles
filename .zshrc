@@ -160,9 +160,11 @@ case "$OSTYPE" in
   ;;
 esac
 
+alias c='cd'
 alias g='git'
-alias t='tig'
 alias o='open'
+alias t='tig'
+alias v='vi'
 alias history='history -f'
 
 # global alias
