@@ -8,8 +8,9 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 
 bindkey -e                              # emacs
 
-# mosh
+# 補完の引き継ぎ
 compdef mosh=ssh
+compdef '_dispatch git git' g
 
 # zsh-completionsを利用する(need 'brew install zsh-completions')
 fpath=(/usr/local/share/zsh-completions $fpath)
