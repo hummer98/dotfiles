@@ -15,26 +15,25 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " from github
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/unite-outline'
-NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite.vim', 'ver.5.1'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak'}}
 NeoBundle 'Shougo/vimshell.vim'
-" NeoBundleLazy 'yuzuemon/jslint.vim', {"autoload": {"filetypes": 'javascript'}}
-NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby', 'php']}}
+NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
-NeoBundleLazy 'itchyny/dictionary.vim'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundleLazy 'taku-o/vim-catn'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-rails',{"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'tpope/vim-surround'
-NeoBundleLazy 'tyru/capture.vim'
 NeoBundleLazy 'Yggdroot/indentLine', {"autoload": {"filetypes": ['html']}}
+NeoBundleLazy 'itchyny/dictionary.vim'
+NeoBundleLazy 'taku-o/vim-catn'
+NeoBundleLazy 'tyru/capture.vim'
+NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby', 'php']}}
 
 " from vim-scripts repository
 NeoBundle 'Align'
