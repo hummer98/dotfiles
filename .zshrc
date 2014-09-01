@@ -163,6 +163,7 @@ esac
 
 alias c='cd'
 alias g='git'
+alias l='ll'
 alias o='open'
 alias t='tig'
 alias v='vi'
