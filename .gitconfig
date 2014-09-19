@@ -27,6 +27,7 @@
   d1 = diff HEAD~
   d2 = diff HEAD~~
   d3 = diff HEAD~~~
+  f  = fetch
   m  = merge
   p  = pull
   ps = push
