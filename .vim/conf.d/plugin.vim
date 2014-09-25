@@ -174,7 +174,7 @@ noremap <c-3> ysst
 
 " for syntastic  -----------------------
 let g:syntastic_mode_map = {
-  \ 'mode': 'active',
+  \ 'mode': 'passive',
   \ 'active_filetypes': ['javascript', 'php', 'ruby', 'python', 'vim'],
   \ 'passive_filetypes': ['html']
   \}
@@ -253,11 +253,25 @@ nnoremap <silent> <leader>l :TlistToggle<CR>
 " for lightline.vim --------------------
 let g:lightline = {
       \ 'colorscheme': 'metroid',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'syntastic', 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \ },
       \ 'component': {
       \   'readonly': '%{&readonly?"\u2b64":""}',
       \ },
       \ 'component_function': {
       \   'mode': 'MyMode',
+      \   'fugitive': 'MyFugitive'
+      \ },
+      \ 'component_expand': {
+      \   'syntastic': 'SyntasticStatuslineFlag',
+      \ },
+      \ 'component_type': {
+      \   'syntastic': 'error',
       \ },
       \ 'separator': { 'left': "\u2b80", 'right': "\u2b82" },
       \ 'subseparator': { 'left': "\u2b81", 'right': "\u2b83" },
@@ -270,6 +284,24 @@ function! MyMode()
        \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
+function! MyFugitive()
+  if exists("*fugitive#head")
+    let _ = fugitive#head()
+    return strlen(_) ? '⭠ '._ : ''
+  endif
+  return ''
+endfunction
+
+augroup AutoSyntastic
+  autocmd!
+  autocmd BufWritePost * call s:syntastic()
+augroup END
+
+function! s:syntastic()
+  SyntasticCheck
+  call lightline#update()
+endfunction
+
 
 let s:base03 = [ '#242424', 235 ]
 let s:base023 = [ '#353535 ', 236 ]
@@ -280,6 +312,7 @@ let s:base0 = [ '#808080', 244 ]
 let s:base1 = [ '#969696', 247 ]
 let s:base2 = [ '#a8a8a8', 248 ]
 let s:base3 = [ '#d0d0d0', 252 ]
+let s:white = [ '#ffffff', 255 ]
 let s:yellow = [ '#fef935', 227 ]
 let s:orange = [ '#e5786d', 173 ]
 let s:red = [ '#e5786d', 197 ]
@@ -301,9 +334,8 @@ let s:p.tabline.left = [ [ s:base3, s:base00 ] ]
 let s:p.tabline.tabsel = [ [ s:base2, s:base023 ] ]
 let s:p.tabline.middle = [ [ s:base02, s:base1 ] ]
 let s:p.tabline.right = [ [ s:base2, s:base01 ] ]
-let s:p.normal.error = [ [ s:base03, s:red ] ]
+let s:p.normal.error = [ [ s:white, s:magenta ] ]
 let s:p.normal.warning = [ [ s:base023, s:yellow ] ]
 
 let g:lightline#colorscheme#metroid#palette = lightline#colorscheme#flatten(s:p)
-
 

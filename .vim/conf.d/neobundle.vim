@@ -27,6 +27,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rails',{"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundle 'tpope/vim-surround'
 NeoBundleLazy 'Yggdroot/indentLine', {"autoload": {"filetypes": ['html']}}

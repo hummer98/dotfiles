@@ -19,6 +19,7 @@
   cm = commit -m
   co = checkout
   cb = checkout -b
+  cp = cherry-pick
   d  = diff
   dm = diff master
   dw = diff --color-words
