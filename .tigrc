@@ -12,4 +12,5 @@ set blame-view = \
         id:yes,color \
         line-number:yes,interval=5 text
 
+set main-view = id date author commit-title:graph=yes,refs=yes
 
