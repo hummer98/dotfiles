@@ -7,6 +7,7 @@ if has('mac')
   set columns=114         " width
   set lines=200           " line
   set antialias
+  set imdisable
 elseif has('linux')
   set guifont=Monaco\ 12
   set columns=160
