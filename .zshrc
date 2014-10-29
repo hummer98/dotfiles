@@ -167,6 +167,7 @@ alias l='ll'
 alias o='open'
 alias t='tig'
 alias v='vi'
+alias ..='cd ..'
 alias history='history -f'
 
 # global alias
