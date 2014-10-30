@@ -7,7 +7,7 @@ if has('vim_starting')
     set rtp+=$HOME/dotfiles/.vim/neobundle.vim
   endif
 
-  call neobundle#rc(expand('$HOME/dotfiles/.vim/neobundle'))
+  call neobundle#begin(expand('$HOME/dotfiles/.vim/neobundle'))
 endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -40,7 +40,8 @@ NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby',
 NeoBundle 'Align'
 NeoBundle 'taglist.vim'
 NeoBundle 'sudo.vim'
-NeoBundleLazy 'TwitVim'
+
+call neobundle#end()
 
 filetype plugin indent on
 NeoBundleCheck
