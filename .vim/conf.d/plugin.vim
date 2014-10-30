@@ -126,22 +126,32 @@ nmap ,u [unite]
 nnoremap <silent>[unite]a  :<C-u>Unite -buffer-name=files buffer file_mru bookmark file tab<CR>
 nnoremap <silent>[unite]b  :<C-u>Unite buffer<CR>
 nnoremap <silent>[unite]c  :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-nnoremap <silent>[unite]qc :<C-u>UniteWithBufferDir -buffer-name=files file file/new -no-quit<CR>
-nnoremap <silent>[unite]rc :<C-u>Unite file_rec/async file/new<CR>
-nnoremap <silent>[unite]f  :<C-u>Unite find<CR>
-nnoremap <silent>[unite]g  :<C-u>Unite file_rec/git file/new<CR>
+nnoremap <silent>[unite]fa :<C-u>Unite file_rec/async file/new<CR>
+nnoremap <silent>[unite]fg :<C-u>Unite file_rec/git file/new<CR>
+nnoremap <silent>[unite]fi :<C-u>Unite find<CR>
+nnoremap <silent>[unite]g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent>[unite]gg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-r><C-w><CR>
+nnoremap <silent>[unite]gr :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>[unite]m  :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
 nnoremap <silent>[unite]me :<C-u>Unite output:message<CR>
 nnoremap <silent>[unite]n  :<C-u>Unite file/new<CR>
 nnoremap <silent>[unite]o  :<C-u>Unite outline<CR>
+nnoremap <silent>[unite]qc :<C-u>UniteWithBufferDir -buffer-name=files file file/new -no-quit<CR>
 nnoremap <silent>[unite]qo :<C-u>Unite outline -no-quit<CR>
+nnoremap <silent>[unite]qt :<C-u>Unite tab -no-quit<CR>
+nnoremap <silent>[unite]qu :<C-u>Unite file_mru tab -no-quit<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent>[unite]s  :<C-u>Unite source<CR>
 nnoremap <silent>[unite]t  :<C-u>Unite tab<CR>
-nnoremap <silent>[unite]qt :<C-u>Unite tab -no-quit<CR>
 nnoremap <silent>[unite]u  :<C-u>Unite file_mru tab<CR>
-nnoremap <silent>[unite]qu :<C-u>Unite file_mru tab -no-quit<CR>
+
+" use ag(The Silver Searcher)
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
 " open with separated window
 au FileType unite nnoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
