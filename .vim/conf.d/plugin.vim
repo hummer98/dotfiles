@@ -104,7 +104,8 @@ endif
 
 " for unite.vim ------------------------
 let g:unite_update_time = 250
-let g:unite_enable_start_insert=0 " unite starts in insert mode
+let g:unite_enable_start_insert = 0 " unite starts in insert mode
+let g:unite_force_overwrite_statusline = 0
 
 call unite#custom#substitute('file', '\$\w\+', '\=eval(submatch(0))', 200)
 call unite#custom#substitute('file', '[^~.]\zs/', '*/*', 20)
@@ -126,21 +127,25 @@ nnoremap <silent>[unite]a  :<C-u>Unite -buffer-name=files buffer file_mru bookma
 nnoremap <silent>[unite]b  :<C-u>Unite buffer<CR>
 nnoremap <silent>[unite]c  :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
 nnoremap <silent>[unite]qc :<C-u>UniteWithBufferDir -buffer-name=files file file/new -no-quit<CR>
-nnoremap <silent>[unite]f  :<C-u>Unite file<CR>
+nnoremap <silent>[unite]rc :<C-u>Unite file_rec/async file/new<CR>
+nnoremap <silent>[unite]f  :<C-u>Unite find<CR>
+nnoremap <silent>[unite]g  :<C-u>Unite file_rec/git file/new<CR>
 nnoremap <silent>[unite]m  :<C-u>Unite file_mru<CR>
+nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
+nnoremap <silent>[unite]me :<C-u>Unite output:message<CR>
 nnoremap <silent>[unite]n  :<C-u>Unite file/new<CR>
 nnoremap <silent>[unite]o  :<C-u>Unite outline<CR>
 nnoremap <silent>[unite]qo :<C-u>Unite outline -no-quit<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite -buffer-name=register register<CR>
-nnoremap <silent>[unite]s  :<C-u>Unite session<CR>
+nnoremap <silent>[unite]s  :<C-u>Unite source<CR>
 nnoremap <silent>[unite]t  :<C-u>Unite tab<CR>
 nnoremap <silent>[unite]qt :<C-u>Unite tab -no-quit<CR>
 nnoremap <silent>[unite]u  :<C-u>Unite file_mru tab<CR>
 nnoremap <silent>[unite]qu :<C-u>Unite file_mru tab -no-quit<CR>
 
 " open with separated window
-au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
-au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+au FileType unite nnoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
 " open with separated vertical window
 au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
