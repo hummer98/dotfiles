@@ -129,8 +129,8 @@ nnoremap <silent>[unite]c  :<C-u>UniteWithBufferDir -buffer-name=files file file
 nnoremap <silent>[unite]fa :<C-u>Unite file_rec/async<CR>
 nnoremap <silent>[unite]fg :<C-u>Unite file_rec/git<CR>
 nnoremap <silent>[unite]fi :<C-u>Unite find<CR>
-nnoremap <silent>[unite]g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent>[unite]gg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-r><C-w><CR>
+nnoremap <silent>[unite]g  :<C-u>Unite grep:. -buffer-name=search-buffer -no-quit<CR>
+nnoremap <silent>[unite]gg :<C-u>Unite grep:. -buffer-name=search-buffer -no-quit<CR><C-r><C-w><CR>
 nnoremap <silent>[unite]gr :<C-u>UniteResume search-buffer<CR>
 nnoremap <silent>[unite]m  :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
