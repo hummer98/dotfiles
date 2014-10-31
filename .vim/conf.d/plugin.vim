@@ -126,8 +126,8 @@ nmap ,u [unite]
 nnoremap <silent>[unite]a  :<C-u>Unite -buffer-name=files buffer file_mru bookmark file tab<CR>
 nnoremap <silent>[unite]b  :<C-u>Unite buffer<CR>
 nnoremap <silent>[unite]c  :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
-nnoremap <silent>[unite]fa :<C-u>Unite file_rec/async file/new<CR>
-nnoremap <silent>[unite]fg :<C-u>Unite file_rec/git file/new<CR>
+nnoremap <silent>[unite]fa :<C-u>Unite file_rec/async<CR>
+nnoremap <silent>[unite]fg :<C-u>Unite file_rec/git<CR>
 nnoremap <silent>[unite]fi :<C-u>Unite find<CR>
 nnoremap <silent>[unite]g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent>[unite]gg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-r><C-w><CR>
