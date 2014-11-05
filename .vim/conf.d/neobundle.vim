@@ -30,6 +30,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
 NeoBundleLazy 'Yggdroot/indentLine', {"autoload": {"filetypes": ['html']}}
+NeoBundleLazy 'derekwyatt/vim-scala.git', {"autoload": {"filetypes": ['scala']}}
 NeoBundleLazy 'itchyny/dictionary.vim'
 NeoBundleLazy 'taku-o/vim-catn'
 NeoBundleLazy 'tpope/vim-rails',{"autoload": {"filetypes": ['html', 'eruby']}}
