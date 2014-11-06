@@ -136,9 +136,9 @@ nnoremap <silent>[unite]m  :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
 nnoremap <silent>[unite]me :<C-u>Unite output:message<CR>
 nnoremap <silent>[unite]n  :<C-u>Unite file/new<CR>
-nnoremap <silent>[unite]o  :<C-u>Unite outline<CR>
+nnoremap <silent>[unite]o  :<C-u>Unite outline -vertical -winwidth=30<CR>
 nnoremap <silent>[unite]qc :<C-u>UniteWithBufferDir -buffer-name=files file file/new -no-quit<CR>
-nnoremap <silent>[unite]qo :<C-u>Unite outline -no-quit<CR>
+nnoremap <silent>[unite]qo :<C-u>Unite outline -vertical -winwidth=30 -no-quit<CR>
 nnoremap <silent>[unite]qt :<C-u>Unite tab -no-quit<CR>
 nnoremap <silent>[unite]qu :<C-u>Unite file_mru tab -no-quit<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite -buffer-name=register register<CR>
