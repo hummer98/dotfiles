@@ -195,6 +195,8 @@ let g:syntastic_mode_map = {
   \}
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpmd_post_args='codesize,design,unusedcode'
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
