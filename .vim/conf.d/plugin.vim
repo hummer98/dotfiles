@@ -197,7 +197,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_php_phpcs_args='--standard=psr2'
-let g:syntastic_php_phpmd_post_args='~/conf/phpmd.xml'
+let g:syntastic_php_phpmd_post_args='~/.conf/phpmd.xml'
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
