@@ -1,6 +1,7 @@
 #!/bin/sh
 
 DOT_FILES=(
+  .conf
   .ctags
   .gitconfig
   .gitignore_global
