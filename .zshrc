@@ -169,6 +169,7 @@ alias t='tig'
 alias v='vi'
 alias ..='cd ..'
 alias history='history -f'
+alias ag='ag --stats'
 
 # global alias
 alias -g B='`git branch -a | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
