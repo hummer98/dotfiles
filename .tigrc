@@ -1,3 +1,4 @@
+set mouse = yes
 set commit-order = topo # Order commits topologically
 set git-colors = no     # Do not read Git's color settings.
 set vertical-split = no # Do not split vertical.
