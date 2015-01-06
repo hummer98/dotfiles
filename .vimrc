@@ -135,6 +135,13 @@ nnoremap <Leader>.   :<C-u>edit $MYVIMRC<Enter>
 nnoremap <Leader>s.  :<C-u>source $MYVIMRC<Enter>
 nnoremap <C-h>       :<C-u>help<Space>
 
+" yank to end of a line.
+nnoremap Y y$
+
+" increment, decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+
 " auto left
 "imap () ()<Left>
 "imap [] []<Left>
