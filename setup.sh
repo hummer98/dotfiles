@@ -31,3 +31,6 @@ do
     echo "シンボリックリンクを貼りますた: $file"
   fi
 done
+
+git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/neobundle
+

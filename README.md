@@ -7,6 +7,7 @@ This repository is my dotfiles.
 
 * Git
 * Vim
+  * with neobundle.vim
 * tmux
 * zsh
 * and more...
