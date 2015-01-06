@@ -22,11 +22,3 @@ cd ./dotfiles
 ./setup.sh
 ```
 
-## How to NeoBundle's Install
-
-```sh
-cd ~/.vim/
-git clone https://github.com/Shougo/neobundle.vim
-vi ~/.vimrc.neobundle
-:NeoBundleInstall!
-```
