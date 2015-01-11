@@ -125,7 +125,8 @@ nnoremap [unite] <Nop>
 nmap ,u [unite]
 nnoremap <silent>[unite]a  :<C-u>Unite -buffer-name=files buffer file_mru bookmark file tab<CR>
 nnoremap <silent>[unite]b  :<C-u>Unite buffer<CR>
-nnoremap <silent>[unite]c  :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+" nnoremap <silent>[unite]c  :<C-u>UniteWithBufferDir -buffer-name=files file file/new<CR>
+nnoremap <silent>[unite]c  :execute "Unite file file/new -input=" . expand("%:p:h") . "/"<CR>
 nnoremap <silent>[unite]fa :<C-u>Unite file_rec/async<CR>
 nnoremap <silent>[unite]fg :<C-u>Unite file_rec/git<CR>
 nnoremap <silent>[unite]fi :<C-u>Unite find<CR>
