@@ -201,6 +201,7 @@ let g:syntastic_php_phpmd_post_args='$HOME/.conf/phpmd.xml'
 let g:syntastic_enable_signs = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+nnoremap <silent><leader>s  :<C-u>SyntasticReset<CR>
 
 " for jslint ---------------------------
 " augroup call_jslint
@@ -312,7 +313,7 @@ endfunction
 
 augroup AutoSyntastic
   autocmd!
-  autocmd BufWritePost * call s:syntastic()
+  autocmd BufWritePost *.(?!html) call s:syntastic()
 augroup END
 
 function! s:syntastic()
@@ -352,7 +353,7 @@ let s:p.tabline.left = [ [ s:base3, s:base00 ] ]
 let s:p.tabline.tabsel = [ [ s:base2, s:base023 ] ]
 let s:p.tabline.middle = [ [ s:base02, s:base1 ] ]
 let s:p.tabline.right = [ [ s:base2, s:base01 ] ]
-let s:p.normal.error = [ [ s:white, s:magenta ] ]
+let s:p.normal.error = [ [ s:base02, s:yellow ] ]
 let s:p.normal.warning = [ [ s:base023, s:yellow ] ]
 
 let g:lightline#colorscheme#metroid#palette = lightline#colorscheme#flatten(s:p)
