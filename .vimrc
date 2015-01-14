@@ -70,6 +70,12 @@ set cursorline                          " カーソル行に下線
 set completeopt-=preview                " 自動プレビューを無効(主にPython用)
 
 
+" Conceal ------------------------------
+if has('conceal')
+  set conceallevel=1 concealcursor=i
+endif
+
+
 " 不可視文字
 set list                                " 不可視文字を表示
 set listchars=tab:>\                    " 不可視文字の表示方法
