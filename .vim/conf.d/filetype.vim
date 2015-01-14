@@ -60,6 +60,12 @@ augroup template
   autocmd FileType php setl smartindent cinwords=if,elseif,else,for,while,try,except,finally,def,class
   autocmd FileType php setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
 
+  " for JSON -----------------------------
+  autocmd Filetype json setl conceallevel=1
+  autocmd Filetype json setl autoindent
+  autocmd FileType json setl smartindent
+  autocmd FileType json setl expandtab tabstop=2 shiftwidth=2 softtabstop=0
+
   " for YAML -----------------------------
   autocmd Filetype yaml setl autoindent
   autocmd FileType yaml setl smartindent
