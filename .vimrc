@@ -7,11 +7,11 @@ set timeout ttimeout timeoutlen=1000 ttimeoutlen=100
 " set notimeout ttimeout timeoutlen=100   " マッピングについてはタイムアウトしない, 端末キーコードについては100ms後にタイムアウトする
 
 " Set RunTimePath ----------------------
-set rtp+=$HOME/dotfiles/.vim/
+set rtp+=$HOME/.vim/
 runtime! conf.d/*.vim
 
 " External File ------------------------
-if filereadable(expand('$HOME/dotfiles/.vim/colors/metroid.vim'))
+if filereadable(expand('$HOME/.vim/colors/metroid.vim'))
   colorscheme metroid
   color metroid
 endif
