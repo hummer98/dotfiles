@@ -23,12 +23,14 @@ NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimproc.vim', {'build': {'mac': 'make -f make_mac.mak', 'unix' : 'make -f make_unix.mak'}}
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tsukkee/unite-tag'
 NeoBundleLazy 'Yggdroot/indentLine', {"autoload": {"filetypes": ['html']}}
 NeoBundleLazy 'derekwyatt/vim-scala.git', {"autoload": {"filetypes": ['scala']}}
 NeoBundleLazy 'itchyny/dictionary.vim'
