@@ -69,6 +69,10 @@ set display=uhex                        " 印字不可能文字を16進数で表
 set cursorline                          " カーソル行に下線
 set completeopt-=preview                " 自動プレビューを無効(主にPython用)
 
+" tags
+if has('path_extra')
+  set tags=.tags;$HOME
+endif
 
 " Conceal ------------------------------
 if has('conceal')

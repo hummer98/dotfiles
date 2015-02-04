@@ -1,4 +1,5 @@
+-f .tags
 --append=yes
 --recurse=yes
 --php-kinds=cfd
-
+--exclude=*.sql

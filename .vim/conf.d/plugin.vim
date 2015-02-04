@@ -128,10 +128,11 @@ nnoremap <silent>[unite]fi :<C-u>Unite find<CR>
 nnoremap <silent>[unite]g  :<C-u>Unite grep:. -buffer-name=search-buffer -direction=topleft -no-quit<CR>
 nnoremap <silent>[unite]gg :<C-u>Unite grep:. -buffer-name=search-buffer -direction=topleft -no-quit<CR><C-r><C-w><CR>
 nnoremap <silent>[unite]gr :<C-u>UniteResume search-buffer -auto-preview<CR>
+nnoremap <silent>[unite]j  :<C-u>UniteWithCursorWord -buffer-name=tag tag tag/include<CR>
+nnoremap <silent>[unite]l  :<C-u>Unite outline -vertical -winwidth=30<CR>
 nnoremap <silent>[unite]m  :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
 nnoremap <silent>[unite]me :<C-u>Unite output:message<CR>
-nnoremap <silent>[unite]l  :<C-u>Unite tab<CR>
 nnoremap <silent>[unite]n  :<C-u>Unite file/new<CR>
 nnoremap <silent>[unite]o  :<C-u>Unite outline -vertical -winwidth=30<CR>
 nnoremap <silent>[unite]qc :<C-u>UniteWithBufferDir -buffer-name=files file file/new -no-quit<CR>
@@ -140,7 +141,7 @@ nnoremap <silent>[unite]qt :<C-u>Unite tab -no-quit<CR>
 nnoremap <silent>[unite]qu :<C-u>Unite file_mru tab -no-quit<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent>[unite]s  :<C-u>Unite source<CR>
-nnoremap <silent>[unite]t  :<C-u>Unite tag/include<CR>
+nnoremap <silent>[unite]t  :<C-u>Unite tab<CR>
 nnoremap <silent>[unite]u  :<C-u>Unite file_mru tab<CR>
 
 " use ag(The Silver Searcher)
@@ -200,18 +201,6 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
 nnoremap <silent><leader>s  :<C-u>SyntasticReset<CR>
 
-" for jslint ---------------------------
-" augroup call_jslint
-  " autocmd! call_jslint
-  " autocmd FileType javascript call s:javascript_filetype_settings()
-" augroup END
-
-" function! s:javascript_filetype_settings()
-  " autocmd BufLeave     <buffer> call jslint#clear()
-  " autocmd BufWritePost <buffer> call jslint#check()
-  " autocmd CursorMoved  <buffer> call jslint#message()
-" endfunction
-
 
 " for NERDCommenter --------------------
 " use NERDCommenterToggle c--
@@ -255,16 +244,6 @@ let g:quickrun_config = {
 " <C-c>
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 
-
-" for taglist.vim ----------------------
-set tags=tags
-if filereadable(expand('/Applications/MacVim.app/Contents/MacOS/ctags'))
-  let Tlist_Ctags_Cmd = '/Applications/MacVim.app/Contents/MacOS/ctags'
-  let tlist_objc_settings='objc;P:protocols;i:interfaces;I:implementations;M:instance methods;C:implementation methods;Z:protocol methods'
-endif
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Show_One_File = 1
-nnoremap <silent> <leader>l :TlistToggle<CR>
 
 " for lightline.vim --------------------
 let g:lightline = {
