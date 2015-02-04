@@ -128,7 +128,6 @@ nnoremap <silent>[unite]fi :<C-u>Unite find<CR>
 nnoremap <silent>[unite]g  :<C-u>Unite grep:. -buffer-name=search-buffer -direction=topleft -no-quit<CR>
 nnoremap <silent>[unite]gg :<C-u>Unite grep:. -buffer-name=search-buffer -direction=topleft -no-quit<CR><C-r><C-w><CR>
 nnoremap <silent>[unite]gr :<C-u>UniteResume search-buffer -auto-preview<CR>
-nnoremap <silent>[unite]j  :<C-u>UniteWithCursorWord -buffer-name=tag tag tag/include<CR>
 nnoremap <silent>[unite]l  :<C-u>Unite outline -vertical -winwidth=30<CR>
 nnoremap <silent>[unite]m  :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
@@ -141,7 +140,8 @@ nnoremap <silent>[unite]qt :<C-u>Unite tab -no-quit<CR>
 nnoremap <silent>[unite]qu :<C-u>Unite file_mru tab -no-quit<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent>[unite]s  :<C-u>Unite source<CR>
-nnoremap <silent>[unite]t  :<C-u>Unite tab<CR>
+nnoremap <silent>[unite]t  :<C-u>UniteWithCursorWord -buffer-name=tag tag tag/include<CR>
+" nnoremap <silent>[unite]t  :<C-u>Unite tab<CR>
 nnoremap <silent>[unite]u  :<C-u>Unite file_mru tab<CR>
 
 " use ag(The Silver Searcher)
@@ -160,6 +160,10 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 " close on push esc*2
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
+
+" for unite-tag
+let g:unite_source_tag_max_name_length  = 50
+let g:unite_source_tag_max_fname_length = 50
 
 " for vimfiler.vim ---------------------
 nnoremap <Leader>e  :<C-u>VimFilerExplorer<CR>
