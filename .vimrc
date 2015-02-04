@@ -72,7 +72,7 @@ set completeopt-=preview                " 自動プレビューを無効(主にP
 
 " Conceal ------------------------------
 if has('conceal')
-  set conceallevel=1 concealcursor=i
+  set conceallevel=1 concealcursor=
 endif
 
 
