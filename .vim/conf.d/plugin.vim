@@ -128,7 +128,7 @@ nnoremap <silent>[unite]fi :<C-u>Unite find<CR>
 nnoremap <silent>[unite]g  :<C-u>Unite grep:. -buffer-name=search-buffer -direction=topleft -no-quit<CR>
 nnoremap <silent>[unite]gg :<C-u>Unite grep:. -buffer-name=search-buffer -direction=topleft -no-quit<CR><C-r><C-w><CR>
 nnoremap <silent>[unite]gr :<C-u>UniteResume search-buffer -auto-preview<CR>
-nnoremap <silent>[unite]l  :<C-u>Unite outline -vertical -winwidth=30<CR>
+nnoremap <silent>[unite]l  :<C-u>Unite tab<CR>
 nnoremap <silent>[unite]m  :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
 nnoremap <silent>[unite]me :<C-u>Unite output:message<CR>
@@ -141,7 +141,6 @@ nnoremap <silent>[unite]qu :<C-u>Unite file_mru tab -no-quit<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent>[unite]s  :<C-u>Unite source<CR>
 nnoremap <silent>[unite]t  :<C-u>UniteWithCursorWord -buffer-name=tag tag tag/include<CR>
-" nnoremap <silent>[unite]t  :<C-u>Unite tab<CR>
 nnoremap <silent>[unite]u  :<C-u>Unite file_mru tab<CR>
 
 " use ag(The Silver Searcher)
