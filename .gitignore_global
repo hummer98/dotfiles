@@ -1,8 +1,9 @@
-*~
-*.dat
 *.[ao]
+*.dat
 *.py[co]
 *.so
 *.sw[nop]
+*~
 .DS_Store
+.tags
 node_modules/
