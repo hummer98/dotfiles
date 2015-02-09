@@ -141,7 +141,7 @@ nnoremap <silent>[unite]qu :<C-u>Unite file_mru tab -no-quit<CR>
 nnoremap <silent>[unite]r  :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent>[unite]s  :<C-u>Unite source<CR>
 nnoremap <silent>[unite]t  :<C-u>UniteWithCursorWord -buffer-name=tag tag tag/include<CR>
-nnoremap <silent>[unite]u  :<C-u>Unite file_mru tab<CR>
+nnoremap <silent>[unite]u  :<C-u>Unite -start-insert file_mru tab<CR>
 
 " use ag(The Silver Searcher)
 if executable('ag')
