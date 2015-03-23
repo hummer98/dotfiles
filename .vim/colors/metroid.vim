@@ -12,8 +12,8 @@ let colors_name = "metroid"
 
 " Vim >= 7.0 specific colors
 if version >= 700
-  hi CursorLine guibg=#2d2d2d                                                           " 'cursorline' がオンになっているときのカーソルがある画面上の行
-  hi CursorColumn guibg=#2d2d2d                                                         " 'cursorcolumn' がオンになっているときのカーソルがある画面上の桁
+  hi CursorLine guibg=#666666                                                           " 'cursorline' がオンになっているときのカーソルがある画面上の行
+  hi CursorColumn guibg=#666666                                                         " 'cursorcolumn' がオンになっているときのカーソルがある画面上の桁
   hi MatchParen guifg=White guibg=#ff2bfd gui=bold ctermfg=White ctermbg=Magenta cterm=none " 対応する括弧
   hi Pmenu      guifg=Black guibg=#ff2bfd ctermfg=Black ctermbg=Magenta                 " ポップアップメニュー: 通常の項目
   hi PmenuSel   guifg=DarkGreen guibg=#ff2bfd gui=bold ctermbg=Magenta ctermfg=DarkGreen cterm=none " ポップアップメニュー: 選択されている項目
