@@ -133,7 +133,7 @@ nnoremap <silent>[unite]m  :<C-u>Unite file_mru<CR>
 nnoremap <silent>[unite]ma :<C-u>Unite mapping<CR>
 nnoremap <silent>[unite]me :<C-u>Unite output:message<CR>
 nnoremap <silent>[unite]n  :<C-u>Unite file/new<CR>
-nnoremap <silent>[unite]o  :<C-u>Unite outline -vertical -winwidth=30<CR>
+nnoremap <silent>[unite]o  :<C-u>Unite outline -vertical -winwidth=50<CR>
 nnoremap <silent>[unite]qc :<C-u>UniteWithBufferDir -buffer-name=files file file/new -no-quit<CR>
 nnoremap <silent>[unite]qo :<C-u>Unite outline -vertical -winwidth=30 -no-quit<CR>
 nnoremap <silent>[unite]qt :<C-u>Unite tab -no-quit<CR>
@@ -151,8 +151,8 @@ if executable('ag')
 endif
 
 " open with separated window
-au FileType unite nnoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
-au FileType unite inoremap <silent> <buffer> <expr> <C-s> unite#do_action('split')
+au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
+au FileType unite inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
 " open with separated vertical window
 au FileType unite nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
 au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vsplit')
@@ -246,7 +246,6 @@ let g:quickrun_config = {
 " 'exec': '~/local/bin/python %o %s'
 " <C-c>
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
-
 
 " for lightline.vim --------------------
 let g:lightline = {

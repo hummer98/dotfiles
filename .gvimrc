@@ -3,9 +3,9 @@ color Metroid
 
 if has('mac')
   set transparency=10     " opacity
-  set guifont=Ricty:h14   " font
-  set columns=114         " width
-  set lines=200           " line
+  set guifont=Ricty:h12   " font
+  set columns=150         " width
+  set lines=80            " line
   set antialias
   set imdisable
 elseif has('linux')

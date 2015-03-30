@@ -169,7 +169,9 @@ alias t='tig'
 alias v='vi'
 alias ..='cd ..'
 alias history='history -f'
+alias fg='find . -type f \( -name "*.php" -o -name "*.html" -o -name "*.yml" -o -name "*.conf" -o -name "*.js" -o -name "*.css" \) -print0 | xargs -0 grep -in'
 alias ag='ag --stats'
+alias tmux="TERM=screen-256color-bce tmux"
 
 # global alias
 alias -g B='`git branch -a | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'

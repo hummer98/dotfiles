@@ -65,9 +65,9 @@ set nowrap                              " 画面幅で折り返す
 set notitle                             " タイトル書き換えない
 set scrolloff=5                         " 行送り
 set display=uhex                        " 印字不可能文字を16進数で表示
-" set paste                               " ペーストモード(neocompleteが動作しない為コメントアウト)
 set cursorline                          " カーソル行に下線
 set completeopt-=preview                " 自動プレビューを無効(主にPython用)
+
 
 " tags
 if has('path_extra')
