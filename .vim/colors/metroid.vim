@@ -64,7 +64,7 @@ hi VisualNOS    guibg=#0097FF                                                cte
 hi Title        guifg=#FF9400 guibg=#000000 gui=bold    ctermfg=Yellow                            cterm=bold    " ':autocmd'などの実行時の出力タイトル
 hi Directory    guifg=#0D99FF                           ctermfg=DarkBlue
 hi NonText      guifg=#76D5FF                           ctermfg=LightBlue                                       " EOF以降の'~', '@'など
-hi SpecialKey   guifg=#FF9400                           ctermfg=Yellow                                          " <leader>
+hi SpecialKey   guifg=#FF9400                           ctermfg=202                                             " <leader>
 
 
 " Status Line ------
