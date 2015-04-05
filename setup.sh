@@ -32,5 +32,5 @@ do
   fi
 done
 
-git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/neobundle
+git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/neobundle.vim
 
