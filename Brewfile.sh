@@ -4,6 +4,7 @@ brew install jq
 brew install nvm
 brew install peco
 brew install rbenv
+brew install ruby-build
 brew install reattach-to-user-namespace
 brew install rmtrash
 brew install the_silver_searcher
