@@ -33,7 +33,3 @@ do
   fi
 done
 
-git clone https://github.com/Shougo/neobundle.vim $HOME/dotfiles/.vim/neobundle.vim
-
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-sh $HOME/dotfiles/Brewfile.sh
