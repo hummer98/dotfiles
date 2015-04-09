@@ -3,6 +3,7 @@
 DOT_FILES=(
   .conf
   .ctags
+  .gemrc
   .gitconfig
   .gitignore_global
   .gvimrc
