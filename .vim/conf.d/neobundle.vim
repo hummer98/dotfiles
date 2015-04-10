@@ -42,7 +42,6 @@ NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby',
 
 " from vim-scripts repository
 NeoBundle 'Align'
-NeoBundle 'taglist.vim'
 NeoBundle 'sudo.vim'
 
 call neobundle#end()
