@@ -1,4 +1,9 @@
 " Plugin -------------------------------
+" for Align.vim ----------------------
+vmap <C-a> :<C-u>'<,'>Align =<CR>
+vmap <C-h> :<C-u>'<,'>Align =><CR>
+
+
 " for neocomplete --------------------
 let g:acp_enableAtStartup = 0 " Disable AutoComplPop.
 let g:neocomplete#enable_at_startup = 1
@@ -81,7 +86,6 @@ endif
 " For rubyomni.vim setting.
 " let g:neocomplete#omni#input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 " autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-
 
 " for neosnippet -----------------------
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
