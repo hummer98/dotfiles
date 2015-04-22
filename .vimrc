@@ -66,7 +66,6 @@ set notitle                             " タイトル書き換えない
 set scrolloff=5                         " 行送り
 set display=uhex                        " 印字不可能文字を16進数で表示
 set cursorline                          " カーソル行に下線
-set completeopt-=preview                " 自動プレビューを無効(主にPython用)
 
 
 " tags
