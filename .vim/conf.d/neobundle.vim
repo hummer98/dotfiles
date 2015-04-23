@@ -1,13 +1,13 @@
 " for NeoBundle ------------------------
 set nocompatible
 if has('vim_starting')
-  if filereadable(expand('$HOME/.vim/neobundle/neobundle.vim/autoload/neobundle.vim'))
-    set rtp+=$HOME/.vim/neobundle/neobundle.vim
-  elseif filereadable(expand('$HOME/.vim/neobundle.vim/autoload/neobundle.vim'))
-    set rtp+=$HOME/.vim/neobundle.vim
+  if filereadable(expand('$HOME/dotfiles/.vim/neobundle/neobundle.vim/autoload/neobundle.vim'))
+    set rtp+=$HOME/dotfiles/.vim/neobundle/neobundle.vim
+  elseif filereadable(expand('$HOME/dotfiles/.vim/neobundle.vim/autoload/neobundle.vim'))
+    set rtp+=$HOME/dotfiles/.vim/neobundle.vim
   endif
 
-  call neobundle#begin(expand('$HOME/.vim/neobundle'))
+  call neobundle#begin(expand('$HOME/dotfiles/.vim/neobundle'))
 endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -48,3 +48,4 @@ call neobundle#end()
 
 filetype plugin indent on
 NeoBundleCheck
+

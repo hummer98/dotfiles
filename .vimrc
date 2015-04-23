@@ -225,3 +225,4 @@ command! -complete=file -nargs=+ Grep call s:grep([<f-args>])
 function! s:grep(args)
   execute 'vimgrep' '/'.a:args[-1].'/' join(a:args[:-2])
 endfunction
+
