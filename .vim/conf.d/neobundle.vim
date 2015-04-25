@@ -35,9 +35,11 @@ NeoBundle 'tsukkee/unite-tag'
 NeoBundleLazy 'Yggdroot/indentLine', {"autoload": {"filetypes": ['html']}}
 NeoBundleLazy 'derekwyatt/vim-scala.git', {"autoload": {"filetypes": ['scala']}}
 NeoBundleLazy 'itchyny/dictionary.vim'
+NeoBundleLazy 'kannokanno/previm'
 NeoBundleLazy 'taku-o/vim-catn'
 NeoBundleLazy 'tpope/vim-rails',{"autoload": {"filetypes": ['html', 'eruby']}}
 NeoBundleLazy 'tyru/capture.vim'
+NeoBundleLazy 'tyru/open-browser.vim'
 NeoBundleLazy 'yuzuemon/emmet-vim', {"autoload": {"filetypes": ['html', 'eruby', 'php']}}
 
 " from vim-scripts repository
@@ -48,3 +50,4 @@ call neobundle#end()
 
 filetype plugin indent on
 NeoBundleCheck
+

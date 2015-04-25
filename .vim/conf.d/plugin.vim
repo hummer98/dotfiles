@@ -251,6 +251,12 @@ let g:quickrun_config = {
 " <C-c>
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
 
+
+" for markdown-preview -----------------
+au BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a Firefox'
+
+
 " for lightline.vim --------------------
 let g:lightline = {
       \ 'colorscheme': 'metroid',
