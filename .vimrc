@@ -227,5 +227,5 @@ function! s:grep(args)
 endfunction
 
 " DeleteBlankLine ----------------------
-command! DeleteBlankLine g/^$/d
+command! DeleteBlankLines g/^$/d
 
