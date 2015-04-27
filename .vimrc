@@ -226,3 +226,6 @@ function! s:grep(args)
   execute 'vimgrep' '/'.a:args[-1].'/' join(a:args[:-2])
 endfunction
 
+" DeleteBlankLine ----------------------
+command! DeleteBlankLine g/^$/d
+
