@@ -195,7 +195,7 @@ noremap <c-3> ysst
 " for syntastic  -----------------------
 let g:syntastic_mode_map = {
   \ 'mode': 'passive',
-  \ 'active_filetypes': ['javascript', 'php', 'ruby', 'python', 'vim'],
+  \ 'active_filetypes': ['javascript', 'css', 'php', 'ruby', 'python', 'vim'],
   \ 'passive_filetypes': ['html']
   \}
 let g:syntastic_auto_loc_list = 1
